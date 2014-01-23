@@ -30,7 +30,7 @@ public class Checkers {
         game.displayPlayers();
         
         Location location = new Location();
-        location.displayPosition();
+        location.displayMarker();
        
         Player player = new Player();
         player.displayName();
