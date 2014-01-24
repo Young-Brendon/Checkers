@@ -15,7 +15,7 @@ public class Game {
      Player loser;
      String status;
      Board board;
-   
+        
 
     public Game() {
    
@@ -43,10 +43,13 @@ public class Game {
     }
     
     public void displayPlayers() {
-        System.out.println("\n\tHere are the two default players in the game of TicTacToe.");
+        System.out.println("\n\tHere are the two default players in the game of Checkers.");
         this.playerA.displayName();
         this.playerB.displayName();
                               
+    }
+    public void displayInstructions() {
+        System.out.println("Instructions: " + instructions);
     }
 }
 
