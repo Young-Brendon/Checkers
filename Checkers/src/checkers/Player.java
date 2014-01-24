@@ -12,6 +12,7 @@ public class Player {
     String color;
     int wins = 0;
     int losses = 0;
+    boolean marker;
     
     public Player(){
         

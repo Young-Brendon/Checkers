@@ -36,7 +36,7 @@ public class Checkers {
         player.displayName();
         
         Marker marker = new Marker();
-        marker.displayPiece();
+        marker.displayMarker();
         
     }
     

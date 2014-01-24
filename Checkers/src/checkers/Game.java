@@ -3,7 +3,7 @@ package checkers;
 
 /**
  *
- * @author Angela & Brendon
+ * @author Angela
  */
 public class Game {
      String gameType;
