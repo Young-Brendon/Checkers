@@ -32,31 +32,36 @@ public class Checkers {
    
     public static void main(String[] args) {
              
-       Checkers checkers = new Checkers();
-       checkers.display();
-       checkers.getName();
-       checkers.displayHelp();
+        Checkers checkers = new Checkers();
+        checkers.display();
+        checkers.getName();
+        checkers.displayHelp();
                        
         Board board = new Board();
         board.displaySize();
         
-        //Game game=new Game();
-        //game.displayPlayers();
+        Game game=new Game();
+        game.displayPlayers();
         
         Location location = new Location();
         location.displayMarker();
        
-        //Player player = new Player();
-        //player.displayName();
+        Player player = new Player();
+        player.displayName();
         
-      //Marker marker = new Marker();
-      //marker.displayMarker();
+        Marker marker = new Marker();
+        marker.displayMarker();
         
     }
     
     private void display() {
         System.out.println(this.welcomeMsg);
     }
+    
+    public void displayInstructions() {
+        System.out.println("Instructions: " + instructions);
+    }
+    
     private void getName() {
             Scanner input = new Scanner(System.in);
             System.out.println("Player 1 - Enter your name: ");
@@ -68,7 +73,5 @@ public class Checkers {
         System.out.println("\nWelcome " + name1 + " and " + name2 + "!\n");
         System.out.println("Instructions: " + instructions);
     }
-    
-
   
 }

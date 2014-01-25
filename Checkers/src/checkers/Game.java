@@ -48,8 +48,5 @@ public class Game {
         this.playerB.displayName();
                               
     }
-    public void displayInstructions() {
-        System.out.println("Instructions: " + instructions);
-    }
 }
 

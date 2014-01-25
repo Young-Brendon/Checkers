@@ -12,8 +12,8 @@ package checkers;
  */
 public class Marker {    
     
-    char markerA = 'Red';    
-    char markerB = 'Black';
+    char markerA = 'o';  
+    char markerB = 'x';
     
     public Marker(){
         
