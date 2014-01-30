@@ -25,7 +25,8 @@ public class Checkers {
              +"captured piece is removed from the board. Multiple capture jumps \n"
              +"are allowed on a single turn. A player wins when the opponenet can not \n"
              +"make any moves or all of the opponents pieces have been removed from \n"
-             +"the board.";
+             +"the board."
+             + "\n";
 
     public Checkers(){
     }
@@ -38,7 +39,11 @@ public class Checkers {
         checkers.displayHelp();
                        
         Board board = new Board();
+        board.getRows();
+        board.getColumns();
         board.displaySize();
+        board.displayBoardSize();
+        
         
         Game game=new Game();
         game.displayPlayers();
