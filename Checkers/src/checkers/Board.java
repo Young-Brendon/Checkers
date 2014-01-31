@@ -9,8 +9,8 @@ import java.util.Scanner;
  */
 public class Board {
     
-    int rows;
-    int columns;
+    double rows;
+    double columns;
       
 public Board() {
 }
@@ -58,11 +58,11 @@ public Board() {
      }
 
     public void displaySize() {
-        System.out.println("\n\tThe board is " + rows + " by " 
-                           + columns + " in size.");
+        System.out.println("\n\tThe board is " + (int)rows + " by " 
+                           + (int)columns + " in size.");
     }
     public void displayBoardSize() {
         double boardSize = columns * rows;
-        System.out.println("\n\tThe board has " + boardSize + " squares.");
+        System.out.println("\n\tThe board has " + (int)boardSize + " squares.");
     }
 }

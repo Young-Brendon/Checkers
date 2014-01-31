@@ -30,7 +30,7 @@ public class Marker {
         else pieces = (int) ((columns/2)*2);
         System.out.println("\n\tHere are the default pieces in the game: " + this.markerA + ", "
                            + this.markerB
-                           + "\n\n\tEach player will have " + pieces + " pieces for this board."
+                           + "\n\n\tEach player will have " + (int)pieces + " pieces for this board."
                            + "\n");
     }
     
