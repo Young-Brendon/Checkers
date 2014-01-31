@@ -56,6 +56,7 @@ public class Checkers {
         
         Marker marker = new Marker();
         marker.displayMarker();
+        marker.getPieces();
         
         Statistics statistics = new Statistics();
         statistics.displayStatistics();
