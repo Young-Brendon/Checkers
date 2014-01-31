@@ -8,11 +8,11 @@ package checkers;
  */
 public class Player {
     
-    String name;
-    String color;
+    String name = "Player 1";
+    String color = "red";
     int wins = 0;
     int losses = 0;
-    boolean marker;
+    boolean marker = true;
     
     public Player(){
         

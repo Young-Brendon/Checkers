@@ -6,8 +6,8 @@ package checkers;
  * @author Angela
  */
 public class Location {
-    int row;
-    int column;
+    int row = 1;
+    int column = 1;
     Player player;
     
     public Location() {
