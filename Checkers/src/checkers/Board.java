@@ -14,7 +14,7 @@ public class Board {
       
 public Board() {
 }
-          public void getRows() {
+          public int getRows() {
             Scanner input = new Scanner(System.in);
             System.out.println("Enter an even number of rows from 6 to 10: ");
             rows = input.nextInt();
@@ -33,8 +33,9 @@ public Board() {
                     + "\n\t an even number from 6 to 10.");
             return -999;
             }
+        return 0;
      }
-          public void getColumns() {
+          public int getColumns() {
             Scanner input = new Scanner(System.in);
             System.out.println("Enter an even number of columns from 6 to 10: ");
             columns = input.nextInt();
@@ -53,6 +54,7 @@ public Board() {
                     + "\n\t an even number from 6 to 10.");
             return -999;
             }
+        return 0;
      }
 
     public void displaySize() {

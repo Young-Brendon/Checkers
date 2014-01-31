@@ -35,13 +35,6 @@ public class Game {
              + "\n\t*******************************************************************************");
     }
 
-    public void displayTiedMessage () {
-       System.out.println( 
-               "\n\t*******************************************************************************"
-             + "\n\t The game is a tie. Better luck next time!" 
-             + "\n\t*******************************************************************************");
-    }
-    
     public void displayPlayers() {
         System.out.println("\n\tHere are the two default players in the game of Checkers.");
         this.playerA.displayName();
