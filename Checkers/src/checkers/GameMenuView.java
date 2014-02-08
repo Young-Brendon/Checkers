@@ -7,63 +7,64 @@
 package checkers;
 
 import java.util.Scanner;
-
 /**
-*
-* @author Angela
-*/
-public class HelpMenuView {
-        
+ *
+ * @author Angela
+ */
+public class GameMenuView {
+    
+    private Game game;
+    private GameMenuControl gameMenuControl ;
+
+
     private final static String[][] menuItems = {
-        {"B", "The board"},
-        {"C", "A computer player"},
-        {"G", "The Checkers game"},
-        {"L", "A location"},
-        {"M", "A marker"},
-        {"R", "A regular player"},
-        {"Q", "Quit Help"}
+        {"T", "Take your turn"},
+        {"D", "Display the board"},
+        {"N", "New Game"},
+        {"R", "Report stastics"},
+        {"P", "Change game preferences"},
+        {"H", "Help"},
+        {"Q", "QUIT"}
     };
-    
-    // Create instance of the HelpMenuControl (action) class
-    private HelpMenuControl helpMenuControl = new HelpMenuControl();
-    
-    // default constructor
-    public HelpMenuView() {
+
+    public GameMenuView(Game game) {
+        this.game = game;
+        this.gameMenuControl = new GameMenuControl(game);
         
     }
+
     
-    // display the help menu and get the end users input selection
+    
     public void getInput() {
-              
+   
         String command;
         Scanner inFile = new Scanner(System.in);
-        
+
         do {
-            
             this.display(); // display the menu
-            
-            // get command entered
+
+            // get commaned entered
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             
             switch (command) {
-                case "B":
-                    this.helpMenuControl.displayBoardHelp();
+                case "T":
+                    this.gameMenuControl.takeTurn();
                     break;
-                case "C":
-                    this.helpMenuControl.displayComputerPlayerHelp();
+                case "D":
+                    gameMenuControl.displayBoard();
                     break;
-                case "G":
-                    this.helpMenuControl.displayGameHelp();
+                case "N":
+                    gameMenuControl.startNewGame();
                     break;
-                case "L":
-                    this.helpMenuControl.displayLocationHelp();
+                case "R":
+                    gameMenuControl.displayStatistics();
                     break;
-                case "M":
-                    this.helpMenuControl.displayMarkerHelp();
+                case "P":
+                    gameMenuControl.displayPreferencesMenu();
                     break;
-                 case "R":
-                    this.helpMenuControl.displayRealPlayerHelp();
+                case "H":
+                    gameMenuControl.displayHelpMenu();
                     break;
                 case "Q":
                     break;
@@ -72,19 +73,21 @@ public class HelpMenuView {
                     continue;
             }
         } while (!command.equals("Q"));
-        
-         return;
-    }
 
-        // displays the help menu
+        return;
+    }
+    
+
+
     public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (int i = 0; i < HelpMenuView.menuItems.length; i++) {
+        for (int i = 0; i < GameMenuView.menuItems.length; i++) {
             System.out.println("\t " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
     }
   
-}
+}    
+
