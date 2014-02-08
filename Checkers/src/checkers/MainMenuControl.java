@@ -16,7 +16,7 @@ public class MainMenuControl {
        
     public void startGame() {
                 
-       GameMenuView gameMenu = new GameMenuView(game);
+       GameMenuView gameMenu = new GameMenuView();
         gameMenu.getInput();
          
     }
@@ -34,6 +34,6 @@ public class MainMenuControl {
             return Game.EXIT;
         }
 
-        return Game.PLAYING;
+        return (String) Game.PLAYING;
     }
 }

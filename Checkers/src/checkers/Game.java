@@ -5,16 +5,21 @@ package checkers;
  *
  * @author Angela
  */
-public class Game {
-     String gameType;
-     Player playerA;
-     Player playerB;
-     Player currentPlayer;
-     Player otherPlayer;
-     Player winner;
-     Player loser;
-     String status;
-     Board board;
+public class Game {    
+    static String EXIT;
+    static String PLAYING;
+    static Object NEW_GAME;
+    static String WINNER;
+    static String TIE;
+    String gameType;
+    Player playerA;
+    Player playerB;
+    Player currentPlayer;
+    Player otherPlayer;
+    Player winner;
+    Player loser;
+    String status;
+    Board board;
         
 
     public Game() {
@@ -40,6 +45,10 @@ public class Game {
         this.playerA.displayName();
         this.playerB.displayName();
                               
+    }
+
+    void start() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
 

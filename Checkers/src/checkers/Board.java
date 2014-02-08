@@ -11,6 +11,7 @@ public class Board {
     
     double rows;
     double columns;
+    Location[][] boardLocations;
       
 public Board() {
 }
@@ -64,5 +65,9 @@ public Board() {
     public void displayBoardSize() {
         double boardSize = columns * rows;
         System.out.println("\n\tThe board has " + (int)boardSize + " squares.");
+    }
+
+    void occupyLocation(Player player, int x, int y) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

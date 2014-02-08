@@ -11,12 +11,11 @@ import java.util.Scanner;
  *
  * @author Angela
  */
-public class GameMenuView {
+public class GameMenuView {   
     
-    private Game game;
-    private GameMenuControl gameMenuControl ;
-
-
+        GameMenuControl gameMenuControl = new GameMenuControl();
+        GamePreferencesMenuView gamePreferencesMenuView = new GamePreferencesMenuView();
+        
     private final static String[][] menuItems = {
         {"T", "Take your turn"},
         {"D", "Display the board"},
@@ -27,13 +26,9 @@ public class GameMenuView {
         {"Q", "QUIT"}
     };
 
-    public GameMenuView(Game game) {
-        this.game = game;
-        this.gameMenuControl = new GameMenuControl(game);
-        
-    }
-
-    
+    public GameMenuView() {        
+                
+    }   
     
     public void getInput() {
    
@@ -49,19 +44,21 @@ public class GameMenuView {
             
             switch (command) {
                 case "T":
-                    this.gameMenuControl.takeTurn();
+                    System.out.println("Take a turn");
+                    //this.gameMenuControl.takeTurn();
                     break;
-                case "D":
+                case "D":                    
                     gameMenuControl.displayBoard();
                     break;
                 case "N":
-                    gameMenuControl.startNewGame();
+                    System.out.println("Start a new game");
+                    //gameMenuControl.startNewGame();
                     break;
-                case "R":
+                case "R":                    
                     gameMenuControl.displayStatistics();
                     break;
                 case "P":
-                    gameMenuControl.displayPreferencesMenu();
+                    gamePreferencesMenuView.getInput();
                     break;
                 case "H":
                     gameMenuControl.displayHelpMenu();

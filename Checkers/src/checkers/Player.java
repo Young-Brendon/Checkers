@@ -21,4 +21,8 @@ public class Player {
     public void displayName() {
         System.out.println("\t\tHello, my name is " + this.name);
     }
+
+    String getPlayerStastics() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

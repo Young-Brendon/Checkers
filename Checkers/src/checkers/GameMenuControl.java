@@ -15,15 +15,13 @@ import java.util.Random;
  */
 public class GameMenuControl {
       
-    private Game game;
-    private Board board;
-    private GetLocationView getLocationView;
-    private BoardView boardView = new BoardView();
+    private Game game;    
+    
+    Board board = new Board();       
+        
 
     
-    public GameMenuControl(Game game) {
-        this.game = game;
-        this.board = game.board;
+    public GameMenuControl() {
     }
     
      
@@ -64,7 +62,11 @@ public class GameMenuControl {
 * Display the board acton
 */
     public void displayBoard() {
-        boardView.displayBoard(this.board);
+        
+        //board.getRows();
+        //board.getColumns();
+        board.displaySize();
+        board.displayBoardSize();
     }
     
     /*
@@ -82,19 +84,16 @@ public class GameMenuControl {
 * Display statistics action
 */
      public void displayStatistics() {
-        String playerAStatistics = this.game.playerA.getPlayerStastics();
-        String playerBStatistics = this.game.playerB.getPlayerStastics();
-        System.out.println("\n\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        System.out.println("\t " + playerAStatistics);
-        System.out.println("\n\t " + playerBStatistics);
-        System.out.println("\t+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        
+        Statistics statistics = new Statistics();       
+        statistics.displayStatistics();
     }
      
      /*
 * Display game preferences menu action
 */
     public void displayPreferencesMenu() {
-        GamePreferencesMenuView gamePreferenceMenuView = new GamePreferencesMenuView(this.game);
+        GamePreferencesMenuView gamePreferenceMenuView = new GamePreferencesMenuView();
         gamePreferenceMenuView.getInput();
     }
     
@@ -234,7 +233,7 @@ public class GameMenuControl {
 */
 //    private Point findWinningLocation(Player player) {
  //       Point coordinate = new Point();
-        Location[][] locations = this.board.boardLocations;
+ //       Location[][] locations = this.board.boardLocations;
  //       for (int row = 0; row < locations.length; row++) {
  //           Location[] rowLocations = locations[row];
  //           for (int col = 0; col < rowLocations.length; col++) {
@@ -324,6 +323,36 @@ public class GameMenuControl {
             for (int j = 0; j < rowlocations.length; j++) {
                 rowlocations[j] = null;
             }
+        }
+    }
+
+    private boolean isWinner() {
+        return false;
+    }
+
+    private boolean isTie() {
+        return false;
+    }
+
+    private static class GetLocationView {
+
+        public GetLocationView() {
+        }
+
+        private GetLocationView(Game game) {
+        }
+
+        private Point getInput() {
+            return null;
+        }
+    }
+
+    private static class BoardView {
+
+        public BoardView() {
+        }
+
+        private void displayBoard(Board board) {
         }
     }
         

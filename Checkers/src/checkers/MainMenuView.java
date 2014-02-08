@@ -13,18 +13,20 @@ import java.util.Scanner;
  */
 public class MainMenuView {
     
+    MainMenuControl mainMenuControl = new MainMenuControl();
+    GameMenuView gameMenuView = new GameMenuView();
+    
     private static final String[][] menuItems = {
         {"S", "Start game"},
         {"H", "Help"},
         {"X", "Exit Tic-Tac-Toe"}
-    };
-  
-    MainMenuControl mainMenuControl = new MainMenuControl();
+    };  
     
-    public MainMenuView() {
-
-    }
- 
+    
+    public MainMenuView() {  
+        
+        
+    } 
     
     public void getInput() {
 
@@ -39,8 +41,8 @@ public class MainMenuView {
             command = command.trim().toUpperCase();
             
             switch (command) {
-                case "S":
-                    this.mainMenuControl.startGame();
+                case "S":                   
+                    gameMenuView.getInput();
                     break;
                 case "H":
                     this.mainMenuControl.displayHelpMenu();
@@ -54,10 +56,7 @@ public class MainMenuView {
         } while (!command.equals("X"));
 
         return;
-    }
-    
-
-    
+    }    
     
    public final void display() {
         System.out.println("\n\t===============================================================");

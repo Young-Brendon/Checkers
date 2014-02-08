@@ -31,10 +31,8 @@ public class Checkers {
         checkers.display();
         
         MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.getInput();
+        mainMenuView.getInput();      
         
-        HelpMenuView helpMenuView = new HelpMenuView();        
-        helpMenuView.getInput();
     }
     
     private void display() {
