@@ -69,7 +69,5 @@ public Board() {
         System.out.println("\n\tThe board has " + (int)boardSize + " squares.");
     }
 
-    void occupyLocation(Player player, int x, int y) {
-        
-    }
+    
         }
