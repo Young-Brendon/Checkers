@@ -1,9 +1,5 @@
-
-
 package checkers;
-
 /**
- *
  * @author Angela & Brendon
  */
 public class Player {

@@ -1,9 +1,7 @@
-
 package checkers;
 
 /**
- *
- * @author Angela
+ * * @author Angela
  */
 public class Location {
     int row = 1;

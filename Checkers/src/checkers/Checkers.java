@@ -4,8 +4,7 @@ package checkers;
 import java.util.Scanner;
 
 /**
- *
- * @author Angela and Brendon
+ * * @author Angela and Brendon
  */
 public class Checkers {
       String welcomeMsg =

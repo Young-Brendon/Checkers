@@ -2,8 +2,7 @@
 package checkers;
 
 /**
- *
- * @author Angela
+  * @author Angela
  */
 public class Game {    
     static String EXIT;

@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package checkers;
-
 /**
- *
- * @author Brendon Young
+ * * @author Brendon Young
  */
 public class Marker {    
     
@@ -32,7 +24,7 @@ public class Marker {
         if (rows>6){
         pieces = (int) ((columns/2)*3);
         }
-        else pieces = (int) ((columns/2)*2);
+        else pieces = (int) columns;
         System.out.println("\n\tEach player will have " + (int)pieces + " pieces for this board."
                            + "\n");
     }

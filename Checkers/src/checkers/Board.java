@@ -4,8 +4,7 @@ package checkers;
 import java.util.Scanner;
 
 /**
- *
- * @author Brendon Young
+  * @author Brendon Young
  */
 public class Board {
     
