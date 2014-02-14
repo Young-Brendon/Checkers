@@ -12,6 +12,8 @@ public class Board {
     double rows;
     double columns;
     Location[][] boardLocations;
+    int rowCount;
+    int columnCount;
       
 public Board() {
 }
@@ -68,6 +70,6 @@ public Board() {
     }
 
     void occupyLocation(Player player, int x, int y) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
-}
+        }

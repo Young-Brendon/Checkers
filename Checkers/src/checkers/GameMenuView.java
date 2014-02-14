@@ -15,6 +15,7 @@ public class GameMenuView {
     
         GameMenuControl gameMenuControl = new GameMenuControl();
         GamePreferencesMenuView gamePreferencesMenuView = new GamePreferencesMenuView();
+        GetLocationView getLocationView = new GetLocationView();
         
     private final static String[][] menuItems = {
         {"T", "Take your turn"},
@@ -45,6 +46,7 @@ public class GameMenuView {
             switch (command) {
                 case "T":
                     System.out.println("Take a turn");
+                    getLocationView.getInput();
                     //this.gameMenuControl.takeTurn();
                     break;
                 case "D":                    
@@ -52,6 +54,7 @@ public class GameMenuView {
                     break;
                 case "N":
                     System.out.println("Start a new game");
+                    
                     //gameMenuControl.startNewGame();
                     break;
                 case "R":                    
