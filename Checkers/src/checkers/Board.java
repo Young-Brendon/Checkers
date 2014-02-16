@@ -8,8 +8,8 @@ import java.util.Scanner;
  */
 public class Board {
     
-    double rows;
-    double columns;
+    int rows;
+    int columns;
     Location[][] boardLocations;
     int rowCount;
     int columnCount;
