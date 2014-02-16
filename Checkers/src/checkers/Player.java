@@ -4,11 +4,12 @@ package checkers;
  */
 public class Player {
     
-    String name = "Player 1";
-    String color = "red";
-    int wins = 0;
-    int losses = 0;
-    boolean marker = true;
+    public String name;
+    public String color;
+    public int wins = 0;
+    public int losses = 0;
+    public int ties = 0;
+    public boolean marker = true;
     
     public Player(){
         
@@ -19,6 +20,6 @@ public class Player {
     }
 
     String getPlayerStastics() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 }

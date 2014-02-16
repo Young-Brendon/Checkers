@@ -17,10 +17,10 @@ public class BoardView {
         
         this.printHeadRow();
         this.printDividerRow();
-        for (int i = 0; i < row; i++) {           
+        for (int i = row; i > 0; i--) {           
             this.printRow();             
             this.printDividerRow();
-            System.out.print(i + 1);
+            System.out.print(i);
         }
           
         System.out.println();
