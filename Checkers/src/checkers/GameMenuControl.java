@@ -20,6 +20,10 @@ public class GameMenuControl {
         boardView.displayBoard();
     }
     
+    public void displayPlayers() {
+        GetPlayersListView getPlayersListView = new GetPlayersListView();
+        getPlayersListView.getInput();
+    }
 
     public void startNewGame() {
         this.game.start();
