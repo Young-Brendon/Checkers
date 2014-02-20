@@ -10,6 +10,7 @@ public class MainMenuView {
     GameMenuView gameMenuView = new GameMenuView();
     
     private static final String[][] menuItems = {
+        {"E", "Enter players names"},
         {"S", "Start game"},
         {"H", "Help"},
         {"X", "Exit Tic-Tac-Toe"}
@@ -34,6 +35,9 @@ public class MainMenuView {
             command = command.trim().toUpperCase();
             
             switch (command) {
+                case "E":
+                    mainMenuControl.displayPlayers();
+                    break;
                 case "S":                   
                     gameMenuView.getInput();
                     break;

@@ -19,6 +19,11 @@ public class MainMenuControl {
         helpMenu.getInput();
     }
     
+    public void displayPlayers() {
+        GetPlayersListView getPlayersListView = new GetPlayersListView();
+        getPlayersListView.getInput();
+    }
+    
     private String quitGame() {
         System.out.println("\n\tAre you sure you want to quit? (Y or N)");
         Scanner inFile = new Scanner(System.in);

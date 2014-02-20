@@ -16,8 +16,7 @@ public class GameMenuView {
         {"D", "Display the board"},
         {"N", "New Game"},
         {"R", "Report stastics"},
-        {"P", "Change game preferences"},
-        {"A", "Add list of players names"},
+        {"P", "Change game preferences"},        
         {"H", "Help"},
         {"Q", "QUIT"}
     };
@@ -57,10 +56,7 @@ public class GameMenuView {
                     break;
                 case "P":
                     gamePreferencesMenuView.getInput();
-                    break;
-                case "A":
-                    gameMenuControl.displayPlayers();
-                    break;
+                    break;                
                 case "H":
                     gameMenuControl.displayHelpMenu();
                     break;
