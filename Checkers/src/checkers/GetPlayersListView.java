@@ -19,7 +19,7 @@ public class GetPlayersListView {
         Scanner inFile = new Scanner(System.in);
         
         System.out.println("\n\t---------------------------------------------------------------");
-        System.out.println("\t Enter a list of names of those who will be playing TicTacToe. ");
+        System.out.println("\t Enter a list of names of those who will be playing Checkers. ");
         System.out.println("\t---------------------------------------------------------------");
         
         int playerIndex = 0;
