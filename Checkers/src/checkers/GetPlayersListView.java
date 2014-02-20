@@ -6,15 +6,14 @@ import java.util.Scanner;
  * @author Angela
  */
 public class GetPlayersListView {
+    
   public String[] listOfPlayerNames = new String[10];
     
     public GetPlayersListView() {
         
-    }
+    }    
     
-    
-    public String[] getInput() {
-        
+    public String[] getInput() {        
         
         Scanner inFile = new Scanner(System.in);
         
@@ -70,22 +69,22 @@ public class GetPlayersListView {
     }
     
     public String[] sortList(String[] names) {
+        // Exchange sort function
         String tmpName;
-        boolean notDone = true;
-        while(notDone) {
+        int j;
+        
+        for (int i = 0; i < names.length-1; i++) {
+            for (j = i + 1; j < names.length; j++) {
+                if (names[i].compareToIgnoreCase(names[j]) > 0) {           
             
-            notDone = false; // assume that you done
-            for (int i = 0; i < names.length-1; i++) {
-                int compareResult = names[i].compareTo(names[i+1]);
-                if (compareResult > 0) {
                     // swap names
                     tmpName = names[i];
-                    names[i] = names[i+1];
-                    names[i+1] = tmpName;
-                    notDone = true;
-                }
-            }
+                    names[i] = names[j];
+                    names[j] = tmpName;                    
+                
+            }                
         }
+    }
 
         return names;
     }
