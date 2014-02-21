@@ -6,6 +6,9 @@ public class Statistics {
     
     double wins = 5;
     double losses = 8;
+    int moves[] = {24, 52, 29, 33, 41, 27, 46 };
+    int sum = 0;
+    double ave = 0;
             
     public Statistics(){
     }
@@ -31,6 +34,13 @@ public class Statistics {
                                 + "\nPercent of Losses = " + (int)percentOfLosses
                                 + "\nPercent of Wins = " + (int)percentOfWins);
         }
+        
+        for(int x : moves) {
+            sum += x;
+            ave = sum/moves.length;
+        }
+        System.out.println("The average number of moves per game is " + ave);
+
     }
     
 }
