@@ -9,10 +9,11 @@ public class GameMenuControl {
     private Game game;    
     
     Board board = new Board();       
-    BoardView boardView = new BoardView();  
+    BoardView boardView = new BoardView();    
 
     
     public GameMenuControl() {
+        
     }    
  
     public void displayBoard() {        
@@ -21,8 +22,8 @@ public class GameMenuControl {
     }
     
     public void startNewGame() {
-        this.game.start();
-        this.displayBoard();
+        
+        System.out.println("Start New Game");
     }
   
 

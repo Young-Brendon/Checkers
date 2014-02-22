@@ -47,9 +47,7 @@ public class GameMenuView {
                     gameMenuControl.displayBoard();
                     break;
                 case "N":
-                    System.out.println("Start a new game");
-                    
-                    //gameMenuControl.startNewGame();
+                    gameMenuControl.startNewGame();
                     break;
                 case "R":                    
                     gameMenuControl.displayStatistics();

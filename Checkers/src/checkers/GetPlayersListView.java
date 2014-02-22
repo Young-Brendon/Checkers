@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class GetPlayersListView {
     
-  public String[] listOfPlayerNames = new String[10];
+    public String[] listOfPlayerNames = new String[10];
     
     public GetPlayersListView() {
         

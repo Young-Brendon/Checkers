@@ -36,10 +36,10 @@ public class MainMenuView {
             
             switch (command) {
                 case "E":
-                    mainMenuControl.displayPlayers();
+                    mainMenuControl.createPlayerList();
                     break;
                 case "S":                   
-                    gameMenuView.getInput();
+                    mainMenuControl.startGame(2);
                     break;
                 case "H":
                     this.mainMenuControl.displayHelpMenu();

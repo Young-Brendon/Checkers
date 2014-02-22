@@ -1,12 +1,13 @@
 
 package checkers;
 
-import java.util.Scanner;
-
 /**
  * * @author Angela and Brendon
  */
 public class Checkers {
+    
+    private static Player[] playerList;
+    
       String welcomeMsg =
               "\n\t***********************************************************************"
             + "\n\t* Welcome to the game of Checkers!                                    *"
@@ -17,11 +18,19 @@ public class Checkers {
             + "\n\t* Good Luck!!!                                                        *"
             + "\n\t***********************************************************************"
             + "\n";
-      String name1;
-      String name2;
+      
       
 
     public Checkers(){
+        
+    }
+    
+    public static Player[] getPlayerList() {
+        return playerList;
+    }
+    
+    public static void setPlayerList(Player[] playerList) {
+        Checkers.playerList = playerList;
     }
    
     public static void main(String[] args) {
@@ -36,17 +45,5 @@ public class Checkers {
     
     private void display() {
         System.out.println(this.welcomeMsg);
-    }
-    
-    private void getName() {
-            Scanner input = new Scanner(System.in);
-            System.out.println("Player 1 - Enter your name: ");
-            this.name1 = input.next();
-            System.out.println("Player 2 - Enter your name");
-            this.name2 = input.next();
-    }
-    //public void displayHelp(){
-        //System.out.println("\nWelcome " + name1 + " and " + name2 + "!\n");
-    //}
-  
+    }  
 }
