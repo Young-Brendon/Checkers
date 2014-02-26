@@ -6,16 +6,14 @@ import java.util.Scanner;
  */
 public class MainMenuView {
     
-    MainMenuControl mainMenuControl = new MainMenuControl();
-    GameMenuView gameMenuView = new GameMenuView();
-    
     private static final String[][] menuItems = {
         {"E", "Enter players names"},
         {"S", "Start game"},
         {"H", "Help"},
-        {"X", "Exit Tic-Tac-Toe"}
+        {"X", "Exit Checkers"}
     };  
     
+    MainMenuControl mainMenuControl = new MainMenuControl();
     
     public MainMenuView() {  
         

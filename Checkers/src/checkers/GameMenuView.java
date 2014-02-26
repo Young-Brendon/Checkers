@@ -5,23 +5,23 @@ import java.util.Scanner;
 /**
  * @author Angela
  */
-public class GameMenuView {   
+public class GameMenuView {
     
-        GameMenuControl gameMenuControl = new GameMenuControl();
-        GamePreferencesMenuView gamePreferencesMenuView = new GamePreferencesMenuView();
-        GetLocationView getLocationView = new GetLocationView();
+    private Game game;    
+    private GameMenuControl gameMenuControl;
         
     private final static String[][] menuItems = {
         {"T", "Take your turn"},
         {"D", "Display the board"},
-        {"N", "New Game"},
-        {"R", "Report stastics"},
-        {"P", "Change game preferences"},        
+        {"N", "New Game"},        
         {"H", "Help"},
         {"Q", "QUIT"}
     };
 
-    public GameMenuView() {        
+    public GameMenuView(Game game) {
+    
+        this.game = game;
+        this.gameMenuControl = new GameMenuControl(game);
                 
     }   
     
@@ -38,23 +38,15 @@ public class GameMenuView {
             command = command.trim().toUpperCase();
             
             switch (command) {
-                case "T":
-                    System.out.println("Take a turn");
-                    getLocationView.getInput();
-                    //this.gameMenuControl.takeTurn();
+                case "T":                    
+                    this.gameMenuControl.takeTurn();
                     break;
                 case "D":                    
                     gameMenuControl.displayBoard();
                     break;
                 case "N":
                     gameMenuControl.startNewGame();
-                    break;
-                case "R":                    
-                    gameMenuControl.displayStatistics();
-                    break;
-                case "P":
-                    gamePreferencesMenuView.getInput();
-                    break;                
+                    break;                                
                 case "H":
                     gameMenuControl.displayHelpMenu();
                     break;

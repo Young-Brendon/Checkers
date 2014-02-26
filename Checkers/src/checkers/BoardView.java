@@ -6,59 +6,35 @@ package checkers;
  */
 public class BoardView {    
    
-    int row = 8;
-    int column = 8;
     
-    public BoardView() {           
+    String[][] board = {
+        {"\t    1   2   3   4   5   6   7   8   "},
+        {"\t  |-------------------------------|"},
+        {"\t1 |   ","| R ","|   ","| R ","|   ","| R ","|   ","| R |"},
+        {"\t  |-------------------------------|"},
+        {"\t2 | R ","|   ","| R ","|   ","| R ","|   ","| R ","|   |"},
+        {"\t  |-------------------------------|"},
+        {"\t3 |   ","| R ","|   ","| R ","|   ","| R ","|   ","| R |"},
+        {"\t  |-------------------------------|"},
+        {"\t4 |   ","|   ","|   ","|   ","|   ","|   ","|   ","|   |"},
+        {"\t  |-------------------------------|"},
+        {"\t5 |   ","|   ","|   ","|   ","|   ","|   ","|   ","|   |"},
+        {"\t  |-------------------------------|"},
+        {"\t6 |   ","| B ","|   ","| B ","|   ","| B ","|   ","| B |"},
+        {"\t  |-------------------------------|"},
+        {"\t7 | B ","|   ","| B ","|   ","| B ","|   ","| B ","|   |"},
+        {"\t  |-------------------------------|"},
+        {"\t8 |   ","| B ","|   ","| B ","|   ","| B ","|   ","| B |"},
+        {"\t  |-------------------------------|"},
+    };
     
-    }
-    
-    void displayBoard(){
+    void displayBoard() {
         
-        this.printHeadRow();
-        this.printDividerRow();
-        for (int i = row; i > 0; i--) {           
-            this.printRow();             
-            this.printDividerRow();
-            System.out.print(i);
-        }
-          
-        System.out.println();
-    }
-
-    private void printHeadRow() {       
-
-        System.out.print("\n\t      1   ");
-        int columnsInRow = column;
-        
-        for (int i = 1; i < columnsInRow - 1; i++) {
-            int col = i + 1;
-            System.out.print("  " + col + "   ");
-        }
-        System.out.print(" " + columnsInRow + "   ");
-    }
-
-    private void printDividerRow() {       
-
-        System.out.print("\n\t  |------");
-        int columnsInRow = column;
-        
-        for (int i = 1; i < columnsInRow - 1; i++) {
-            System.out.print("------");
-        }
-        System.out.print("-----|");
-    }
-
-    private void printRow() {
-        
-        // print first cell
-        String letter = " ";
-        
-        System.out.print("\n\t       " + " |  " + letter + "  |");
-        // print remaining cells in row
-        for (int i = 1; i < column-2; i++) {
-            
-            System.out.print("  " + letter + "  |");
+        for (String[] row: board) {
+            System.out.print("\n");
+            for (String p1: row) {  
+                System.out.print(p1);        
+            } 
         }
     }
 

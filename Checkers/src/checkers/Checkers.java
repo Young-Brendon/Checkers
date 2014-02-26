@@ -33,8 +33,8 @@ public class Checkers {
         Checkers.playerList = playerList;
     }
    
-    public static void main(String[] args) {
-             
+    public static void main(String[] args) {        
+        
         Checkers checkers = new Checkers();       
         checkers.display();
         

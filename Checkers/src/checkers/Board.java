@@ -1,72 +1,126 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 package checkers;
 
-import java.util.Scanner;
+import java.awt.Point;
+
 
 /**
-  * @author Brendon Young
+ *
+ * @author BDawg
  */
 public class Board {
     
-    int rows;
-    int columns;
-    Location[][] boardLocations;
-    int rowCount;
-    int columnCount;
-      
-public Board() {
-}
-          public int getRows() {
-            Scanner input = new Scanner(System.in);
-            System.out.println("Enter an even number of rows from 6 to 10: ");
-            rows = input.nextInt();
-            if(rows < 6){
-               System.out.println("\n\tThe number of rows must be "
-                    + "\n\t an even number from 6 to 10.");
-            return -999;
-            }
-            if(rows > 10){
-               System.out.println("\n\tThe number of rows must be "
-                    + "\n\t an even number from 6 to 10.");
-            return -999;
-            }
-            if((rows%2)!=0){
-               System.out.println("\n\tThe number of rows must be "
-                    + "\n\t an even number from 6 to 10.");
-            return -999;
-            }
-        return 0;
-     }
-          public int getColumns() {
-            Scanner input = new Scanner(System.in);
-            System.out.println("Enter an even number of columns from 6 to 10: ");
-            columns = input.nextInt();
-            if(columns < 6){
-               System.out.println("\n\tThe number of columns must be "
-                    + "\n\t an even number from 6 to 10.");
-            return -999;
-            }
-            if(columns > 10){
-               System.out.println("\n\tThe number of columns must be "
-                    + "\n\t an even number from 6 to 10.");
-            return -999;
-            }
-            if((columns%2)!=0){
-               System.out.println("\n\tThe number of columns must be "
-                    + "\n\t an even number from 6 to 10.");
-            return -999;
-            }
-        return 0;
-     }
-
-    public void displaySize() {
-        System.out.println("\n\tThe board is " + (int)rows + " by " 
-                           + (int)columns + " in size.");
-    }
-    public void displayBoardSize() {
-        double boardSize = columns * rows;
-        System.out.println("\n\tThe board has " + (int)boardSize + " squares.");
-    }
-
+    public int rowCount = 8;
+    public int columnCount = 8;    
+    public Player[][] boardLocations;
     
+    public Board() {
+    }
+    
+    public Board(int noRows, int noColumns) {
+        
+        this.boardLocations = new Player[noRows][noColumns];
+    }
+    
+    public Player[][] getBoardLocations() {
+        return boardLocations;
+    }
+    
+    public void setBoardLocations(Player[][] boardLocations) {
+        this.boardLocations = boardLocations;
+    }
+    
+    public Player getPlayerAt(int row, int column) {
+        return this.boardLocations[row][column];
+    }
+    
+    public void clearTheBoard() {
+        for (int i = 0; i < this.boardLocations.length; i++) {
+            Player[] rowlocations = this.boardLocations[i];
+            for (int j = 0; j < rowlocations.length; j++) {
+                rowlocations[j] =  null;
+            }
         }
+    }
+    
+    public boolean locationOccupied(Point location) {
+        int row = location.x;
+        int column = location.y;
+        
+        if (this.boardLocations[row][column] != null) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    public void occupyLocation(Player player, int row, int column)  {        
+
+         Player playerAtLocation = this.boardLocations[row][column];
+
+        if (playerAtLocation != null) { // location already occupied
+            new CheckersError().displayError("This location is already occupied. "
+                    + "Try a different location.");
+        }
+        this.boardLocations[row][column] = player;
+    }
+    
+    public class Location {
+
+        private int row;
+        private int column;
+        private String value;
+        private Player player;
+
+        Location() {
+        }
+
+        int getRow() {
+            return row;
+        }
+
+        void setRow(int row) {
+            this.row = row;
+        }
+
+        int getColumn() {
+            return column;
+        }
+
+        void setColumn(int column) {
+            this.column = column;
+        }
+
+        String getValue() {
+            return value;
+        }
+
+        void setValue(String value) {
+            this.value = value;
+        }
+
+        Player getPlayer() {
+            return player;
+        }
+
+        public void setPlayer(Player player) {
+            this.player = player;
+        }
+
+        String[] getCoordinates() {
+            String[] coordinates = new String[2];
+            Integer intRow = this.getRow() + 1;
+            Integer intColumn = this.getColumn() + 1;
+            coordinates[0] = intRow.toString();
+            coordinates[1] = intColumn.toString();
+            return coordinates;
+        }
+    }
+    
+}

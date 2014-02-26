@@ -12,10 +12,7 @@ public class GetLocationView {
     public GetLocationView(Game game) {
         this.game = game;
     }
-
-    GetLocationView() {
-        
-    }
+    
     
     /*
 * Prompt the user to enter the location (row and column) to place their
@@ -83,25 +80,25 @@ public class GetLocationView {
             int row = Integer.parseInt(coordinates[0]);
             int column = Integer.parseInt(coordinates[1]);
                      
-            //Board board = this.game.board; // get the game board
+            Board board = this.game.board; // get the game board
             
             // Check for invalid row and column entered
-            //if (row < 1 || row > board.rowCount ||
-                //column < 1 || column > board.columnCount) {
-                //new CheckersError().displayError(
-                        //"Enter a valid number of rows and columns from 3 to 10. Try again.");
-                //continue;
-            //}
+            if (row < 1 || row > board.rowCount ||
+                column < 1 || column > board.columnCount) {
+                new CheckersError().displayError(
+                        "Enter a valid number of rows and columns from 3 to 10. Try again.");
+                continue;
+            }
             
             // create a Point object to store the row and column coordinates in
             location = new Point(row-1, column-1);
             
             // check to see if the location entered is already occupied
-            //if ( board.boardLocations[row-1][column-1].player != null ) {
-                //new CheckersError().displayError(
-                    //"The current location is taken. Select another location");
-                //continue;
-            //}
+            if (board.locationOccupied(location)) {
+                new CheckersError().displayError(
+                    "The current location is taken. Select another location");
+                continue;
+            }
 
             valid = true; // a valid location was entered
             System.out.println(row);  System.out.println(column);
