@@ -10,54 +10,41 @@ public class Player {
     public String marker;
     public String playerType;
     public long wins = 0;
-    public long losses = 0;    
+    public long losses = 0; 
+    public long ties = 0;
     
-    public Player(){
-        
+    public Player() {
     }
-    
+
     public Player(String playerType, String marker) {
         this.playerType = playerType;
         this.marker = marker;
     }
     
-    public String getName() {
-        return name;
-    }
     
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getPlayerType() {
-        return playerType;
-    }
-
-    public void setPlayerType(String playerType) {
-        this.playerType = playerType;
-    }
     
-    public String getMarker() {
-        return marker;
+    
+    private double getWinningPercentage() {
+        double totalScore = this.wins + this.losses + ties;
+        
+        if (totalScore ==  0) {
+            return 0;
+        }
+        
+        double winLossRatio = this.wins / totalScore;
+        return winLossRatio*100;
     }
 
-    public void setMarker(String marker) {
-        this.marker = marker;
-    }    
-
-    public long getWins() {
-        return wins;
+    public String getPlayerStastics() {
+        String playerStatistics = 
+                this.name + " has won "
+                + this.getWinningPercentage() + "% of the games."
+                + "\n\t" + this.wins + " wins, "
+                + this.losses + " losses and "
+                + ties + " ties.";
+        
+        return playerStatistics;
     }
 
-    public void setWins(long wins) {
-        this.wins = wins;
-    }
-
-    public long getLosses() {
-        return losses;
-    }
-
-    public void setLosses(long losses) {
-        this.losses = losses;
-    }
-   
+    
 }

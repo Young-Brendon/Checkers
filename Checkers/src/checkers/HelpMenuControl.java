@@ -42,7 +42,7 @@ public class HelpMenuControl {
         System.out.println(
                 "\tA player takes their turn by moving a marker diagonally one space "
                 + "\n\ton the board. A player may jump over the opposing player's "
-                + "\n\tmarkers as many times at possible as long as they continue to "
+                + "\n\tmarkers as many times as possible as long as they continue to "
                 + "\n\tjump forward in a diagonal direction without skipping a square."
                 );
         displayHelpBorder();

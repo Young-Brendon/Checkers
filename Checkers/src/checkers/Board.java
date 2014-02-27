@@ -78,7 +78,7 @@ public class Board {
         private String value;
         private Player player;
 
-        Location() {
+        Location() {    
         }
 
         int getRow() {
