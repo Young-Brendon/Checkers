@@ -11,7 +11,8 @@ public class GameMenuControl {
     private Game game;            
     private Board board;
     private GetLocationView getLocationView;
-    private BoardView boardView = new BoardView();
+    BoardView boardView = new BoardView();
+    HelpMenuView helpMenuView = new HelpMenuView();
     
     public GameMenuControl(Game game) {
         
@@ -20,29 +21,9 @@ public class GameMenuControl {
     
     public void takeTurn(){
         
-        int returnValue = 1;
         
-        if (!this.game.status.equals(Game.NEW_GAME)  && !this.game.status.equals(Game.PLAYING)) {
-            new CheckersError().displayError("You must start a new game first.");
-            return;
-        }
-        
-        returnValue = this.regularPlayerTurn(this.game.currentPlayer);            
-            if (returnValue < 0  || this.gameOver(this.game.currentPlayer)) {
-                return;
-            }
-            this.displayBoard();
-            this.alternatePlayers(); // alternate players             
-            
-            // other player takes turn 
-            returnValue = this.regularPlayerTurn(this.game.currentPlayer);            
-            if (returnValue < 0  || this.gameOver(this.game.currentPlayer)) {
-                return;
-            }
-            this.displayBoard();
-            this.alternatePlayers(); // alternate players        
-        
-        
+        boardView.displayBoard();
+        boardView.selectPiece();
     }
     
     public void displayBoard() {
@@ -52,11 +33,11 @@ public class GameMenuControl {
     
     public void startNewGame() {        
         
-        this.displayBoard();
+        boardView.displayBoard();
     }
      
     public void displayHelpMenu() {
-        HelpMenuView helpMenuView = new HelpMenuView();
+        
         helpMenuView.getInput();
     }
     

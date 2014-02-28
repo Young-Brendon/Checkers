@@ -82,12 +82,16 @@ public void movePiece(){
     int y1 = y2-1;
     int x1 = x2-1;
     
-       if(((board[(x1)][(y1)]) != "R") || ((board[(x1)][(y1)]) != "B") || ((board[(x1)][(y1)]) != "-")) {
-            //if(player=playerA){ ---- code to check for correct player
-                board[(x1)][(y1)]="M";
-                displayBoard();
-            //}
+       if((board[(x1)][(y1)]) != "R") { //|| ((board[(x1)][(y1)]) != "B") || ((board[(x1)][(y1)]) != "-")) {
+           board[(x1)][(y1)]="B";
+           displayBoard();
+            
         }
+       
+       else if (((board[(x1)][(y1)]) != "B")){
+           board[(x1)][(y1)]="R";
+           displayBoard();
+       }
             else System.out.println("Invalid selection. Please try again.");
         
 
