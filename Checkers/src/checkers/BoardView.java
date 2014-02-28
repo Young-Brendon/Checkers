@@ -23,7 +23,7 @@ public class BoardView {
          /*adds the other characters to display the board.*/
           System.out.println("|--------------Checkers-------------|");
           System.out.println("|-----------------------------------|");
-          System.out.println("| - | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |"); 
+          System.out.println("|   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |"); 
           System.out.println("|-----------------------------------|");
         
        for (int row=0;row<this.board.length;row++) {
@@ -37,7 +37,7 @@ public class BoardView {
           System.out.println("|-----------------------------------|");
         
         }
-        this.selectPiece();
+        
     }
     
     
@@ -46,10 +46,10 @@ public void selectPiece(){
     Scanner input = new Scanner(System.in);
   
     //System.out.println("Please Select a piece According to your color you are");
-    System.out.print("Type in the Row for the piece: ");
+    System.out.print("Type in the Column for the piece: ");
         input = new Scanner(System.in);
             String y = input.next();
-    System.out.print("Type in the Column for the piece: ");
+    System.out.print("Type in the Row for the piece: ");
         input = new Scanner(System.in);
             String x = input.next();
     int y2 = Integer.parseInt(y);
@@ -69,12 +69,12 @@ public void movePiece(){
     /* this doesnt work but it is a start I think its supposed to draw the piece in its new location.*/
  Scanner input = new Scanner(System.in);
 
- System.out.println("Please input Where you would like to move this piece ");
+ System.out.println("Please input where you would like to move this piece.");
  
- System.out.println("Type in the Row for the piece: ");
+ System.out.println("Type in the Column you want to move to: ");
     input = new Scanner(System.in);
        String y = input.next();
- System.out.print("Type in the Column for the piece: ");
+ System.out.print("Type in the Row you want to move to: ");
     input = new Scanner(System.in);
         String x = input.next();
     int y2 = Integer.parseInt(y);

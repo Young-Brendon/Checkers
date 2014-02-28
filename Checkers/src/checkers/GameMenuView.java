@@ -9,7 +9,7 @@ public class GameMenuView {
     
     private Game game;    
     private GameMenuControl gameMenuControl;
-    private BoardView boardView;
+    
         
     private final static String[][] menuItems = {
         {"T", "Take your turn"},
@@ -18,12 +18,12 @@ public class GameMenuView {
         {"H", "Help"},
         {"Q", "QUIT"}
     };
+    
 
     public GameMenuView(Game game) {
     
         this.game = game;
-        this.gameMenuControl = new GameMenuControl(game);
-                
+        this.gameMenuControl = new GameMenuControl(game);              
     }   
     
     public void getInput() {
@@ -39,8 +39,8 @@ public class GameMenuView {
             command = command.trim().toUpperCase();
             
             switch (command) {
-                case "T":                    
-                    boardView.selectPiece();
+                case "T":
+                    gameMenuControl.takeTurn();
                     break;
                 case "D":                    
                     gameMenuControl.displayBoard();

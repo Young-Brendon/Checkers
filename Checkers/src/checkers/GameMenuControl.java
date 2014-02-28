@@ -22,8 +22,7 @@ public class GameMenuControl {
         
         int returnValue = 1;
         
-        if (!this.game.status.equals(Game.NEW_GAME)  && 
-            !this.game.status.equals(Game.PLAYING)) {
+        if (!this.game.status.equals(Game.NEW_GAME)  && !this.game.status.equals(Game.PLAYING)) {
             new CheckersError().displayError("You must start a new game first.");
             return;
         }
@@ -77,8 +76,7 @@ public class GameMenuControl {
 
     private int regularPlayerTurn(Player player) {
         
-        if (!this.game.status.equals(Game.NEW_GAME)  &&
-            !this.game.status.equals(Game.PLAYING)) {
+        if (!this.game.status.equals(Game.NEW_GAME) && !this.game.status.equals(Game.PLAYING)) {
             new CheckersError().displayError(
                     "There is no active game. You must start a new game before "
                     + "you can take a turn");
