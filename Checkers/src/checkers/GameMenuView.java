@@ -9,6 +9,7 @@ public class GameMenuView {
     
     private Game game;    
     private GameMenuControl gameMenuControl;
+    private BoardView boardView;
         
     private final static String[][] menuItems = {
         {"T", "Take your turn"},
@@ -39,7 +40,7 @@ public class GameMenuView {
             
             switch (command) {
                 case "T":                    
-                    this.gameMenuControl.takeTurn();
+                    boardView.selectPiece();
                     break;
                 case "D":                    
                     gameMenuControl.displayBoard();
@@ -71,6 +72,7 @@ public class GameMenuView {
             System.out.println("\t " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
+        
     }
   
 }    
