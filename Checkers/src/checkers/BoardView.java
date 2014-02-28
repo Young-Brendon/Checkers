@@ -7,7 +7,7 @@ import java.util.Scanner;
   * @author Cody
  */
 public class BoardView {    
- 
+ /*this initialize's the default layout of the board*/ 
     String[][] board = {
         {"-","R","-","R","-","R","-","R"},
         {"R","-","R","-","R","-","R","-"},
@@ -20,6 +20,7 @@ public class BoardView {
     };
     
     void displayBoard() {
+         /*adds the other characters to display the board.*/
           System.out.println("|--------------Checkers-------------|");
           System.out.println("|-----------------------------------|");
           System.out.println("| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |"); 
@@ -39,6 +40,7 @@ public class BoardView {
         this.selectPiece();
     }
 void selectPiece(){
+    /*this selects a piece according to the Coodranates given still needs alot of work*/
     Scanner input = new Scanner(System.in);
   
     System.out.println("Please Select a piece According to your color you are");
@@ -67,6 +69,7 @@ void selectPiece(){
 
 }
 void movePiece(){
+    /* this doesnt work but it is a start I think its supposed to draw the piece in its new location.*/
  Scanner input = new Scanner(System.in);
  System.out.print("Please indicate your color R or B");
  String color =input.next();
