@@ -38,7 +38,7 @@ public class GameMenuControl {
      
     public void displayHelpMenu() {
         
-        helpMenuView.getInput();
+        helpMenuView.getInput(null);
     }
     
     private boolean gameOver(Player player) {

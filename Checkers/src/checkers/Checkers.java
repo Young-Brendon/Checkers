@@ -1,10 +1,14 @@
 
 package checkers;
 
+import java.util.Scanner;
+
 /**
  * * @author Angela and Brendon
  */
 public class Checkers {
+    
+    private static final Scanner inFile = new Scanner(System.in);
     
     private static Player[] playerList;
     
@@ -23,6 +27,10 @@ public class Checkers {
 
     public Checkers(){
         
+    }
+    
+    public static Scanner getInputFile() {
+        return Checkers.inFile;
     }
     
     public static Player[] getPlayerList() {

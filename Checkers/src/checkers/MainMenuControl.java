@@ -82,7 +82,7 @@ public class MainMenuControl {
     
     public void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.getInput();
+        helpMenu.getInput(null);
     }
     
 }
