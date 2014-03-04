@@ -47,7 +47,7 @@ public class Checkers {
         checkers.display();
         
         MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.getInput();      
+        mainMenuView.getInput(null);     
         
     }
     

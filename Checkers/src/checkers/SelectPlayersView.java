@@ -48,8 +48,8 @@ public class SelectPlayersView {
 
     public Player getPlayer() {
         
-        Player player = null;
-        Scanner inFile = new Scanner(System.in);
+        Scanner inFile = Checkers.getInputFile();
+        Player player = null;        
         
         boolean valid = false;
         while (!valid) {

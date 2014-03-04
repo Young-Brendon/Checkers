@@ -89,19 +89,6 @@ public class Game {
         
     }
 
-    public void recordTie() {
-        long player1Ties = this.playerA.ties;
-        player1Ties++;
-        this.playerA.ties = player1Ties;
-        long player2Ties = this.playerB.ties;
-        player2Ties++;
-        this.playerB.ties = player2Ties;
-
-        this.status = Game.TIE;
-       
-    }
-
-
 
     public String getWinningMessage () {
         return "\n\t*******************************************************************************"
@@ -109,10 +96,5 @@ public class Game {
              + "\n\t Sorry " + loser.name + ", You are the loser." 
              + "\n\t*******************************************************************************";
     }
-
-    public String getTiedMessage () {
-       return "\n\t*******************************************************************************"
-             + "\n\t The game is a tie. Better luck next time!" 
-             + "\n\t*******************************************************************************";
-    }
+    
 }

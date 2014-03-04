@@ -18,19 +18,56 @@ public class MainMenuView {
     public MainMenuView() {  
         
         
-    } 
+    }
     
-    public void getInput() {
+    public final void display() {
+        System.out.println("\n\t===============================================================");
+        System.out.println("\tEnter the letter associated with one of the following commands:");
 
+        for (int i = 0; i < MainMenuView.menuItems.length; i++) {
+            System.out.println("\t " + menuItems[i][0] + "\t" + menuItems[i][1]);
+        }
+        System.out.println("\t===============================================================\n");
+    }
+    
+    private boolean validCommand(String command) {
+        String[][] items = MainMenuView.menuItems;
+
+        for (String[] item : MainMenuView.menuItems) {
+            if (item[0].equals(command)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    protected final String getCommand() {
+
+        Scanner inFile = Checkers.getInputFile();
         String command;
-        Scanner inFile = new Scanner(System.in);
+        boolean valid = false;
+        do {
+            command = inFile.nextLine();
+            command = command.trim().toUpperCase();
+            valid = validCommand(command);
+            if (!validCommand(command)) {
+                new CheckersError().displayError("Invalid command. Please enter a valid command.");
+                continue;
+            }
+                
+        } while (!valid);
+        
+        return command;
+    }
+    
+    public String getInput(Object object) {
+        
+        String gameStatus = Game.PLAYING;        
         
         do {
             this.display(); // display the menu
-
-            // get commaned entered
-            command = inFile.nextLine();
-            command = command.trim().toUpperCase();
+            
+            String command = this.getCommand();            
             
             switch (command) {
                 case "E":
@@ -43,24 +80,13 @@ public class MainMenuView {
                     this.mainMenuControl.displayHelpMenu();
                     break;
                 case "X":
-                    break;
-                default:
-                    new CheckersError().displayError("Invalid command. Please enter a valid command.");
-                    continue;
+                    return Game.EXIT;               
             }
-        } while (!command.equals("X"));
+        } while (!gameStatus.equals(Game.EXIT));
 
-        return;
+        return Game.EXIT;
     }    
     
-   public final void display() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-
-        for (int i = 0; i < MainMenuView.menuItems.length; i++) {
-            System.out.println("\t " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\t===============================================================\n");
-    }
+   
     
 }
