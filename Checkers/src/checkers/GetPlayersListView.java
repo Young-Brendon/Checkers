@@ -15,7 +15,7 @@ public class GetPlayersListView {
     
     public String[] getInput() {        
         
-        Scanner inFile = new Scanner(System.in);
+        Scanner inFile = Checkers.getInputFile();
         
         System.out.println("\n\t---------------------------------------------------------------");
         System.out.println("\t Enter a list of names of those who will be playing Checkers. ");
@@ -68,7 +68,7 @@ public class GetPlayersListView {
         return newNameList;
     }
     
-    public String[] sortList(String[] names) {
+    private String[] sortList(String[] names) {
         // Exchange sort function
         String tmpName;
         int j;
@@ -102,7 +102,7 @@ public class GetPlayersListView {
     
     
     
-    public void displayNameList(String[] names) {
+    private void displayNameList(String[] names) {
         System.out.println("\n\t===============================================================");
         System.out.println("\tHere is the list of players in the game");
 

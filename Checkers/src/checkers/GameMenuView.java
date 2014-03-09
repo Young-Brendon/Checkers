@@ -26,10 +26,10 @@ public class GameMenuView {
         this.gameMenuControl = new GameMenuControl(game);              
     }   
     
-    public void getInput() {
+    public final void getInput() {
    
         String command;
-        Scanner inFile = new Scanner(System.in);
+        Scanner inFile = Checkers.getInputFile();
 
         do {
             this.display(); // display the menu
@@ -55,8 +55,7 @@ public class GameMenuView {
                     break;
                 default:
                     new CheckersError().displayError("Invalid command. Please enter a valid command.");
-                    continue;
-            }
+                           }
         } while (!command.equals("Q"));
 
         return;
@@ -64,7 +63,7 @@ public class GameMenuView {
     
 
 
-    public final void display() {
+    private void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 

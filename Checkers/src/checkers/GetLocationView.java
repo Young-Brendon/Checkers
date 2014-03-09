@@ -21,7 +21,7 @@ public class GetLocationView {
 */
     public Point getInput() {
 
-        Scanner inFile = new Scanner(System.in); // get input file
+        Scanner inFile = Checkers.getInputFile(); // get input file
         String[] coordinates;
         Point location = null;
         
