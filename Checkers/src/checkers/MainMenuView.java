@@ -7,13 +7,13 @@ import java.util.Scanner;
 public class MainMenuView {
     
     private static final String[][] menuItems = {
-        {"E", "Enter players names"},
+    //    {"E", "Enter players names"},
         {"S", "Start game"},
         {"H", "Help"},
         {"X", "Exit Checkers"}
     };  
     
-    MainMenuControl mainMenuControl = new MainMenuControl();
+  MainMenuControl mainCommands = new MainMenuControl();
     
     public MainMenuView() {  
         
@@ -70,14 +70,14 @@ public class MainMenuView {
             String command = this.getCommand();            
             
             switch (command) {
-                case "E":
+ /*               case "E":
                     mainMenuControl.createPlayerList();
-                    break;
+                    break; */
                 case "S":                   
-                    mainMenuControl.startGame(2);
+                   this.startGame();
                     break;
                 case "H":
-                    this.mainMenuControl.displayHelpMenu();
+                    this.mainCommands.displayHelpMenu();
                     break;
                 case "X":
                     return Game.EXIT;               
@@ -87,6 +87,29 @@ public class MainMenuView {
         return Game.EXIT;
     }    
     
-   
-    
+  private void startGame() {
+      
+        Game game;
+      
+        game = this.mainCommands.create("TWO_PLAYER");
+        
+        SelectPlayersView selectPlayersView = new SelectPlayersView(game);
+        String status = (String) selectPlayersView.selectPlayers(Checkers.getNameList());
+        if (status.equals(Game.QUIT)) {
+            return;
+        }
+        GameMenuView gameMenu = new GameMenuView(game);
+        gameMenu.getInput(game);
+    }
+ 
+     private String quitGame() {
+        System.out.println("\n\tAre you sure you want to quit? (Y or N)");
+        Scanner inFile = new Scanner(System.in);
+        String answer = inFile.next().trim().toUpperCase();
+        if (answer.equals("Y")) {
+            return Game.EXIT;
+        }
+
+        return Game.PLAYING;
+    }
 }

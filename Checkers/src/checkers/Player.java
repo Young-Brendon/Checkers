@@ -9,11 +9,11 @@ public class Player implements Serializable {
     
     public static final String REGULAR_PLAYER = "REGULAR";
     
-    public String name;
-    public String marker;
-    public String playerType;
-    public long wins = 0;
-    public long losses = 0;    
+    private String name;
+    private String marker;
+    private String playerType;
+    private long wins = 0;
+    private long losses = 0;    
     
     public Player() {
     }
@@ -62,5 +62,26 @@ public class Player implements Serializable {
     public void setMarker(String marker) {
         this.marker = marker;
     }    
-       
+
+private double getWinningPercentage() {
+        double totalScore = this.getWins() + this.getLosses();
+        
+        if (totalScore == 0) {
+            return 0;
+        }
+        
+        double winLossRatio = this.getWins() / totalScore;
+        return winLossRatio*100;
+    }
+
+    public String getPlayerStastics() {
+        String playerStatistics =
+                this.getName() + " has won "
+                + this.getWinningPercentage() + "% of the games."
+                + "\n\t" + this.getWins() + " wins, and "
+                + this.getLosses() + " losses.";
+        
+        return playerStatistics;
+    }    
+    
 }

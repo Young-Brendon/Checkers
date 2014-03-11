@@ -15,85 +15,79 @@ import java.util.Scanner;
 public class SelectPlayersView {
     
     private Game game;
-    private Player[] playerList;
+    private String[] playerNames;
 
     public SelectPlayersView(Game game) {
         this.game = game;
-        playerList = Checkers.getPlayerList();
+        playerNames = Checkers.getNameList();
     }
-
     
-    public boolean getInput() {
+    public String selectPlayers(String[] nameList) {
+        String playersName;
         
         this.displayNameList(); // display the list of names
         
         System.out.println("\tPlease enter the number of the first player.");
-        // get first players name
-        Player player1 = this.getPlayer();
-        if (player1 ==  null) {
-            return false;
-        }            
+            
+            // get first players name
+            playersName = this.getName(Checkers.getNameList());
+            if (playersName == null) {
+                return null;
+            }
+            this.game.getPlayerA().setName(playersName);
 
-        // get the second players name
-        System.out.println("\tPlease enter the number of the second player.");
-        Player player2 = this.getPlayer();
-        if (player2 ==  null) {
-            return false;
-        }       
-        
-        return true;
-        
-    }
-    
+            // get the second players name
+            System.out.println("\tPlease enter the number of the second player.");
+            playersName = this.getName(Checkers.getNameList());
+            if (playersName == null) {
+                return null;
+            }
+            this.game.getPlayerB().setName(playersName);
+                
+        return Game.CONTINUE; 
+        }
+         
 
-    public Player getPlayer() {
-        
+    public String getName(String[] nameList) {
+
         Scanner inFile = Checkers.getInputFile();
-        Player player = null;        
-        
+        String name = null;
         boolean valid = false;
-        while (!valid) {
+        do {
             String strNumber = inFile.nextLine();
             
             if (strNumber.length() < 1) { // was a value entered ?
-                new CheckersError().displayError(
-                        "You must enter a number associated with the name or "
-                        + "enter a \"Q\" to quit. Try again.");
+                new CheckersError().displayError("You must enter a name or enter a \"Q\" to quit. Try again.");
                 continue;
             }
             
-            strNumber = strNumber.trim(); // trim off all blanks from front and back    
+            strNumber = strNumber.trim(); // trim off all blanks from front and back
             strNumber = strNumber.substring(0, 1); // get only the first character
             
             if (strNumber.toUpperCase().equals("Q")) { // quit?
                 return null;
             }
-                    
+                       
             if (!strNumber.matches("[0-9]+")) { // is the value entered a number?
-                new CheckersError().displayError(
-                        "You must enter a number associated with the name or "
-                        + "enter a \"Q\" to quit. Try again.");
+                new CheckersError().displayError("You must enter a number in the list. Try again.");
                 continue;
             }
             
             int numberSelected = Integer.parseInt(strNumber); // convert string to integer
             
             // is the number outside the range of the list of names
-            if (numberSelected < 1  ||  numberSelected > this.playerList.length) {
+            if (numberSelected < 1 || numberSelected > nameList.length) {
                 new CheckersError().displayError(
-                        "Invalid number. You must enter a number between "
-                        + "1 and " + this.playerList.length 
-                        + "or enter a \"Q\" to quit. Try again.");
+                        "You must enter a number from the list. Try again.");
                 continue;
             }
             
-            player = this.playerList[numberSelected-1]; // get the player from the list            
-            
-            valid = true; // valid name selected
+            name = nameList[numberSelected-1]; // get the name from the list
+            valid = true; // names selected successfully
       
         } while (!valid);
         
-        return player;
+        return name;
     }
     
     
@@ -102,12 +96,21 @@ public class SelectPlayersView {
         System.out.println("\tSelect the players who will be playing the game.");
         System.out.println("\tEnter the number of a player below:");
 
-        for (int i = 0; i < this.playerList.length; i++) {
+        for (int i = 0; i < this.playerNames.length; i++) {
             int namePosition = i+1;
-            System.out.println("\t   " + namePosition + "\t" + playerList[i].name);
+            System.out.println("\t " + namePosition + "\t" + playerNames[i]);
         }
         System.out.println("\t===============================================================\n");
-    }   
+    }
+    
+    private boolean alreadyInList(String[] listOfNames, String name) {
+        for (String currentName : listOfNames) {
+            if (currentName.equals(name)) {
+                return true;
+            }
+        }
+        return false;
+    }
     
 }    
 

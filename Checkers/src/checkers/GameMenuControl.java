@@ -2,6 +2,7 @@
 package checkers;
 
 import java.awt.Point;
+import java.util.ArrayList;
 
 /**
   * @author Angela
@@ -10,15 +11,121 @@ public class GameMenuControl {
       
     private Game game;            
     private Board board;
-    private GetLocationView getLocationView;
-    BoardView boardView = new BoardView();
-    HelpMenuView helpMenuView = new HelpMenuView();
+ //   private GetLocationView getLocationView;
+ //   BoardView boardView = new BoardView();
+ //   HelpMenuView helpMenuView = new HelpMenuView();
     
     public GameMenuControl(Game game) {
+        this.game = game;
+        this.board = game.getBoard();
+    }
+           
+    public Point playerTakesTurn(Player player, Point selectedLocation) {
+        Point locationMarkerPlaced = null;
+
+         if (player == null) {
+            new CheckersError().displayError("You must start a new game first.");
+            return null;
+        }
+
+        if (!player.getPlayerType().equals(Player.REGULAR_PLAYER)) {
+            new CheckersError().displayError("GameCommands - takeTurn: invalidPlayerType");
+            return null;
+        }
+
+        if (this.game.getStatus().equals(Game.NEW_GAME)) {
+            this.game.setStatus(Game.PLAYING);
+        }
+        else if (!this.game.getStatus().equals(Game.PLAYING)) {
+            new CheckersError().displayError("There is no active game. "
+                    + "You must start a new game before you can take a turn");
+        }
         
-        this.game = game;       
+       
+        
+        String playerType = player.getPlayerType();
+
+        if (playerType.equals(Player.REGULAR_PLAYER)) {
+            this.regularTurn(player, selectedLocation);
+            locationMarkerPlaced = selectedLocation;
+        }
+
+        this.alternatePlayers();
+
+        return locationMarkerPlaced;
     }
     
+    public void takeTurn(Point selectedLocation) {
+        Player currentPlayer = this.game.getCurrentPlayer();
+        Player otherPlayer = this.game.getOtherPlayer();
+        
+        String playerType = currentPlayer.getPlayerType();
+
+            this.playerTakesTurn(currentPlayer, selectedLocation);
+            this.alternatePlayers();
+        }
+        
+    
+    public void alternatePlayers() {
+        if (this.game.getCurrentPlayer() == this.game.getPlayerA()) {
+            this.game.setCurrentPlayer(this.game.getPlayerB());
+            this.game.setOtherPlayer(this.game.getPlayerA());
+        } else {
+            this.game.setCurrentPlayer(this.game.getPlayerA());
+            this.game.setOtherPlayer(this.game.getPlayerB());
+        }
+    }
+    
+    public boolean regularTurn(Player player, Point location){
+        if (location == null) {
+            new CheckersError().displayError("GameCommands - regularTurn: location is null");
+            return false;
+        }
+        
+        if (game.getStatus().equals(Game.PLAYING) &&
+            game.getStatus().equals(Game.NEW_GAME)) {
+            new CheckersError().displayError("There is no active game. "
+                    + "You must start a new game before you can take a turn");
+            return false;
+        }
+
+        game.setStatus(Game.PLAYING);
+        this.markLocation(player, location);
+        
+        return true;
+    }
+    
+      
+    private void markLocation(Player player, Point location) {
+ 
+        this.game.getBoard().occupyLocation(player, location.x, location.y);
+        
+        this.game.setStatus(Game.PLAYING);
+    }
+    
+    
+    public void startNewGame(Game game) {
+        game.start();
+        this.clearTheBoard();
+    }
+  
+    
+    
+    public void clearTheBoard() {
+        Player[][] locations = this.game.getBoard().getBoardLocations();
+        
+        for (int i = 0; i < this.board.getBoardLocations().length; i++) {
+            Player[] rowlocations = locations[i];
+            for (int j = 0; j < rowlocations.length; j++) {
+                rowlocations[j] = null;
+            }
+        }
+    }
+}  
+    
+    
+    
+/*    
     public void takeTurn(){
         
         
@@ -97,4 +204,4 @@ public class GameMenuControl {
             }
         }
     } 
-}
+}*/

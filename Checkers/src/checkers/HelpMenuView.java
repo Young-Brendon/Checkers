@@ -10,13 +10,11 @@ public class HelpMenuView {
     public static final String BOARD = "BOARD";
     public static final String GAME = "GAME";
     public static final String REAL_PLAYER = "REAL_PLAYER";
-    public static final String COMPUTER_PLAYER = "COMPUTER_PLAYER";
     public static final String LOCATION = "LOCATION";
     public static final String MARKER = "MARKER";
         
     private final static String[][] menuItems = {
         {"B", "The board"},
-        {"C", "A computer player"},
         {"G", "The Checkers game"},
         {"L", "A location"},
         {"M", "A marker"},
@@ -82,9 +80,6 @@ public class HelpMenuView {
                 case "B":
                     this.displayHelp(HelpMenuView.BOARD);
                     break;
-                case "C":
-                    this.displayHelp(HelpMenuView.COMPUTER_PLAYER);
-                    break;
                 case "G":
                     this.displayHelp(HelpMenuView.GAME);
                     break;
@@ -133,11 +128,7 @@ public class HelpMenuView {
                 + "\n\tmarkers as many times as possible as long as they continue to "
                 + "\n\tjump forward in a diagonal direction without skipping a square.";
                 break;
-                
-            case HelpMenuView.COMPUTER_PLAYER: helpText = 
-                "\tA computer based player is not available in this version.";
-                break;
-                
+                 
             case HelpMenuView.LOCATION: helpText = 
                 "\tA location on the board where a player can place their marker";
                 break;
