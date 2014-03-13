@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Checkers {
     
     private static final Scanner inFile = new Scanner(System.in);
+    private static final HelpMenuView helpMenu = new HelpMenuView();
         
     private static String[] nameList;
     
@@ -23,7 +24,7 @@ public class Checkers {
             + "\n\t***********************************************************************"
             + "\n";
       
-      
+   private Player[] players = new Player[10];   
 
     public Checkers(){
         
@@ -32,7 +33,11 @@ public class Checkers {
     public static Scanner getInputFile() {
         return Checkers.inFile;
     }
-        
+    
+    public static HelpMenuView getHelpMenu() {
+        return Checkers.helpMenu;
+    }
+    
     public static String[] getNameList() {
         return nameList;
     }
@@ -41,13 +46,21 @@ public class Checkers {
         Checkers.nameList = nameList;
     }
    
+    public Player[] getPlayers() {
+        return players;
+    }
+    
+    public void setPlayers(Player[] players) {
+        this.players = players;
+    }
+    
     public static void main(String[] args) {        
         
         Checkers checkers = new Checkers();       
         checkers.display();
         Checkers.nameList = checkers.getPlayerNames();
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.getInput(null);
+         mainMenu.executeCommands(null);;
         Checkers.inFile.close();  
     }
     

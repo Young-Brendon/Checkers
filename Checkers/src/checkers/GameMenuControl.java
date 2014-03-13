@@ -28,11 +28,6 @@ public class GameMenuControl {
             return null;
         }
 
-        if (!player.getPlayerType().equals(Player.REGULAR_PLAYER)) {
-            new CheckersError().displayError("GameCommands - takeTurn: invalidPlayerType");
-            return null;
-        }
-
         if (this.game.getStatus().equals(Game.NEW_GAME)) {
             this.game.setStatus(Game.PLAYING);
         }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * * @author Angela
  */
-public class MainMenuView {
+public class MainMenuView extends Menu{
     
     private static final String[][] menuItems = {
     //    {"E", "Enter players names"},
@@ -16,93 +16,49 @@ public class MainMenuView {
   MainMenuControl mainCommands = new MainMenuControl();
     
     public MainMenuView() {  
+        super(MainMenuView.menuItems);    
+    }
+    
+    @Override
+   public String executeCommands(Object object) {
         
-        
-    }
-    
-    public final void display() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-
-        for (int i = 0; i < MainMenuView.menuItems.length; i++) {
-            System.out.println("\t " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\t===============================================================\n");
-    }
-    
-    private boolean validCommand(String command) {
-        String[][] items = MainMenuView.menuItems;
-
-        for (String[] item : MainMenuView.menuItems) {
-            if (item[0].equals(command)) {
-                return true;
-            }
-        }
-        return false;
-    }
-    
-    protected final String getCommand() {
-
-        Scanner inFile = Checkers.getInputFile();
-        String command;
-        boolean valid = false;
+        String gameStatus = Game.PLAYING;
         do {
-            command = inFile.nextLine();
-            command = command.trim().toUpperCase();
-            valid = validCommand(command);
-            if (!validCommand(command)) {
-                new CheckersError().displayError("Invalid command. Please enter a valid command.");
-                continue;
-            }
-                
-        } while (!valid);
-        
-        return command;
-    }
-    
-    public String getInput(Object object) {
-        
-        String gameStatus = Game.PLAYING;        
-        
-        do {
-            this.display(); // display the menu
-            
-            String command = this.getCommand();            
-            
+            this.display();
+
+            // get commaned entered
+            String command = this.getCommand();
             switch (command) {
- /*               case "E":
-                    mainMenuControl.createPlayerList();
-                    break; */
-                case "S":                   
-                   this.startGame();
+                case "S":
+                    this.startGame(2);
                     break;
                 case "H":
-                    this.mainCommands.displayHelpMenu();
+                    HelpMenuView helpMenu = Checkers.getHelpMenu();
+                    helpMenu.executeCommands(null);
                     break;
                 case "X":
-                    return Game.EXIT;               
+                    return Game.EXIT;
             }
         } while (!gameStatus.equals(Game.EXIT));
 
         return Game.EXIT;
-    }    
-    
-  private void startGame() {
-      
-        Game game;
-      
-        game = this.mainCommands.create("TWO_PLAYER");
-        
+    }
+
+    private void startGame(long noPlayers) {
+        Game game;        
+        game = this.mainCommands.create(Game.TWO_PLAYER);
+                
         SelectPlayersView selectPlayersView = new SelectPlayersView(game);
         String status = (String) selectPlayersView.selectPlayers(Checkers.getNameList());
         if (status.equals(Game.QUIT)) {
             return;
         }
+
         GameMenuView gameMenu = new GameMenuView(game);
-        gameMenu.getInput(game);
+        gameMenu.executeCommands(game);
     }
- 
-     private String quitGame() {
+
+    private String quitGame() {
         System.out.println("\n\tAre you sure you want to quit? (Y or N)");
         Scanner inFile = new Scanner(System.in);
         String answer = inFile.next().trim().toUpperCase();
@@ -112,4 +68,5 @@ public class MainMenuView {
 
         return Game.PLAYING;
     }
+    
 }

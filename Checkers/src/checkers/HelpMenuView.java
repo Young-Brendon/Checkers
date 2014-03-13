@@ -1,11 +1,9 @@
 package checkers;
 
-import java.util.Scanner;
-
 /**
 ** @author Angela
 */
-public class HelpMenuView {
+public class HelpMenuView extends Menu {
     
     public static final String BOARD = "BOARD";
     public static final String GAME = "GAME";
@@ -23,10 +21,10 @@ public class HelpMenuView {
     };   
         
     public HelpMenuView() {
-        
+        super(HelpMenuView.menuItems);  
     }
     
-    public final void display() {
+ /*   public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
@@ -66,9 +64,10 @@ public class HelpMenuView {
         
         return command;
         
-    }
+    }*/
     
-    public String getInput(Object object) {
+    @Override
+    public String executeCommands(Object object)  {
         
         String gameStatus = Game.PLAYING;
         

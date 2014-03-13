@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * @author Angela
  */
-public class GameMenuView {
+public class GameMenuView extends Menu {
     
     private Game game;
     private GameMenuControl gameCommands ;
@@ -25,6 +25,7 @@ public class GameMenuView {
     
 
     public GameMenuView(Game game) {
+        super(GameMenuView.menuItems);
         this.gameCommands = new GameMenuControl(game);
         
     }
@@ -37,58 +38,15 @@ public class GameMenuView {
         this.displayBoard = displayBoard;
     }
 
-    public final void display() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-
-        for (int i = 0; i < GameMenuView.menuItems.length; i++) {
-            System.out.println("\t " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\t===============================================================\n");
-    }
-
-    private boolean validCommand(String command) {
-        String[][] items = GameMenuView.menuItems;
-
-        for (String[] item : GameMenuView.menuItems) {
-            if (item[0].equals(command)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    protected final String getCommand() {
-
-        Scanner inFile = Checkers.getInputFile();
-        String command;
-        boolean valid = false;
-        do {
-            command = inFile.nextLine();
-            command = command.trim().toUpperCase();
-            valid = validCommand(command);
-            if (!validCommand(command)) {
-                new CheckersError().displayError("Invalid command. Please enter a valid command.");
-                continue;
-            }
-                
-        } while (!valid);
-        
-        return command;
-    }
-
-
-    
-    public Object getInput(Object object) {
+        @Override
+    public String executeCommands(Object object) {
         this.game = (Game) object;
-        Scanner inFile = Checkers.getInputFile();
 
-     
-        String gameStatus = this.game.getStatus();
+        String gameStatus = Game.CONTINUE;
         do {
      
             this.display();
-     
+            
             // get commaned entered
             String command = this.getCommand();
             switch (command) {
@@ -96,26 +54,26 @@ public class GameMenuView {
                     this.takeTurn();
                     break;
                 case "D":
-                     this.displayBoard.display(game.getBoard());
+                    this.displayBoard.display(game.getBoard());
                     break;
                 case "N":
                     gameCommands.startNewGame(game);
                     this.displayBoard.display(game.getBoard());
                     break;
-                 case "H":
-                    this.displayHelp.display();
+                case "H":
+                    HelpMenuView helpMenu = Checkers.getHelpMenu();
+                    helpMenu.executeCommands(null);
                     break;
                 case "Q":
-                    gameStatus = Game.EXIT;
+                    gameStatus = Game.QUIT;
                     break;
             }
-        } while (!gameStatus.equals(Game.EXIT));
+        } while (!gameStatus.equals(Game.QUIT));
 
         return Game.PLAYING;
     }
     
-    
-   private void takeTurn() {
+     private void takeTurn() {
         String playersMarker;
         Point selectedLocation;
 
@@ -149,9 +107,9 @@ public class GameMenuView {
         System.out.println("\n\n\t" + promptNextPlayer);
 
 
-    }
-
-    private boolean gameOver() {
+    } 
+    
+  private boolean gameOver() {
         boolean done = false;
        if (this.game.getStatus().equals(Game.WINNER)) { // a win?
             System.out.println("\n\n\t" + this.game.getWinningMessage());
@@ -162,7 +120,6 @@ public class GameMenuView {
             this.displayBoard.display(this.game.getBoard());
         }
         
-
         return done;
     }
     
@@ -171,6 +128,6 @@ public class GameMenuView {
          return "It is now your turn "
                     + player.getName();
         }
-      
+     
 }    
 

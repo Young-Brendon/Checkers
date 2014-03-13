@@ -77,7 +77,8 @@ public class Board extends AbstractTableModel {
         for (int i = 0; i < this.boardLocations.length; i++) {
             Player[] rowlocations = this.boardLocations[i];
             for (int j = 0; j < rowlocations.length; j++) {
-                rowlocations[j] =  null;
+                Player location = rowlocations[j];
+                location = null;
             }
         }
     }

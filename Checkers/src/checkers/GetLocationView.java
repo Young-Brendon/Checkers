@@ -12,9 +12,8 @@ public class GetLocationView {
     
         public Object getLocation(Object object) {
         this.game = (Game) object;
-        Scanner inFile = Checkers.getInputFile(); // get input file
-
-        // prompt for the row and column numbers
+        Scanner inFile = Checkers.getInputFile(); 
+        
         System.out.println("\n\n\t" + game.getCurrentPlayer().getName() + " it is your turn."
                 + " Enter a row and column number (For example: 1 3)");
 
@@ -67,7 +66,7 @@ public class GetLocationView {
             if (row < 1 || row > board.getRowCount() ||
                 column < 1 || column > board.getColumnCount()) {
                 new CheckersError().displayError(
-                        "Enter a valid number of rows and columns from 3 to 10. Try again.");
+                        "Enter a valid number of rows and columns. Try again.");
                 continue;
             }
 
