@@ -54,13 +54,20 @@ public class Checkers {
         this.players = players;
     }
     
-    public static void main(String[] args) {        
+    public static void main(String[] args) {
+        
+        //Added for individual assignment
+        RegularPlayer r = new RegularPlayer(1, 2);
+        r.showPlayer();
+        System.out.println("Regular player and computer player added together = " + r.playOrder());
+        //
+        
         
         Checkers checkers = new Checkers();       
         checkers.display();
         Checkers.nameList = checkers.getPlayerNames();
         MainMenuView mainMenu = new MainMenuView();
-         mainMenu.executeCommands(null);;
+        mainMenu.executeCommands(null);
         Checkers.inFile.close();  
     }
     
