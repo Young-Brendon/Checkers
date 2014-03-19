@@ -1,5 +1,14 @@
 
-package checkers;
+package byui.cit260.checkers.views;
+
+import byui.cit260.checkers.views.GetLocationView;
+import checkers.Checkers;
+import checkers.CheckersError;
+import checkers.Game;
+import checkers.GameMenuControl;
+import byui.cit260.checkers.views.HelpMenuView;
+import checkers.Menu;
+import checkers.Player;
 
 import java.awt.Point;
 import java.util.Scanner;

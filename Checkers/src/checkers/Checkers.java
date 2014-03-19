@@ -1,6 +1,8 @@
 
 package checkers;
 
+import byui.cit260.checkers.views.MainMenuView;
+import byui.cit260.checkers.views.HelpMenuView;
 import java.util.Scanner;
 
 /**

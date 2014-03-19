@@ -1,5 +1,8 @@
 
-package checkers;
+package byui.cit260.checkers.views;
+import checkers.Checkers;
+import checkers.CheckersError;
+import checkers.Game;
 
 import java.util.Scanner;
 

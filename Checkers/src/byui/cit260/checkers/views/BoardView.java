@@ -1,5 +1,8 @@
 
-package checkers;
+package byui.cit260.checkers.views;
+import checkers.Board;
+import checkers.Player;
+
 
 /**
   * @author Cody
