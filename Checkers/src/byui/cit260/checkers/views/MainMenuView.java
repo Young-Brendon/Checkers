@@ -2,9 +2,9 @@ package byui.cit260.checkers.views;
 
 import byui.cit260.checkers.views.HelpMenuView;
 import byui.cit260.checkers.views.GameMenuView;
-import checkers.Checkers;
+import byui.cit260.checkers.controls.Checkers;
 import checkers.Game;
-import checkers.MainMenuControl;
+import byui.cit260.checkers.controls.MainMenuControl;
 import checkers.Menu;
 import byui.cit260.checkers.views.SelectPlayersView;
 import java.util.Scanner;

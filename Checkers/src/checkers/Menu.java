@@ -5,6 +5,8 @@
  */
 
 package checkers;
+import byui.cit260.checkers.controls.CheckersError;
+import byui.cit260.checkers.controls.Checkers;
 import java.util.Scanner;
 /**
  *

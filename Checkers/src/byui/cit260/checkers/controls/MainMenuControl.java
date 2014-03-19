@@ -1,4 +1,7 @@
-package checkers;
+package byui.cit260.checkers.controls;
+
+import checkers.Game;
+import checkers.Player;
 
 /**
  * * @author Angela

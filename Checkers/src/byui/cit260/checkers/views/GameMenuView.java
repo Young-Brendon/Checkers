@@ -2,10 +2,10 @@
 package byui.cit260.checkers.views;
 
 import byui.cit260.checkers.views.GetLocationView;
-import checkers.Checkers;
-import checkers.CheckersError;
+import byui.cit260.checkers.controls.Checkers;
+import byui.cit260.checkers.controls.CheckersError;
 import checkers.Game;
-import checkers.GameMenuControl;
+import byui.cit260.checkers.controls.GameMenuControl;
 import byui.cit260.checkers.views.HelpMenuView;
 import checkers.Menu;
 import checkers.Player;

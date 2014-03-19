@@ -6,6 +6,7 @@
 
 package checkers;
 
+import byui.cit260.checkers.controls.CheckersError;
 import java.awt.Point;
 import javax.swing.table.AbstractTableModel;
 

@@ -1,5 +1,5 @@
 
-package checkers;
+package byui.cit260.checkers.controls;
 
 /**
   * @author Angela

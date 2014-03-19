@@ -1,6 +1,9 @@
 
-package checkers;
+package byui.cit260.checkers.controls;
 
+import checkers.Board;
+import checkers.Game;
+import checkers.Player;
 import java.awt.Point;
 import java.util.ArrayList;
 

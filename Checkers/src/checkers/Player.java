@@ -15,11 +15,6 @@ public class Player implements Serializable {
     private long wins = 0;
     private long losses = 0;
     
-    //Added for individual assignment
-    private int regular;
-    private int computer;
-    //
-    
     public Player() {
         
     }
@@ -29,51 +24,7 @@ public class Player implements Serializable {
         this.playerType = playerType;
         this.marker = marker;
         
-    }
-    //Added for individual assignment
-    public Player(int r, int c) {
-        
-        regular = r;
-        computer = c;
     }    
-      
-    //Added for individual assignment    
-    double getRegular() {
-        
-        return regular;
-    }
-    
-    //Added for individual assignment
-    void setRegular(int r) {
-        
-        regular = r;
-    }
-    
-    //Added for individual assignment
-    double getComputer() {
-        
-        return computer;
-    }
-    
-    //Added for individual assignment
-    void setComputer(int c) {
-        
-        computer = c;
-    }
-    
-    //Added for individual assignment
-    void showPlayer() {
-        
-        System.out.println("Player regular = " + regular + ". Player computer = " + computer + ".");
-    }
-    
-    //Added for individual assignment
-    double playOrder() {
-        
-        System.out.println("Overridden method");
-        return 0;
-    }
-    //
         
     public String getName() {
         return name;

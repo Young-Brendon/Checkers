@@ -1,8 +1,9 @@
 
-package checkers;
+package byui.cit260.checkers.controls;
 
 import byui.cit260.checkers.views.MainMenuView;
 import byui.cit260.checkers.views.HelpMenuView;
+import checkers.Player;
 import java.util.Scanner;
 
 /**
@@ -57,13 +58,6 @@ public class Checkers {
     }
     
     public static void main(String[] args) {
-        
-        //Added for individual assignment
-        RegularPlayer r = new RegularPlayer(1, 2);
-        r.showPlayer();
-        System.out.println("Regular player and computer player added together = " + r.playOrder());
-        //
-        
         
         Checkers checkers = new Checkers();       
         checkers.display();
