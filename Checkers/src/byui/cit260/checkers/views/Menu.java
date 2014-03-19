@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author Angela
  */
-public abstract class Menu {
+public class Menu {
 
     private String[][] menuItems = null;
 
@@ -23,10 +23,6 @@ public abstract class Menu {
         this();
         this.menuItems = menuItems;
     }
-    
-    // This is an abstract function. It specifies that all sub-classes must
-    // implement this function.
-    public abstract String executeCommands(Object object);
     
     public String[][] getMenuItems() {
         return menuItems;
@@ -68,7 +64,7 @@ public abstract class Menu {
             command = command.trim().toUpperCase();
             valid = validCommand(command);
             if (!validCommand(command)) {
-                new CheckersError().displayError("Invalid command. Please enter a valid command.");
+                new CheckersError().display("Invalid command. Please enter a valid command.");
                 continue;
             }
                 

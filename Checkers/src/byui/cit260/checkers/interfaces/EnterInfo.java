@@ -8,10 +8,15 @@ package byui.cit260.checkers.interfaces;
 
 /**
  *
- * @author BDawg
+ * @author Brendon
  */
 public interface EnterInfo {
     
-    Object getInput(Object object ); 
+    /**
+     *
+     * @param object
+     * @return
+     */
+    Object getInput(Object object);
     
 }

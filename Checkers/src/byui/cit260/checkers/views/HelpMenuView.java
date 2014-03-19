@@ -2,11 +2,12 @@ package byui.cit260.checkers.views;
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.enums.GameType;
 import byui.cit260.checkers.enums.StatusType;
+import byui.cit260.checkers.interfaces.EnterInfo;
 
 /**
 ** @author Angela
 */
-public class HelpMenuView extends Menu {
+public class HelpMenuView extends Menu implements EnterInfo {
     
     public static final String BOARD = "BOARD";
     public static final String GAME = "GAME";
@@ -70,7 +71,7 @@ public class HelpMenuView extends Menu {
     }*/
     
     @Override
-    public String executeCommands(Object object)  {
+    public String getInput (Object object)  {
         
             
        StatusType gameStatus = StatusType.PLAYING;

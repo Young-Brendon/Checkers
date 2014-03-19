@@ -8,7 +8,7 @@ package byui.cit260.checkers.interfaces;
 
 /**
  *
- * @author BDawg
+ * @author Brendon
  */
 public interface DisplayInfo {
     

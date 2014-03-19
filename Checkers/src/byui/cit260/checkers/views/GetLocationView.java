@@ -4,17 +4,19 @@ import byui.cit260.checkers.models.Board;
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.controls.CheckersError;
 import byui.cit260.checkers.models.Game;
+import byui.cit260.checkers.interfaces.EnterInfo;
 import java.awt.Point;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 /**
  * @author Angela
  */
-public class GetLocationView {
+public class GetLocationView implements EnterInfo {
     
     private Game game;
     
-        public Object getLocation(Object object) {
+    @Override
+    public Object getInput(Object object) {
         this.game = (Game) object;
         Scanner inFile = Checkers.getInputFile(); 
         
@@ -35,7 +37,7 @@ public class GetLocationView {
             coordinates = strRowColumn.split("\\s"); // tokenize the string
 
             if (coordinates.length < 1) { // no coordinates specified
-                new CheckersError().displayError(
+                new CheckersError().display(
                         "You must enter two numbers, a row and the column, "
                         + "or a \"Q\" to quit. Try again.");
                 continue;
@@ -45,7 +47,7 @@ public class GetLocationView {
                 if (coordinates[0].toUpperCase().equals("Q")) { // Quit?
                     return null;
                 } else { // wrong number of values entered.
-                    new CheckersError().displayError(
+                    new CheckersError().display(
                         "You must enter two numbers, a row and the column, "
                         + "or a \"Q\" to quit. Try again.");
                     continue;
@@ -57,7 +59,7 @@ public class GetLocationView {
             if (digitPattern.matcher(coordinates[0]).matches() ||
                 digitPattern.matcher(coordinates[1]).matches()
                ) {
-                new CheckersError().displayError(
+                new CheckersError().display(
                         "You must enter two numbers, a row and the column, "
                         + "or a \"Q\" to quit. Try again.");
                 continue;
@@ -69,7 +71,7 @@ public class GetLocationView {
             Board board = game.getBoard();
             if (row < 1 || row > board.getRowCount() ||
                 column < 1 || column > board.getColumnCount()) {
-                new CheckersError().displayError(
+                new CheckersError().display(
                         "Enter a valid number of rows and columns. Try again.");
                 continue;
             }

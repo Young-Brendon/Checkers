@@ -3,13 +3,14 @@ package byui.cit260.checkers.views;
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.controls.CheckersError;
 import byui.cit260.checkers.models.Game;
+import byui.cit260.checkers.interfaces.EnterInfo;
 import java.util.Scanner;
 import byui.cit260.checkers.enums.StatusType;
 /**
  *
  * @author Angela
  */
-public class EnterNamesView {
+public class EnterNamesView implements EnterInfo{
      
     private Game game;
 
@@ -20,7 +21,8 @@ public class EnterNamesView {
     
     
    
-    public Object getNames(Object object) {
+    @Override
+    public Object getInput(Object object) {
         String playersName = null;
 
             System.out.println("\n\tFirst player:");
@@ -52,7 +54,7 @@ public class EnterNamesView {
             strName = inFile.nextLine();
             strName = strName.trim().toUpperCase();
             if (strName.length() < 1) {
-                new CheckersError().displayError("You must enter a name or enter a \"Q\" to quit. Try again.");
+                new CheckersError().display("You must enter a name or enter a \"Q\" to quit. Try again.");
                 return null;
             }
             strName = strName.trim();

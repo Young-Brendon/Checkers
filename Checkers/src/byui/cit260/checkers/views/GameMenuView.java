@@ -1,21 +1,20 @@
 
 package byui.cit260.checkers.views;
 
-import byui.cit260.checkers.views.GetLocationView;
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.controls.CheckersError;
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.controls.GameMenuControl;
-import byui.cit260.checkers.views.HelpMenuView;
 import byui.cit260.checkers.models.Player;
 import byui.cit260.checkers.enums.StatusType;
+import byui.cit260.checkers.interfaces.EnterInfo;
 
 import java.awt.Point;
 import java.util.Scanner;
 /**
  * @author Angela
  */
-public class GameMenuView extends Menu {
+public class GameMenuView extends Menu implements EnterInfo{
     
     private Game game;
     private GameMenuControl gameCommands ;
@@ -49,7 +48,7 @@ public class GameMenuView extends Menu {
     }
 
         @Override
-    public String executeCommands(Object object) {
+    public String getInput (Object object) {
         this.game = (Game) object;
 
         StatusType gameStatus = StatusType.CONTINUE;
@@ -72,7 +71,7 @@ public class GameMenuView extends Menu {
                     break;
                 case "H":
                     HelpMenuView helpMenu = Checkers.getHelpMenu();
-                    helpMenu.executeCommands(null);
+                    helpMenu.getInput(null);
                     break;
                 case "Q":
                     gameStatus = StatusType.QUIT;
@@ -90,7 +89,7 @@ public class GameMenuView extends Menu {
 
         if (!this.game.getStatus().equals(StatusType.NEW_GAME) &&
             !this.game.getStatus().equals(StatusType.PLAYING)) {
-            new CheckersError().displayError(
+            new CheckersError().display(
                     "There is no active game. You must start a new game before "
                     + "you can take a turn");
             return;
@@ -99,7 +98,7 @@ public class GameMenuView extends Menu {
         Player otherPlayer = this.game.getOtherPlayer();
 
         // get location for first player
-        selectedLocation = (Point) getLocation.getLocation(this.game);
+        selectedLocation = (Point) getLocation.getInput(this.game);
         if (selectedLocation == null) {
             return;
         }

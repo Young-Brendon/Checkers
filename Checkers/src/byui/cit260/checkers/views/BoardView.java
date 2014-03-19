@@ -2,15 +2,17 @@
 package byui.cit260.checkers.views;
 import byui.cit260.checkers.models.Board;
 import byui.cit260.checkers.models.Player;
+import byui.cit260.checkers.interfaces.DisplayInfo;
 
 
 /**
   * @author Cody
  */
-public class BoardView { 
+public class BoardView implements DisplayInfo { 
  
     Board board;
     
+    @Override
     public Object display(Object object) {
         this.board = (Board) object;
         this.printHeadRow();

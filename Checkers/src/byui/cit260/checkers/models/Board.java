@@ -90,7 +90,7 @@ public class Board extends AbstractTableModel {
          Player playerAtLocation = this.boardLocations[row][column];
 
         if (playerAtLocation != null) { // location already occupied
-            new CheckersError().displayError("This location is already occupied. "
+            new CheckersError().display("This location is already occupied. "
                     + "Try a different location.");
         }
         this.boardLocations[row][column] = player;

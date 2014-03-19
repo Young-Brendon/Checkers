@@ -6,13 +6,14 @@ import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.controls.MainMenuControl;
 import byui.cit260.checkers.views.SelectPlayersView;
+import byui.cit260.checkers.interfaces.EnterInfo;
 import java.util.Scanner;
 import byui.cit260.checkers.enums.GameType;
 import byui.cit260.checkers.enums.StatusType;
 /**
  * * @author Angela
  */
-public class MainMenuView extends Menu{
+public class MainMenuView extends Menu implements EnterInfo {
     
     private static final String[][] menuItems = {
     //    {"E", "Enter players names"},
@@ -28,7 +29,7 @@ public class MainMenuView extends Menu{
     }
     
     @Override
-   public String executeCommands(Object object) {
+   public String getInput(Object object) {
         
         StatusType gameStatus = StatusType.PLAYING;
         do {
@@ -42,7 +43,7 @@ public class MainMenuView extends Menu{
                     break;
                 case "H":
                     HelpMenuView helpMenu = Checkers.getHelpMenu();
-                    helpMenu.executeCommands(null);
+                    helpMenu.getInput(null);
                     break;
                 case "X":
                     return StatusType.EXIT;
@@ -63,7 +64,7 @@ public class MainMenuView extends Menu{
         }
 
         GameMenuView gameMenu = new GameMenuView(game);
-        gameMenu.executeCommands(game);
+        gameMenu.getInput(game);
     }
 
     private String quitGame() {

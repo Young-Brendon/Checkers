@@ -56,7 +56,7 @@ public class SelectPlayersView {
             String strNumber = inFile.nextLine();
             
             if (strNumber.length() < 1) { // was a value entered ?
-                new CheckersError().displayError("You must enter a name or enter a \"Q\" to quit. Try again.");
+                new CheckersError().display("You must enter a name or enter a \"Q\" to quit. Try again.");
                 continue;
             }
             
@@ -68,7 +68,7 @@ public class SelectPlayersView {
             }
                        
             if (!strNumber.matches("[0-9]+")) { // is the value entered a number?
-                new CheckersError().displayError("You must enter a number in the list. Try again.");
+                new CheckersError().display("You must enter a number in the list. Try again.");
                 continue;
             }
             
@@ -76,7 +76,7 @@ public class SelectPlayersView {
             
             // is the number outside the range of the list of names
             if (numberSelected < 1 || numberSelected > nameList.length) {
-                new CheckersError().displayError(
+                new CheckersError().display(
                         "You must enter a number from the list. Try again.");
                 continue;
             }

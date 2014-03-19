@@ -28,7 +28,7 @@ public class GameMenuControl {
         Point locationMarkerPlaced = null;
 
          if (player == null) {
-            new CheckersError().displayError("You must start a new game first.");
+            new CheckersError().display("You must start a new game first.");
             return null;
         }
 
@@ -36,7 +36,7 @@ public class GameMenuControl {
             this.game.setStatus(StatusType.PLAYING);
         }
         else if (!this.game.getStatus().equals(StatusType.PLAYING)) {
-            new CheckersError().displayError("There is no active game. "
+            new CheckersError().display("There is no active game. "
                     + "You must start a new game before you can take a turn");
         }
         
@@ -77,13 +77,13 @@ public class GameMenuControl {
     
     public boolean regularTurn(Player player, Point location){
         if (location == null) {
-            new CheckersError().displayError("GameCommands - regularTurn: location is null");
+            new CheckersError().display("GameCommands - regularTurn: location is null");
             return false;
         }
         
         if (game.getStatus().equals(StatusType.PLAYING) &&
             game.getStatus().equals(StatusType.NEW_GAME)) {
-            new CheckersError().displayError("There is no active game. "
+            new CheckersError().display("There is no active game. "
                     + "You must start a new game before you can take a turn");
             return false;
         }

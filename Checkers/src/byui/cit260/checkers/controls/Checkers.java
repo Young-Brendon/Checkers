@@ -63,7 +63,7 @@ public class Checkers {
         checkers.display();
         Checkers.nameList = checkers.getPlayerNames();
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.executeCommands(null);
+        mainMenu.getInput(null);
         Checkers.inFile.close();  
     }
     
@@ -89,7 +89,7 @@ public class Checkers {
             name = name.trim();
 
             if (name.length() < 1) {
-                new CheckersError().displayError("\tA name must be at least one character long. Try again.");
+                new CheckersError().display("\tA name must be at least one character long. Try again.");
                 continue;
             }
 
