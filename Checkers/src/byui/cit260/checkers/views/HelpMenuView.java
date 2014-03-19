@@ -71,7 +71,7 @@ public class HelpMenuView extends Menu implements EnterInfo {
     }*/
     
     @Override
-    public String getInput (Object object)  {
+    public Object getInput (Object object)  {
         
             
        StatusType gameStatus = StatusType.PLAYING;

@@ -21,7 +21,7 @@ public class SelectPlayersView {
         playerNames = Checkers.getNameList();
     }
     
-    public String selectPlayers(String[] nameList) {
+    public StatusType selectPlayers(String[] nameList) {
         String playersName;
         
         this.displayNameList(); // display the list of names

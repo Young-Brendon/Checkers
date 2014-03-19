@@ -9,6 +9,7 @@ import byui.cit260.checkers.models.Player;
 import byui.cit260.checkers.enums.StatusType;
 import byui.cit260.checkers.interfaces.EnterInfo;
 
+
 import java.awt.Point;
 import java.util.Scanner;
 /**
@@ -48,7 +49,7 @@ public class GameMenuView extends Menu implements EnterInfo{
     }
 
         @Override
-    public String getInput (Object object) {
+    public Object getInput (Object object) {
         this.game = (Game) object;
 
         StatusType gameStatus = StatusType.CONTINUE;

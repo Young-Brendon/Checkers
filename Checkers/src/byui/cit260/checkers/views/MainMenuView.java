@@ -29,7 +29,7 @@ public class MainMenuView extends Menu implements EnterInfo {
     }
     
     @Override
-   public String getInput(Object object) {
+   public Object getInput(Object object) {
         
         StatusType gameStatus = StatusType.PLAYING;
         do {
@@ -58,7 +58,7 @@ public class MainMenuView extends Menu implements EnterInfo {
         game = this.mainCommands.create(GameType.TWO_PLAYER);
                 
         SelectPlayersView selectPlayersView = new SelectPlayersView(game);
-        String status = (String) selectPlayersView.selectPlayers(Checkers.getNameList());
+        StatusType status = selectPlayersView.selectPlayers(Checkers.getNameList());
         if (status.equals(StatusType.QUIT)) {
             return;
         }
@@ -67,7 +67,7 @@ public class MainMenuView extends Menu implements EnterInfo {
         gameMenu.getInput(game);
     }
 
-    private String quitGame() {
+    private Object quitGame() {
         System.out.println("\n\tAre you sure you want to quit? (Y or N)");
         Scanner inFile = new Scanner(System.in);
         String answer = inFile.next().trim().toUpperCase();

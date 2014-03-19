@@ -8,6 +8,7 @@ import java.awt.Point;
 import java.util.ArrayList;
 import byui.cit260.checkers.enums.StatusType;
 
+
 /**
   * @author Angela
  */
@@ -44,7 +45,7 @@ public class GameMenuControl {
         
         String playerType = player.getPlayerType();
 
-        if (playerType.equals(Player.REGULAR_PLAYER)) {
+        if (playerType == (Player.REGULAR_PLAYER)) {
             this.regularTurn(player, selectedLocation);
             locationMarkerPlaced = selectedLocation;
         }
