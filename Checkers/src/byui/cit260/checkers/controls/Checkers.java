@@ -3,7 +3,7 @@ package byui.cit260.checkers.controls;
 
 import byui.cit260.checkers.views.MainMenuView;
 import byui.cit260.checkers.views.HelpMenuView;
-import checkers.Player;
+import byui.cit260.checkers.models.Player;
 import java.util.Scanner;
 
 /**

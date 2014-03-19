@@ -1,9 +1,9 @@
 package byui.cit260.checkers.views;
 
-import checkers.Board;
+import byui.cit260.checkers.models.Board;
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.controls.CheckersError;
-import checkers.Game;
+import byui.cit260.checkers.models.Game;
 import java.awt.Point;
 import java.util.Scanner;
 import java.util.regex.Pattern;

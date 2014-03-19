@@ -1,5 +1,7 @@
 
-package checkers;
+package byui.cit260.checkers.models;
+
+import byui.cit260.checkers.models.Board;
 
 /**
   * @author Angela

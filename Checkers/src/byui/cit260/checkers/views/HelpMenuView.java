@@ -1,6 +1,5 @@
 package byui.cit260.checkers.views;
-import checkers.Game;
-import checkers.Menu;
+import byui.cit260.checkers.models.Game;
 
 /**
 ** @author Angela

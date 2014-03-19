@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package checkers;
+package byui.cit260.checkers.views;
 import byui.cit260.checkers.controls.CheckersError;
 import byui.cit260.checkers.controls.Checkers;
 import java.util.Scanner;

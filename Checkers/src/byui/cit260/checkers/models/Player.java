@@ -1,4 +1,4 @@
-package checkers;
+package byui.cit260.checkers.models;
 
 import java.io.Serializable;
 

@@ -1,7 +1,7 @@
 
 package byui.cit260.checkers.views;
-import checkers.Board;
-import checkers.Player;
+import byui.cit260.checkers.models.Board;
+import byui.cit260.checkers.models.Player;
 
 
 /**

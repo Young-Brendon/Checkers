@@ -4,11 +4,10 @@ package byui.cit260.checkers.views;
 import byui.cit260.checkers.views.GetLocationView;
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.controls.CheckersError;
-import checkers.Game;
+import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.controls.GameMenuControl;
 import byui.cit260.checkers.views.HelpMenuView;
-import checkers.Menu;
-import checkers.Player;
+import byui.cit260.checkers.models.Player;
 
 import java.awt.Point;
 import java.util.Scanner;

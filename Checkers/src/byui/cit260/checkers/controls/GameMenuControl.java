@@ -1,9 +1,9 @@
 
 package byui.cit260.checkers.controls;
 
-import checkers.Board;
-import checkers.Game;
-import checkers.Player;
+import byui.cit260.checkers.models.Board;
+import byui.cit260.checkers.models.Game;
+import byui.cit260.checkers.models.Player;
 import java.awt.Point;
 import java.util.ArrayList;
 

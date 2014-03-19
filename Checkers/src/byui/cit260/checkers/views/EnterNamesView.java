@@ -2,7 +2,7 @@
 package byui.cit260.checkers.views; 
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.controls.CheckersError;
-import checkers.Game;
+import byui.cit260.checkers.models.Game;
 import java.util.Scanner;
 /**
  *
