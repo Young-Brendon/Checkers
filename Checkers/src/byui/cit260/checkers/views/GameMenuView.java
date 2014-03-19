@@ -8,6 +8,7 @@ import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.controls.GameMenuControl;
 import byui.cit260.checkers.views.HelpMenuView;
 import byui.cit260.checkers.models.Player;
+import byui.cit260.checkers.enums.StatusType;
 
 import java.awt.Point;
 import java.util.Scanner;
@@ -22,7 +23,8 @@ public class GameMenuView extends Menu {
     private BoardView displayBoard = new BoardView();
     private HelpMenuView displayHelp = new HelpMenuView();
     
-        
+   
+    
     private final static String[][] menuItems = {
         {"T", "Take your turn"},
         {"D", "Display the board"},
@@ -50,7 +52,7 @@ public class GameMenuView extends Menu {
     public String executeCommands(Object object) {
         this.game = (Game) object;
 
-        String gameStatus = Game.CONTINUE;
+        StatusType gameStatus = StatusType.CONTINUE;
         do {
      
             this.display();
@@ -73,20 +75,21 @@ public class GameMenuView extends Menu {
                     helpMenu.executeCommands(null);
                     break;
                 case "Q":
-                    gameStatus = Game.QUIT;
+                    gameStatus = StatusType.QUIT;
                     break;
             }
-        } while (!gameStatus.equals(Game.QUIT));
+     } while (gameStatus != StatusType.QUIT);
 
-        return Game.PLAYING;
+ 
+        return StatusType.PLAYING;
     }
     
      private void takeTurn() {
         String playersMarker;
         Point selectedLocation;
 
-        if (!this.game.getStatus().equals(Game.NEW_GAME) &&
-            !this.game.getStatus().equals(Game.PLAYING)) {
+        if (!this.game.getStatus().equals(StatusType.NEW_GAME) &&
+            !this.game.getStatus().equals(StatusType.PLAYING)) {
             new CheckersError().displayError(
                     "There is no active game. You must start a new game before "
                     + "you can take a turn");
@@ -119,7 +122,7 @@ public class GameMenuView extends Menu {
     
   private boolean gameOver() {
         boolean done = false;
-       if (this.game.getStatus().equals(Game.WINNER)) { // a win?
+       if (this.game.getStatus().equals(StatusType.WINNER)) { // a win?
             System.out.println("\n\n\t" + this.game.getWinningMessage());
             done = true;
         }

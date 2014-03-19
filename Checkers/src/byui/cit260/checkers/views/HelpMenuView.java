@@ -1,5 +1,7 @@
 package byui.cit260.checkers.views;
 import byui.cit260.checkers.models.Game;
+import byui.cit260.checkers.enums.GameType;
+import byui.cit260.checkers.enums.StatusType;
 
 /**
 ** @author Angela
@@ -70,7 +72,9 @@ public class HelpMenuView extends Menu {
     @Override
     public String executeCommands(Object object)  {
         
-        String gameStatus = Game.PLAYING;
+            
+       StatusType gameStatus = StatusType.PLAYING;
+       
         
         do {
             this.display();
@@ -93,10 +97,10 @@ public class HelpMenuView extends Menu {
                     this.displayHelp(HelpMenuView.REAL_PLAYER);
                     break;
                 case "Q":
-                    return Game.QUIT;
+                    return StatusType.QUIT;
                 
             }
-        } while (!gameStatus.equals(Game.QUIT));
+        } while (!gameStatus.equals(StatusType.QUIT));
         
          return gameStatus;
     }

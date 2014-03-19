@@ -2,6 +2,8 @@
 package byui.cit260.checkers.models;
 
 import byui.cit260.checkers.models.Board;
+import byui.cit260.checkers.enums.GameType;
+import byui.cit260.checkers.enums.StatusType;
 
 /**
   * @author Angela
@@ -11,27 +13,17 @@ public class Game {
     public final static String PLAYER_A_DEFAULT_MARKER = "R";
     public final static String PLAYER_B_DEFAULT_MARKER = "B";
     
-    public static final String TWO_PLAYER = "TWO_PLAYER";
-        
-    public static final String CONTINUE = "CONTINUE";
-    public static final String NEW_GAME = "NEW_GAME";
-    public static final String PLAYING = "PLAYING"; 
-    public static final String WINNER = "WINNER"; 
-    public static final String QUIT = "QUIT"; 
-    public static final String ERROR = "ERROR";
-    public static final String EXIT = "EXIT";
-    
-    private String gameType;
+          
+    private GameType gameType; 
     private Player playerA;
     private Player playerB;
     private Player currentPlayer;
     private Player otherPlayer;
     private Player winner;
     private Player loser;
-    private String status;
+    private StatusType status;
     private Board board;
            
-
     public Game() {
    
        this.playerA = new Player();       
@@ -41,7 +33,7 @@ public class Game {
        this.playerB.setMarker(Game.PLAYER_B_DEFAULT_MARKER);
     }
     
-    public Game(String gameType) {
+    public Game(GameType gameType) {
         this();
 
         this.gameType = gameType;
@@ -49,11 +41,11 @@ public class Game {
         
     }
     
-    public String getGameType() {
+    public GameType getGameType() {
         return gameType;
     }
 
-    public void setGameType(String gameType) {
+    public void setGameType(GameType gameType) {
         this.gameType = gameType;
     }
 
@@ -89,11 +81,11 @@ public class Game {
         this.otherPlayer = otherPlayer;
     }
 
-    public String getStatus() {
+    public StatusType getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusType status) {
         this.status = status;
     }
 
@@ -127,7 +119,7 @@ public class Game {
 
         // clear the board
         this.board.clearTheBoard();
-        this.setStatus(Game.NEW_GAME);
+        this.setStatus(StatusType.NEW_GAME);
     }
 
   public void setPlayingOrder(Player player1, Player player2) {
@@ -160,7 +152,7 @@ public class Game {
         noLosses++;
         this.loser.setLosses(noLosses);
 
-        this.setStatus(Game.WINNER);
+        this.setStatus(StatusType.WINNER);
         
     }
 

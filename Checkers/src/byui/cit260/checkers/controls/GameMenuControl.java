@@ -6,6 +6,7 @@ import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.models.Player;
 import java.awt.Point;
 import java.util.ArrayList;
+import byui.cit260.checkers.enums.StatusType;
 
 /**
   * @author Angela
@@ -31,10 +32,10 @@ public class GameMenuControl {
             return null;
         }
 
-        if (this.game.getStatus().equals(Game.NEW_GAME)) {
-            this.game.setStatus(Game.PLAYING);
+        if (this.game.getStatus().equals(StatusType.NEW_GAME)) {
+            this.game.setStatus(StatusType.PLAYING);
         }
-        else if (!this.game.getStatus().equals(Game.PLAYING)) {
+        else if (!this.game.getStatus().equals(StatusType.PLAYING)) {
             new CheckersError().displayError("There is no active game. "
                     + "You must start a new game before you can take a turn");
         }
@@ -80,14 +81,14 @@ public class GameMenuControl {
             return false;
         }
         
-        if (game.getStatus().equals(Game.PLAYING) &&
-            game.getStatus().equals(Game.NEW_GAME)) {
+        if (game.getStatus().equals(StatusType.PLAYING) &&
+            game.getStatus().equals(StatusType.NEW_GAME)) {
             new CheckersError().displayError("There is no active game. "
                     + "You must start a new game before you can take a turn");
             return false;
         }
 
-        game.setStatus(Game.PLAYING);
+        game.setStatus(StatusType.PLAYING);
         this.markLocation(player, location);
         
         return true;
@@ -98,7 +99,7 @@ public class GameMenuControl {
  
         this.game.getBoard().occupyLocation(player, location.x, location.y);
         
-        this.game.setStatus(Game.PLAYING);
+        this.game.setStatus(StatusType.PLAYING);
     }
     
     

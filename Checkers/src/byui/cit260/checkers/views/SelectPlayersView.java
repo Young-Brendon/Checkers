@@ -3,6 +3,7 @@ package byui.cit260.checkers.views;
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.controls.CheckersError;
 import byui.cit260.checkers.models.Game;
+import byui.cit260.checkers.enums.StatusType;
 
 import java.util.Scanner;
 
@@ -42,7 +43,7 @@ public class SelectPlayersView {
             }
             this.game.getPlayerB().setName(playersName);
                 
-        return Game.CONTINUE; 
+        return StatusType.CONTINUE; 
         }
          
 

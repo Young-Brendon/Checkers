@@ -4,6 +4,7 @@ import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.controls.CheckersError;
 import byui.cit260.checkers.models.Game;
 import java.util.Scanner;
+import byui.cit260.checkers.enums.StatusType;
 /**
  *
  * @author Angela
@@ -25,18 +26,18 @@ public class EnterNamesView {
             System.out.println("\n\tFirst player:");
             playersName = (String) this.getName();
             if (playersName == null) {
-                return Game.QUIT;
+                return StatusType.QUIT;
             }
             this.game.getPlayerA().setName(playersName);
 
             System.out.println("\n\tSecond player:");
             playersName = (String) this.getName();
             if (playersName == null) {
-                return Game.QUIT;
+                return StatusType.QUIT;
             }
             this.game.getPlayerB().setName(playersName);
         
-        return Game.CONTINUE;
+        return StatusType.CONTINUE;
     }
  
 

@@ -7,6 +7,8 @@ import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.controls.MainMenuControl;
 import byui.cit260.checkers.views.SelectPlayersView;
 import java.util.Scanner;
+import byui.cit260.checkers.enums.GameType;
+import byui.cit260.checkers.enums.StatusType;
 /**
  * * @author Angela
  */
@@ -28,7 +30,7 @@ public class MainMenuView extends Menu{
     @Override
    public String executeCommands(Object object) {
         
-        String gameStatus = Game.PLAYING;
+        StatusType gameStatus = StatusType.PLAYING;
         do {
             this.display();
 
@@ -43,20 +45,20 @@ public class MainMenuView extends Menu{
                     helpMenu.executeCommands(null);
                     break;
                 case "X":
-                    return Game.EXIT;
+                    return StatusType.EXIT;
             }
-        } while (!gameStatus.equals(Game.EXIT));
+        } while (!gameStatus.equals(StatusType.EXIT));
 
-        return Game.EXIT;
+        return StatusType.EXIT;
     }
 
     private void startGame(long noPlayers) {
         Game game;        
-        game = this.mainCommands.create(Game.TWO_PLAYER);
+        game = this.mainCommands.create(GameType.TWO_PLAYER);
                 
         SelectPlayersView selectPlayersView = new SelectPlayersView(game);
         String status = (String) selectPlayersView.selectPlayers(Checkers.getNameList());
-        if (status.equals(Game.QUIT)) {
+        if (status.equals(StatusType.QUIT)) {
             return;
         }
 
@@ -69,10 +71,10 @@ public class MainMenuView extends Menu{
         Scanner inFile = new Scanner(System.in);
         String answer = inFile.next().trim().toUpperCase();
         if (answer.equals("Y")) {
-            return Game.EXIT;
+            return StatusType.EXIT;
         }
 
-        return Game.PLAYING;
+        return StatusType.PLAYING;
     }
     
 }
