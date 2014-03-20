@@ -13,8 +13,8 @@ import java.util.Scanner;
  */
 public class SelectPlayersView {
     
-    private Game game;
-    private String[] playerNames;
+    private final Game game;
+    private final String[] playerNames;
 
     public SelectPlayersView(Game game) {
         this.game = game;
@@ -100,16 +100,8 @@ public class SelectPlayersView {
             System.out.println("\t " + namePosition + "\t" + playerNames[i]);
         }
         System.out.println("\t===============================================================\n");
-    }
-    
- /*   private boolean alreadyInList(String[] listOfNames, String name) {
-        for (String currentName : listOfNames) {
-            if (currentName.equals(name)) {
-                return true;
-            }
-        }
-        return false;
-    }*/
+    } 
+
     
 }    
 

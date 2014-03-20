@@ -1,19 +1,13 @@
 package byui.cit260.checkers.views;
-import byui.cit260.checkers.models.Game;
-import byui.cit260.checkers.enums.GameType;
 import byui.cit260.checkers.enums.StatusType;
+import byui.cit260.checkers.enums.HelpType;
 import byui.cit260.checkers.interfaces.EnterInfo;
+
 
 /**
 ** @author Angela
 */
-public class HelpMenuView extends Menu implements EnterInfo {
-    
-    public static final String BOARD = "BOARD";
-    public static final String GAME = "GAME";
-    public static final String REAL_PLAYER = "REAL_PLAYER";
-    public static final String LOCATION = "LOCATION";
-    public static final String MARKER = "MARKER";
+public class HelpMenuView extends Menu implements EnterInfo {    
         
     private final static String[][] menuItems = {
         {"B", "The board"},
@@ -28,48 +22,6 @@ public class HelpMenuView extends Menu implements EnterInfo {
         super(HelpMenuView.menuItems);  
     }
     
- /*   public final void display() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-
-        for (int i = 0; i < HelpMenuView.menuItems.length; i++) {
-            System.out.println("\t " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\t===============================================================\n");
-    }
-    
-    private boolean validCommand(String command) {
-        String[][] items = HelpMenuView.menuItems;
-
-        for (String[] item : HelpMenuView.menuItems) {
-            if (item[0].equals(command)) {
-                return true;
-            }
-        }
-        return false;
-    }
-    
-    protected final String getCommand() {
-        
-        Scanner inFile = Checkers.getInputFile();
-        String command;
-        boolean valid = false;        
-        do {
-            
-            command = inFile.nextLine();
-            command = command.trim().toUpperCase();
-            valid = validCommand(command);
-            if (!validCommand(command)) {
-                new CheckersError().displayError("Invalid command. Please enter a valid command.");
-                continue;
-            }
-            
-            } while (!valid);
-        
-        return command;
-        
-    }*/
-    
     @Override
     public Object getInput (Object object)  {
         
@@ -83,19 +35,19 @@ public class HelpMenuView extends Menu implements EnterInfo {
                 
             switch (command) {
                 case "B":
-                    this.displayHelp(HelpMenuView.BOARD);
+                    this.displayHelp(HelpType.BOARD);
                     break;
                 case "G":
-                    this.displayHelp(HelpMenuView.GAME);
+                    this.displayHelp(HelpType.GAME);
                     break;
                 case "L":
-                    this.displayHelp(HelpMenuView.LOCATION);
+                    this.displayHelp(HelpType.LOCATION);
                     break;
                 case "M":
-                    this.displayHelp(HelpMenuView.MARKER);
+                    this.displayHelp(HelpType.MARKER);
                     break;
                  case "R":
-                    this.displayHelp(HelpMenuView.REAL_PLAYER);
+                    this.displayHelp(HelpType.REAL_PLAYER);
                     break;
                 case "Q":
                     return StatusType.QUIT;
@@ -106,55 +58,15 @@ public class HelpMenuView extends Menu implements EnterInfo {
          return gameStatus;
     }
     
-    private void displayHelp(String helpType) {
-
-        String helpText = null;
-        switch (helpType) {
-            case HelpMenuView.BOARD: helpText = 
-                "\tThe game board for Checkers. It consist of a grid of "
-                + "\n\tlocations. Players move their markers diagonally across "
-                + "\n\tthe board in an effort to win the game. The default board is "
-                + "\n\t8 rows by 8 columns.";
-                break;
-                
-            case HelpMenuView.GAME: helpText = 
-                "\tThe objective of the game is to be the first player to move all of "
-                + "\n\ttheir markers diagonally across the board. Each player takes "
-                + "\n\tturns moving their marker one square, or jumping diagonally over "
-                + "\n\tanother player's marker. The opponents markers that are jumped "
-                + "\n\tover are removed from the board. The first player to get all of "
-                + "\n\ttheir markers (or all their remaining markers) to the other side "
-                + "\n\tof the board is the winner.";
-                break; 
-                
-            case HelpMenuView.REAL_PLAYER: helpText = 
-                "\tA player takes their turn by moving a marker diagonally one space "
-                + "\n\ton the board. A player may jump over the opposing player's "
-                + "\n\tmarkers as many times as possible as long as they continue to "
-                + "\n\tjump forward in a diagonal direction without skipping a square.";
-                break;
-                 
-            case HelpMenuView.LOCATION: helpText = 
-                "\tA location on the board where a player can place their marker";
-                break;
-                
-            case HelpMenuView.MARKER: helpText = 
-                "\tA symbol that \"marks\" the locations in the board that are occupied "
-                + "by a player. "
-                + "\n\tThe default markers are \"R\" and \"B\" which stands for Red and Black"
-                + "\n\trespectively.";
-                break;
-        }   
-        
+    private void displayHelp(HelpType helpText) {
         StringBuilder dividerLine = new StringBuilder(80);
         for (int i = 0; i < 80; i++) {
             dividerLine.insert(i, '~');
         }
-        
         System.out.println("\t" + dividerLine.toString());
-        System.out.println(helpText);
+        System.out.println(helpText.getHelpText());
         System.out.println("\t" + dividerLine.toString());
-    }
-
+    }    
+    
 }
 

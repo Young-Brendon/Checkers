@@ -12,11 +12,6 @@ package byui.cit260.checkers.interfaces;
  */
 public interface EnterInfo {
     
-    /**
-     *
-     * @param object
-     * @return
-     */
     Object getInput(Object object);
     
 }
