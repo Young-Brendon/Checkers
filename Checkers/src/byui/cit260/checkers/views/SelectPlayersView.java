@@ -1,7 +1,8 @@
 
 package byui.cit260.checkers.views;
 import byui.cit260.checkers.controls.Checkers;
-import byui.cit260.checkers.controls.CheckersError;
+
+import byui.cit260.checkers.enums.ErrorType;
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.enums.StatusType;
 
@@ -56,7 +57,7 @@ public class SelectPlayersView {
             String strNumber = inFile.nextLine();
             
             if (strNumber.length() < 1) { // was a value entered ?
-                new CheckersError().display("You must enter a name or enter a \"Q\" to quit. Try again.");
+                  ErrorType.displayErrorMsg(ErrorType.ERROR107.getMessage());
                 continue;
             }
             
@@ -68,7 +69,7 @@ public class SelectPlayersView {
             }
                        
             if (!strNumber.matches("[0-9]+")) { // is the value entered a number?
-                new CheckersError().display("You must enter a number in the list. Try again.");
+                 ErrorType.displayErrorMsg(ErrorType.ERROR202.getMessage());
                 continue;
             }
             
@@ -76,8 +77,7 @@ public class SelectPlayersView {
             
             // is the number outside the range of the list of names
             if (numberSelected < 1 || numberSelected > nameList.length) {
-                new CheckersError().display(
-                        "You must enter a number from the list. Try again.");
+                ErrorType.displayErrorMsg(ErrorType.ERROR202.getMessage());
                 continue;
             }
             

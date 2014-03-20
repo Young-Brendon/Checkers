@@ -2,7 +2,8 @@ package byui.cit260.checkers.views;
 
 import byui.cit260.checkers.models.Board;
 import byui.cit260.checkers.controls.Checkers;
-import byui.cit260.checkers.controls.CheckersError;
+import byui.cit260.checkers.enums.ErrorType;
+
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.interfaces.EnterInfo;
 import java.awt.Point;
@@ -37,9 +38,7 @@ public class GetLocationView implements EnterInfo {
             coordinates = strRowColumn.split("\\s"); // tokenize the string
 
             if (coordinates.length < 1) { // no coordinates specified
-                new CheckersError().display(
-                        "You must enter two numbers, a row and the column, "
-                        + "or a \"Q\" to quit. Try again.");
+                 ErrorType.displayErrorMsg(ErrorType.ERROR109.getMessage());
                 continue;
             }
 
@@ -47,9 +46,7 @@ public class GetLocationView implements EnterInfo {
                 if (coordinates[0].toUpperCase().equals("Q")) { // Quit?
                     return null;
                 } else { // wrong number of values entered.
-                    new CheckersError().display(
-                        "You must enter two numbers, a row and the column, "
-                        + "or a \"Q\" to quit. Try again.");
+                   ErrorType.displayErrorMsg(ErrorType.ERROR109.getMessage());
                     continue;
                 }
             }
@@ -59,9 +56,7 @@ public class GetLocationView implements EnterInfo {
             if (digitPattern.matcher(coordinates[0]).matches() ||
                 digitPattern.matcher(coordinates[1]).matches()
                ) {
-                new CheckersError().display(
-                        "You must enter two numbers, a row and the column, "
-                        + "or a \"Q\" to quit. Try again.");
+                ErrorType.displayErrorMsg(ErrorType.ERROR109.getMessage());
                 continue;
             }
             
@@ -71,8 +66,7 @@ public class GetLocationView implements EnterInfo {
             Board board = game.getBoard();
             if (row < 1 || row > board.getRowCount() ||
                 column < 1 || column > board.getColumnCount()) {
-                new CheckersError().display(
-                        "Enter a valid number of rows and columns. Try again.");
+            ErrorType.displayErrorMsg(ErrorType.ERROR109.getMessage());
                 continue;
             }
 

@@ -5,8 +5,9 @@
  */
 
 package byui.cit260.checkers.views;
-import byui.cit260.checkers.controls.CheckersError;
+
 import byui.cit260.checkers.controls.Checkers;
+import byui.cit260.checkers.enums.ErrorType;
 import java.util.Scanner;
 /**
  *
@@ -64,7 +65,7 @@ public class Menu {
             command = command.trim().toUpperCase();
             valid = validCommand(command);
             if (!validCommand(command)) {
-                new CheckersError().display("Invalid command. Please enter a valid command.");
+                ErrorType.displayErrorMsg(ErrorType.ERROR105.getMessage());
                 continue;
             }
                 

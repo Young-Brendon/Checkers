@@ -6,7 +6,8 @@
 
 package byui.cit260.checkers.models;
 
-import byui.cit260.checkers.controls.CheckersError;
+
+import byui.cit260.checkers.enums.ErrorType;
 import java.awt.Point;
 import javax.swing.table.AbstractTableModel;
 
@@ -90,8 +91,7 @@ public class Board extends AbstractTableModel {
          Player playerAtLocation = this.boardLocations[row][column];
 
         if (playerAtLocation != null) { // location already occupied
-            new CheckersError().display("This location is already occupied. "
-                    + "Try a different location.");
+           ErrorType.displayErrorMsg(ErrorType.ERROR203.getMessage());
         }
         this.boardLocations[row][column] = player;
     }

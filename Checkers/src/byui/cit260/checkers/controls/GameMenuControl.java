@@ -7,6 +7,7 @@ import byui.cit260.checkers.models.Player;
 import java.awt.Point;
 import java.util.ArrayList;
 import byui.cit260.checkers.enums.StatusType;
+import byui.cit260.checkers.enums.ErrorType;
 
 
 /**
@@ -29,7 +30,7 @@ public class GameMenuControl {
         Point locationMarkerPlaced = null;
 
          if (player == null) {
-            new CheckersError().display("You must start a new game first.");
+            ErrorType.displayErrorMsg(ErrorType.ERROR103.getMessage());
             return null;
         }
 
@@ -37,8 +38,7 @@ public class GameMenuControl {
             this.game.setStatus(StatusType.PLAYING);
         }
         else if (!this.game.getStatus().equals(StatusType.PLAYING)) {
-            new CheckersError().display("There is no active game. "
-                    + "You must start a new game before you can take a turn");
+             ErrorType.displayErrorMsg(ErrorType.ERROR101.getMessage());
         }
         
        
@@ -78,14 +78,13 @@ public class GameMenuControl {
     
     public boolean regularTurn(Player player, Point location){
         if (location == null) {
-            new CheckersError().display("GameCommands - regularTurn: location is null");
+           ErrorType.displayErrorMsg(ErrorType.ERROR104.getMessage());
             return false;
         }
         
         if (game.getStatus().equals(StatusType.PLAYING) &&
             game.getStatus().equals(StatusType.NEW_GAME)) {
-            new CheckersError().display("There is no active game. "
-                    + "You must start a new game before you can take a turn");
+             ErrorType.displayErrorMsg(ErrorType.ERROR101.getMessage());
             return false;
         }
 

@@ -1,6 +1,7 @@
 
 package byui.cit260.checkers.controls;
 
+import byui.cit260.checkers.enums.ErrorType;
 import byui.cit260.checkers.views.MainMenuView;
 import byui.cit260.checkers.views.HelpMenuView;
 import byui.cit260.checkers.models.Player;
@@ -89,7 +90,7 @@ public class Checkers {
             name = name.trim();
 
             if (name.length() < 1) {
-                new CheckersError().display("\tA name must be at least one character long. Try again.");
+               ErrorType.displayErrorMsg(ErrorType.ERROR102.getMessage());
                 continue;
             }
 

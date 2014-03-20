@@ -2,9 +2,10 @@
 package byui.cit260.checkers.views;
 
 import byui.cit260.checkers.controls.Checkers;
-import byui.cit260.checkers.controls.CheckersError;
+
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.controls.GameMenuControl;
+import byui.cit260.checkers.enums.ErrorType;
 import byui.cit260.checkers.models.Player;
 import byui.cit260.checkers.enums.StatusType;
 import byui.cit260.checkers.interfaces.EnterInfo;
@@ -90,9 +91,7 @@ public class GameMenuView extends Menu implements EnterInfo{
 
         if (!this.game.getStatus().equals(StatusType.NEW_GAME) &&
             !this.game.getStatus().equals(StatusType.PLAYING)) {
-            new CheckersError().display(
-                    "There is no active game. You must start a new game before "
-                    + "you can take a turn");
+            ErrorType.displayErrorMsg(ErrorType.ERROR101.getMessage());
             return;
         }
         Player currentPlayer = this.game.getCurrentPlayer();

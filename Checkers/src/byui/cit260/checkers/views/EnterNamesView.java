@@ -1,7 +1,8 @@
 
 package byui.cit260.checkers.views; 
 import byui.cit260.checkers.controls.Checkers;
-import byui.cit260.checkers.controls.CheckersError;
+import byui.cit260.checkers.enums.ErrorType;
+
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.interfaces.EnterInfo;
 import java.util.Scanner;
@@ -54,7 +55,7 @@ public class EnterNamesView implements EnterInfo{
             strName = inFile.nextLine();
             strName = strName.trim().toUpperCase();
             if (strName.length() < 1) {
-                new CheckersError().display("You must enter a name or enter a \"Q\" to quit. Try again.");
+               ErrorType.displayErrorMsg(ErrorType.ERROR107.getMessage());
                 return null;
             }
             strName = strName.trim();
