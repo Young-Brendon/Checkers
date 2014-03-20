@@ -64,6 +64,7 @@ public class Checkers {
         checkers.display();
         Checkers.nameList = checkers.getPlayerNames();
         MainMenuView mainMenu = new MainMenuView();
+        
         mainMenu.getInput(null);
         Checkers.inFile.close();  
     }

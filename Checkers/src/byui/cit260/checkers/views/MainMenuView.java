@@ -1,11 +1,8 @@
 package byui.cit260.checkers.views;
 
-import byui.cit260.checkers.views.HelpMenuView;
-import byui.cit260.checkers.views.GameMenuView;
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.controls.MainMenuControl;
-import byui.cit260.checkers.views.SelectPlayersView;
 import byui.cit260.checkers.interfaces.EnterInfo;
 import java.util.Scanner;
 import byui.cit260.checkers.enums.GameType;
@@ -16,7 +13,7 @@ import byui.cit260.checkers.enums.StatusType;
 public class MainMenuView extends Menu implements EnterInfo {
     
     private static final String[][] menuItems = {
-    //    {"E", "Enter players names"},
+        
         {"S", "Start game"},
         {"H", "Help"},
         {"X", "Exit Checkers"}
