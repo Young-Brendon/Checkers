@@ -12,19 +12,15 @@ import byui.cit260.checkers.interfaces.EnterInfo;
 
 
 import java.awt.Point;
-import java.util.Scanner;
 /**
  * @author Angela
  */
 public class GameMenuView extends Menu implements EnterInfo{
     
     private Game game;
-    private GameMenuControl gameCommands ;
-    private GetLocationView getLocation = new GetLocationView();
-    private BoardView displayBoard = new BoardView();
-    private HelpMenuView displayHelp = new HelpMenuView();
-    
-   
+    private final GameMenuControl gameCommands ;
+    private final GetLocationView getLocation = new GetLocationView();
+    private BoardView displayBoard = new BoardView();   
     
     private final static String[][] menuItems = {
         {"T", "Take your turn"},
@@ -65,11 +61,11 @@ public class GameMenuView extends Menu implements EnterInfo{
                     this.takeTurn();
                     break;
                 case "D":
-                    this.displayBoard.display(game.getBoard());
+                    this.displayBoard.display();
                     break;
                 case "N":
                     gameCommands.startNewGame(game);
-                    this.displayBoard.display(game.getBoard());
+                    this.displayBoard.display();
                     break;
                 case "H":
                     HelpMenuView helpMenu = Checkers.getHelpMenu();
@@ -112,7 +108,7 @@ public class GameMenuView extends Menu implements EnterInfo{
         }
 
         // displayError board and prompt for next player's turn
-        this.displayBoard.display(game.getBoard());
+        this.displayBoard.display();
         String promptNextPlayer = getNextPlayerMessage(otherPlayer);
         System.out.println("\n\n\t" + promptNextPlayer);
 
@@ -127,7 +123,7 @@ public class GameMenuView extends Menu implements EnterInfo{
         }
         
         if (done) {
-            this.displayBoard.display(this.game.getBoard());
+            this.displayBoard.display();
         }
         
         return done;
