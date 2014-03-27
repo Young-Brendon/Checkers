@@ -1,6 +1,7 @@
 
 package byui.cit260.checkers.controls;
 
+import byui.cit260.checkers.exceptions.CheckersException;
 import byui.cit260.checkers.enums.ErrorType;
 import byui.cit260.checkers.views.MainMenuView;
 import byui.cit260.checkers.views.HelpMenuView;
@@ -64,9 +65,15 @@ public class Checkers {
         checkers.display();
         Checkers.nameList = checkers.getPlayerNames();
         MainMenuView mainMenu = new MainMenuView();
-        
-        mainMenu.getInput(null);
-        Checkers.inFile.close();  
+        try {
+            mainMenu.getInput(null);
+            throw new CheckersException();
+        } catch (CheckersException ex) {
+            System.out.println(ex.getMessage());
+        }
+        finally {
+            Checkers.inFile.close();
+        }  
     }
     
     private void display() {

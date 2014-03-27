@@ -1,5 +1,6 @@
 package byui.cit260.checkers.views;
 
+import byui.cit260.checkers.exceptions.CheckersException;
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.controls.MainMenuControl;
@@ -26,10 +27,12 @@ public class MainMenuView extends Menu implements EnterInfo {
     }
     
     @Override
-   public Object getInput(Object object) {
+   public StatusType getInput(Object object) {
         
         StatusType gameStatus = StatusType.PLAYING;
         do {
+            try {
+                
             this.display();
 
             // get commaned entered
@@ -45,12 +48,16 @@ public class MainMenuView extends Menu implements EnterInfo {
                 case "X":
                     return StatusType.EXIT;
             }
+            }
+         catch (CheckersException e) {
+             System.out.println("\n" + e.getMessage());
+         }   
         } while (!gameStatus.equals(StatusType.EXIT));
 
         return StatusType.EXIT;
     }
 
-    private void startGame(long noPlayers) {
+    private void startGame(long noPlayers) throws CheckersException {
         Game game;        
         game = this.mainCommands.create(GameType.TWO_PLAYER);
                 

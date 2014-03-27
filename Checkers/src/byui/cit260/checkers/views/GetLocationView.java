@@ -3,7 +3,8 @@ package byui.cit260.checkers.views;
 import byui.cit260.checkers.models.Board;
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.enums.ErrorType;
-
+import byui.cit260.checkers.exceptions.CheckersException;
+import byui.cit260.checkers.exceptions.GameException;
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.interfaces.EnterInfo;
 import java.awt.Point;
@@ -21,7 +22,7 @@ public class GetLocationView implements EnterInfo {
     @Override
     public Object getInput(Object object) {
         this.game = (Game) object; 
-        
+        Scanner inFile = Checkers.getInputFile();
         System.out.println("\n\n\t" + game.getCurrentPlayer().getName() + " it is your turn.");
         boardView.selectPiece();
         boardView.movePiece();

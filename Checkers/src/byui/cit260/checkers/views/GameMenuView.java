@@ -2,15 +2,14 @@
 package byui.cit260.checkers.views;
 
 import byui.cit260.checkers.controls.Checkers;
-
+import byui.cit260.checkers.exceptions.CheckersException;
+import byui.cit260.checkers.exceptions.GameException;
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.controls.GameMenuControl;
 import byui.cit260.checkers.enums.ErrorType;
 import byui.cit260.checkers.models.Player;
 import byui.cit260.checkers.enums.StatusType;
 import byui.cit260.checkers.interfaces.EnterInfo;
-
-
 import java.awt.Point;
 /**
  * @author Angela
@@ -18,8 +17,8 @@ import java.awt.Point;
 public class GameMenuView extends Menu implements EnterInfo{
     
     private Game game;
-    private final GameMenuControl gameCommands ;
-    private final GetLocationView getLocation = new GetLocationView();
+    private GameMenuControl gameCommands ;
+    private GetLocationView getLocation = new GetLocationView();
     private BoardView displayBoard = new BoardView();   
     
     private final static String[][] menuItems = {
@@ -37,25 +36,26 @@ public class GameMenuView extends Menu implements EnterInfo{
         
     }
 
-    public BoardView getDisplayBoard() {
+ /*   public BoardView getDisplayBoard() {
         return displayBoard;
     }
 
     public void setDisplayBoard(BoardView displayBoard) {
         this.displayBoard = displayBoard;
-    }
+    }*/
 
         @Override
-    public Object getInput (Object object) {
+    public Object getInput (Object object)  {
         this.game = (Game) object;
 
         StatusType gameStatus = StatusType.CONTINUE;
         do {
-     
+          try {              
             this.display();
             
             // get commaned entered
             String command = this.getCommand();
+            
             switch (command) {
                 case "T":
                     this.takeTurn();
@@ -74,22 +74,25 @@ public class GameMenuView extends Menu implements EnterInfo{
                 case "Q":
                     gameStatus = StatusType.QUIT;
                     break;
-            }
+                 }
+            } catch (GameException | CheckersException tex) {
+                System.out.println("\n" + tex.getMessage());
+                continue;
+            }    
      } while (gameStatus != StatusType.QUIT);
 
  
         return StatusType.PLAYING;
     }
     
-     private void takeTurn() {
+     private void takeTurn() throws GameException, CheckersException {
         String playersMarker;
         Point selectedLocation;
 
         if (!this.game.getStatus().equals(StatusType.NEW_GAME) &&
             !this.game.getStatus().equals(StatusType.PLAYING)) {
-            ErrorType.displayErrorMsg(ErrorType.ERROR101.getMessage());
-            return;
-        }
+            throw new CheckersException(ErrorType.ERROR101.getMessage());
+          }
         Player currentPlayer = this.game.getCurrentPlayer();
         Player otherPlayer = this.game.getOtherPlayer();
 

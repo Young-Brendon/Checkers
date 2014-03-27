@@ -7,6 +7,7 @@
 package byui.cit260.checkers.models;
 
 
+import byui.cit260.checkers.exceptions.GameException;
 import byui.cit260.checkers.enums.ErrorType;
 import java.awt.Point;
 import javax.swing.table.AbstractTableModel;
@@ -86,12 +87,12 @@ public class Board extends AbstractTableModel {
     }
     
     
- public void occupyLocation(Player player, int row, int column)  {        
+ public void occupyLocation(Player player, int row, int column) throws GameException {        
 
          Player playerAtLocation = this.boardLocations[row][column];
 
         if (playerAtLocation != null) { // location already occupied
-           ErrorType.displayErrorMsg(ErrorType.ERROR203.getMessage());
+           throw new GameException(ErrorType.ERROR203.getMessage());
         }
         this.boardLocations[row][column] = player;
     }

@@ -6,6 +6,7 @@
 
 package byui.cit260.checkers.views;
 
+import byui.cit260.checkers.exceptions.CheckersException;
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.enums.ErrorType;
 import java.util.Scanner;
@@ -55,7 +56,7 @@ public class Menu {
         return false;
     }
 
-    protected final String getCommand() {
+    protected final String getCommand() throws CheckersException {
 
         Scanner inFile = Checkers.getInputFile();
         String command;
@@ -65,13 +66,12 @@ public class Menu {
             command = command.trim().toUpperCase();
             valid = validCommand(command);
             if (!validCommand(command)) {
-                ErrorType.displayErrorMsg(ErrorType.ERROR105.getMessage());
-                continue;
+                throw new CheckersException(ErrorType.ERROR105.getMessage());
             }
-                
+           return command;     
         } while (!valid);
+     
         
-        return command;
     }
 
 

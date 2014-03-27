@@ -1,4 +1,6 @@
 package byui.cit260.checkers.views;
+
+import byui.cit260.checkers.exceptions.CheckersException;
 import byui.cit260.checkers.enums.StatusType;
 import byui.cit260.checkers.enums.HelpType;
 import byui.cit260.checkers.interfaces.EnterInfo;
@@ -30,6 +32,8 @@ public class HelpMenuView extends Menu implements EnterInfo {
        
         
         do {
+            try{
+                
             this.display();
             String command = this.getCommand();
                 
@@ -52,6 +56,10 @@ public class HelpMenuView extends Menu implements EnterInfo {
                 case "Q":
                     return StatusType.QUIT;
                 
+            }
+            }
+            catch (CheckersException e) {
+                System.out.println("\n" + e.getMessage());
             }
         } while (!gameStatus.equals(StatusType.QUIT));
         

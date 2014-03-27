@@ -2,6 +2,8 @@
 package byui.cit260.checkers.controls;
 
 import byui.cit260.checkers.models.Board;
+import byui.cit260.checkers.exceptions.CheckersException;
+import byui.cit260.checkers.exceptions.GameException;
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.models.Player;
 import java.awt.Point;
@@ -26,19 +28,18 @@ public class GameMenuControl {
         this.board = game.getBoard();
     }
            
-    public Point playerTakesTurn(Player player, Point selectedLocation) {
+    public Point playerTakesTurn(Player player, Point selectedLocation) throws CheckersException, GameException {
         Point locationMarkerPlaced = null;
 
          if (player == null) {
-            ErrorType.displayErrorMsg(ErrorType.ERROR103.getMessage());
-            return null;
+            throw new CheckersException(ErrorType.ERROR103.getMessage());
         }
 
         if (this.game.getStatus().equals(StatusType.NEW_GAME)) {
             this.game.setStatus(StatusType.PLAYING);
         }
         else if (!this.game.getStatus().equals(StatusType.PLAYING)) {
-             ErrorType.displayErrorMsg(ErrorType.ERROR101.getMessage());
+             throw new CheckersException(ErrorType.ERROR101.getMessage());
         }
         
        
@@ -55,7 +56,7 @@ public class GameMenuControl {
         return locationMarkerPlaced;
     }
     
-    public void takeTurn(Point selectedLocation) {
+    public void takeTurn(Point selectedLocation) throws CheckersException, GameException {
         Player currentPlayer = this.game.getCurrentPlayer();
         Player otherPlayer = this.game.getOtherPlayer();
         
@@ -76,16 +77,16 @@ public class GameMenuControl {
         }
     }
     
-    public boolean regularTurn(Player player, Point location){
+    public boolean regularTurn(Player player, Point location) throws CheckersException, GameException {
         if (location == null) {
-           ErrorType.displayErrorMsg(ErrorType.ERROR104.getMessage());
-            return false;
+           throw new IllegalArgumentException(ErrorType.ERROR104.getMessage());
+            
         }
         
         if (game.getStatus().equals(StatusType.PLAYING) &&
             game.getStatus().equals(StatusType.NEW_GAME)) {
-             ErrorType.displayErrorMsg(ErrorType.ERROR101.getMessage());
-            return false;
+             throw new CheckersException(ErrorType.ERROR101.getMessage());
+           
         }
 
         game.setStatus(StatusType.PLAYING);
@@ -95,7 +96,7 @@ public class GameMenuControl {
     }
     
       
-    private void markLocation(Player player, Point location) {
+    private void markLocation(Player player, Point location) throws GameException {
  
         this.game.getBoard().occupyLocation(player, location.x, location.y);
         
