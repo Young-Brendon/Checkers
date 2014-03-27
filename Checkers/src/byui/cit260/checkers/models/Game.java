@@ -1,7 +1,6 @@
 
 package byui.cit260.checkers.models;
 
-import byui.cit260.checkers.models.Board;
 import byui.cit260.checkers.enums.GameType;
 import byui.cit260.checkers.enums.StatusType;
 
