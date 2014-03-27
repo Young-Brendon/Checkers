@@ -3,7 +3,7 @@ package byui.cit260.checkers.exceptions;
 
 /**
  *
- * @author Angela
+ * @author Brendon
  */
 public class CheckersException extends Exception {
 
