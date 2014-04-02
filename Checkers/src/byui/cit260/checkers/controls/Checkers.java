@@ -1,6 +1,7 @@
 
 package byui.cit260.checkers.controls;
 
+import byui.cit260.checkers.frames.MainFrame;
 import byui.cit260.checkers.exceptions.CheckersException;
 import byui.cit260.checkers.enums.ErrorType;
 import byui.cit260.checkers.views.MainMenuView;
@@ -13,6 +14,7 @@ import java.util.Scanner;
  */
 public class Checkers {
     
+    public static MainFrame mainFrame = null;
     private static final Scanner inFile = new Scanner(System.in);
     private static final HelpMenuView helpMenu = new HelpMenuView();
         
@@ -67,12 +69,20 @@ public class Checkers {
         MainMenuView mainMenu = new MainMenuView();
         try {
             mainMenu.getInput(null);
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    Checkers.mainFrame = new MainFrame();
+                    Checkers.mainFrame.setVisible(true);
+                }
+            });
             throw new CheckersException();
         } catch (CheckersException ex) {
             System.out.println(ex.getMessage());
         }
         finally {
-            Checkers.inFile.close();
+            if (Checkers.mainFrame != null) {
+                Checkers.mainFrame.dispose();
+            }
         }  
     }
     
