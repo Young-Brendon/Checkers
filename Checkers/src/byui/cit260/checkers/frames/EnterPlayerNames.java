@@ -23,9 +23,8 @@ public class EnterPlayerNames extends javax.swing.JFrame {
     
      public void initializeForm ( ) {
         if (this.game.getGameType() == GameType.TWO_PLAYER) {
-            this.jLabel2.setEnabled(false);
-            this.jtPlayerBName.setEnabled(false);
-            this.jtPlayerBName.setText("Computer");
+            this.jLabel2.setEnabled(true);
+            this.jtPlayerBName.setEnabled(true);
         }
      }
     /**
@@ -58,11 +57,11 @@ public class EnterPlayerNames extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(0, 51, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setText("Players Name");
+        jLabel2.setText("Player 1:");
 
         jLabel3.setBackground(new java.awt.Color(0, 51, 255));
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Players Name");
+        jLabel3.setText("Player 2:");
 
         jtPlayerAName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtPlayerAName.setName(""); // NOI18N

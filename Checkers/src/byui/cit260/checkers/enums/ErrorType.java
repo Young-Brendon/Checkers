@@ -47,8 +47,7 @@ public enum ErrorType {
     ERROR207 ("The number of rows must be between 3 - 9 and the "
               + "number of columns must be between 3 - 9 "),
     
-    ERROR209 ("GameCommands - takeTurn: invalidPlayerTYpe");
-
+    ERROR209 ("GameCommands - takeTurn: invalidPlayerTYpe");   
 
     
     String message;
