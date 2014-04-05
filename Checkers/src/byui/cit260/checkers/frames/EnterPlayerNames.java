@@ -154,8 +154,8 @@ public class EnterPlayerNames extends javax.swing.JFrame {
         String playerAName = this.jtPlayerAName.getText();
         String playerBName = this.jtPlayerBName.getText();
         PlayerNameMenuControl.savePlayersNames(game, playerAName, playerBName);
-       // GameFrame gameFrame = new GameFrame(this.game);
-        //gameFrame.setVisible(true);
+        GameFrame gameFrame = new GameFrame(this.game);
+        gameFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_bContinueKeyPressed
 
