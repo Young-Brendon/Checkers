@@ -6,18 +6,35 @@
 
 package byui.cit260.checkers.frames;
 
+import byui.cit260.checkers.controls.Checkers;
+import byui.cit260.checkers.controls.GameMenuControl;
+import byui.cit260.checkers.models.Game;
+
 /**
  *
  * @author BDawg
  */
 public class GameFrame extends javax.swing.JFrame {
+    
+    private String currentMarker = null;
+    private Game game = null;
+    private GameMenuControl gameCommands = null;
 
     /**
      * Creates new form GameFrame
      */
-    public GameFrame() {
-        initComponents();
+    public GameFrame() {        
+        
+        this.initComponents();
+        setLocationRelativeTo(null);
     }
+    
+    public GameFrame(Game game) {
+        this();
+        this.game = game;
+        this.gameCommands = new GameMenuControl(game);
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,14 +48,13 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jTakeTurn = new javax.swing.JButton();
         jNewGame = new javax.swing.JButton();
         jHelp = new javax.swing.JButton();
-        jQuit = new javax.swing.JButton();
+        jbQuit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jChekersTable = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jtMessageArea = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Checkers");
@@ -49,13 +65,26 @@ public class GameFrame extends javax.swing.JFrame {
         jLabel1.setText("Checkers");
         jLabel1.setName("jpTitle"); // NOI18N
 
-        jTakeTurn.setText("Take Turn");
-
         jNewGame.setText("New Game");
+        jNewGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNewGameActionPerformed(evt);
+            }
+        });
 
         jHelp.setText("Help");
+        jHelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jHelpActionPerformed(evt);
+            }
+        });
 
-        jQuit.setText("Quit");
+        jbQuit.setText("Quit");
+        jbQuit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbQuitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -64,9 +93,8 @@ public class GameFrame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTakeTurn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jNewGame, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
-                    .addComponent(jQuit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jbQuit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(23, Short.MAX_VALUE)
@@ -78,12 +106,10 @@ public class GameFrame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jNewGame)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTakeTurn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
                 .addComponent(jHelp)
                 .addGap(18, 18, 18)
-                .addComponent(jQuit)
+                .addComponent(jbQuit)
                 .addContainerGap())
         );
 
@@ -127,9 +153,9 @@ public class GameFrame extends javax.swing.JFrame {
             jChekersTable.getColumnModel().getColumn(7).setHeaderValue("");
         }
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        jtMessageArea.setColumns(20);
+        jtMessageArea.setRows(5);
+        jScrollPane2.setViewportView(jtMessageArea);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -183,20 +209,29 @@ public class GameFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
+        // TODO add your handling code here:
+        Checkers.mainFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbQuitActionPerformed
+
+    private void jHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHelpActionPerformed
+        // TODO add your handling code here:
+        //HelpFrame helpFrame = new HelpFrame();
+        //helpFrame.setVisible(true);
+    }//GEN-LAST:event_jHelpActionPerformed
+
+    private void jNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNewGameActionPerformed
+        // TODO add your handling code here:
+        this.gameCommands.startNewGame(this.game);
+        String nextPlayersMessage = this.game.getCurrentPlayer().getName()
+        + " it is your turn.";
+        this.jtMessageArea.setText(nextPlayersMessage);
+    }//GEN-LAST:event_jNewGameActionPerformed
+  
     /**
      * @param args the command line arguments
      */
-    
-    
-    
-    private void jHelpActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        HelpFrame helpFrame = new HelpFrame();
-        helpFrame.setVisible(true);
-    }
-    
-    private void jQuitActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        this.dispose();
-    } 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable jChekersTable;
@@ -205,10 +240,9 @@ public class GameFrame extends javax.swing.JFrame {
     private javax.swing.JButton jNewGame;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JButton jQuit;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JButton jTakeTurn;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton jbQuit;
+    private javax.swing.JTextArea jtMessageArea;
     // End of variables declaration//GEN-END:variables
 }
