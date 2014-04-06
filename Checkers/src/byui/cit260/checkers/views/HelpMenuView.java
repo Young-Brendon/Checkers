@@ -1,4 +1,4 @@
-package byui.cit260.checkers.views;
+/*package byui.cit260.checkers.views;
 
 import byui.cit260.checkers.exceptions.CheckersException;
 import byui.cit260.checkers.enums.StatusType;
@@ -9,9 +9,9 @@ import byui.cit260.checkers.interfaces.EnterInfo;
 /**
 ** @author Angela
 */
-public class HelpMenuView extends Menu implements EnterInfo {    
+/*public class HelpMenuView extends Menu implements EnterInfo {    
         
-    private final static String[][] menuItems = {
+   private final static String[][] menuItems = {
         {"B", "The board"},
         {"G", "The Checkers game"},
         {"L", "A location"},
@@ -58,7 +58,7 @@ public class HelpMenuView extends Menu implements EnterInfo {
                 
             }
             }
-            catch (CheckersException e) {
+      //      catch (CheckersException e) {
                 System.out.println("\n" + e.getMessage());
             }
         } while (!gameStatus.equals(StatusType.QUIT));
@@ -76,5 +76,5 @@ public class HelpMenuView extends Menu implements EnterInfo {
         System.out.println("\t" + dividerLine.toString());
     }    
     
-}
+}*/
 

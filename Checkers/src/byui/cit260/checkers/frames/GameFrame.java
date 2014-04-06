@@ -217,8 +217,8 @@ public class GameFrame extends javax.swing.JFrame {
 
     private void jHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHelpActionPerformed
         // TODO add your handling code here:
-        //HelpFrame helpFrame = new HelpFrame();
-        //helpFrame.setVisible(true);
+        HelpFrame helpFrame = new HelpFrame();
+        helpFrame.setVisible(true);
     }//GEN-LAST:event_jHelpActionPerformed
 
     private void jNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNewGameActionPerformed
