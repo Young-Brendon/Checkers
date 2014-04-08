@@ -6,7 +6,6 @@
 
 package byui.cit260.checkers.frames;
 
-import byui.cit260.checkers.frames.EnterPlayerNames;
 import byui.cit260.checkers.controls.MainMenuControl;
 import byui.cit260.checkers.enums.GameType;
 import byui.cit260.checkers.models.Game;

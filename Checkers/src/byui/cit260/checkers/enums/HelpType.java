@@ -12,6 +12,10 @@ package byui.cit260.checkers.enums;
  */
 public enum HelpType {
     
+    INSTRUCTIONS ("\tThe object of the game is to move all of your pieces to "
+                + "\n\tthe other end of the board while removing as many of your "
+                + "\n\topponents pieces as possible. " ),
+    
     BOARD ("\tThe game board for Checkers. It consist of a grid of "
                 + "\n\tlocations. Players move their markers diagonally across "
                 + "\n\tthe board in an effort to win the game. The default board is "
