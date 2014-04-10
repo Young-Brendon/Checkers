@@ -8,7 +8,23 @@ package byui.cit260.checkers.frames;
 
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.controls.GameMenuControl;
+import byui.cit260.checkers.enums.GameType;
+import byui.cit260.checkers.enums.StatusType;
+import byui.cit260.checkers.exceptions.GameException;
+import byui.cit260.checkers.exceptions.CheckersException;
 import byui.cit260.checkers.models.Game;
+import byui.cit260.checkers.models.Player;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Point;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.JScrollPane;
+import javax.swing.ListSelectionModel;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableColumnModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -26,6 +42,7 @@ public class GameFrame extends javax.swing.JFrame {
     public GameFrame() {        
         
         this.initComponents();
+        this.initializeFrame();
         setLocationRelativeTo(null);
     }
     
@@ -35,7 +52,59 @@ public class GameFrame extends javax.swing.JFrame {
         this.gameCommands = new GameMenuControl(game);
     }
     
+        public void initializeFrame() {
+        /* Create and display the form */
+        
 
+        jChekersTable.getTableHeader().setVisible(false);
+        jChekersTable.getTableHeader().setPreferredSize(new Dimension(8, 8));
+        jChekersTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        Color backgroundColor = jChekersTable.getBackground();
+        jChekersTable.setSelectionBackground(backgroundColor);
+
+        CellRenderer cellRenderer = new CellRenderer();
+        cellRenderer.setHorizontalAlignment(JLabel.CENTER);
+        TableColumnModel columnTableModel = jChekersTable.getColumnModel();
+        for (int i = 0; i < jChekersTable.getColumnCount(); i++) {
+            columnTableModel.getColumn(i).setCellRenderer(cellRenderer);
+        }
+        
+    }
+    public String getCurrentMarker() {
+        return currentMarker;
+    }
+
+    public void setCurrentMarker(String currentMarker) {
+        this.currentMarker = currentMarker;
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    public JTable getCheckersTable() {
+        return jChekersTable;
+    }
+
+    public void setCheckersTable(JTable CheckersTable) {
+        this.jChekersTable = CheckersTable;
+    }
+
+    public JScrollPane getJpScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setJpScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -133,6 +202,11 @@ public class GameFrame extends javax.swing.JFrame {
         jChekersTable.setFocusable(false);
         jChekersTable.setGridColor(new java.awt.Color(0, 0, 0));
         jChekersTable.setRowHeight(30);
+        jChekersTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jChekersTableMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jChekersTable);
         if (jChekersTable.getColumnModel().getColumnCount() > 0) {
             jChekersTable.getColumnModel().getColumn(0).setResizable(false);
@@ -210,25 +284,35 @@ public class GameFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
-        // TODO add your handling code here:
         Checkers.mainFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jbQuitActionPerformed
 
     private void jHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHelpActionPerformed
-        // TODO add your handling code here:
         HelpFrame helpFrame = new HelpFrame();
         helpFrame.setVisible(true);
     }//GEN-LAST:event_jHelpActionPerformed
 
     private void jNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNewGameActionPerformed
-        // TODO add your handling code here:
         this.gameCommands.startNewGame(this.game);
+        takeFirstTurn();
         String nextPlayersMessage = this.game.getCurrentPlayer().getName()
         + " it is your turn.";
         this.jtMessageArea.setText(nextPlayersMessage);
     }//GEN-LAST:event_jNewGameActionPerformed
+
+    private void jChekersTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jChekersTableMouseClicked
+        JTable jTable = (JTable) evt.getComponent();
+        this.jtMessageArea.setForeground(Color.black);
+        this.takeTurn(jTable);
+    }//GEN-LAST:event_jChekersTableMouseClicked
   
+     private String getNextPlayerMessage(Player player) {
+       
+            return "It is now your turn "
+                    + player.getName();
+        }
+    
     /**
      * @param args the command line arguments
      */
@@ -245,4 +329,43 @@ public class GameFrame extends javax.swing.JFrame {
     private javax.swing.JButton jbQuit;
     private javax.swing.JTextArea jtMessageArea;
     // End of variables declaration//GEN-END:variables
+
+ private void takeFirstTurn() {
+        Player currentPlayer = this.game.getCurrentPlayer();
+             
+        String promptNextPlayer = getNextPlayerMessage(currentPlayer);
+        this.jtMessageArea.setText(promptNextPlayer);
+        this.game.setStatus(StatusType.PLAYING);
+    }
+
+    private void takeTurn(JTable table) {
+        String playersMarker;
+        int selectedRow = table.getSelectedRow();
+        int selectedColumn = table.getSelectedColumn();
+        Point selectedLocation = new Point(selectedRow, selectedColumn);
+
+        Player currentPlayer = this.game.getCurrentPlayer();
+        Player otherPlayer = this.game.getOtherPlayer();
+
+         
+            String promptNextPlayer = getNextPlayerMessage(this.game.getCurrentPlayer());
+            this.jtMessageArea.setText(promptNextPlayer);
+
+        }
+    
+
+    private class CellRenderer extends DefaultTableCellRenderer {
+
+        public CellRenderer() {
+            super();
+        }
+
+        public void setValue(Player player) {
+            setText((player == null) ? "" : player.getMarker());
+        }
+    }
 }
+
+
+
+

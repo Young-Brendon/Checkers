@@ -33,7 +33,7 @@ public class Checkers {
         try {
             checkers = new Checkers();
             java.awt.EventQueue.invokeLater(new Runnable() {
-                @Override
+            
                 public void run() {
                     Checkers.mainFrame = new MainFrame();
                     Checkers.mainFrame.setVisible(true);

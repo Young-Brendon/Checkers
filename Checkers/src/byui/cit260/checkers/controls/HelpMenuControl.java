@@ -4,6 +4,7 @@ package byui.cit260.checkers.controls;
 import byui.cit260.checkers.enums.ErrorType;
 import byui.cit260.checkers.enums.HelpType;
 import byui.cit260.checkers.exceptions.CheckersException;
+import static byui.cit260.checkers.enums.HelpType.INSTRUCTIONS;
 
 
 

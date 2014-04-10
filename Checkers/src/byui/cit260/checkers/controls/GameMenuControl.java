@@ -1,15 +1,20 @@
 
 package byui.cit260.checkers.controls;
 
-import byui.cit260.checkers.models.Board;
-import byui.cit260.checkers.exceptions.CheckersException;
+import byui.cit260.checkers.enums.StatusType;
 import byui.cit260.checkers.exceptions.GameException;
-import byui.cit260.checkers.models.Game;
-import byui.cit260.checkers.models.Player;
+import byui.cit260.checkers.exceptions.CheckersException;
+import byui.cit260.checkers.models.Board;
 import java.awt.Point;
 import java.util.ArrayList;
-import byui.cit260.checkers.enums.StatusType;
 import byui.cit260.checkers.enums.ErrorType;
+import byui.cit260.checkers.enums.GameType;
+import byui.cit260.checkers.models.Board;
+import byui.cit260.checkers.models.Game;
+import byui.cit260.checkers.models.Player;
+
+
+
 
 
 /**
@@ -17,8 +22,8 @@ import byui.cit260.checkers.enums.ErrorType;
  */
 public class GameMenuControl {
       
-    private Game game;            
-    private Board board;
+    Game game;            
+    Board board;
  //   private GetLocationView getLocationView;
  //   BoardView boardView = new BoardView();
  //   HelpMenuView helpMenuView = new HelpMenuView();

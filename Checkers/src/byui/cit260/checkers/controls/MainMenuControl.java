@@ -3,7 +3,6 @@ package byui.cit260.checkers.controls;
 import byui.cit260.checkers.models.Game;
 import byui.cit260.checkers.models.Player;
 import byui.cit260.checkers.enums.GameType;
-import byui.cit260.checkers.enums.StatusType;
 
 /**
  * * @author Angela
@@ -32,9 +31,7 @@ public class MainMenuControl {
          
         game.setPlayerA(playerA);
         game.setPlayerB(playerB);
-        
-        game.setStatus(StatusType.CONTINUE);
-        
+                
         return game;
     } 
 }      

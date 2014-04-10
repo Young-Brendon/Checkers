@@ -177,7 +177,7 @@
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="2" attributes="0">
                               <Component id="exitButton" alignment="2" min="-2" pref="87" max="-2" attributes="0"/>
-                              <Component id="helpButton" alignment="2" min="-2" pref="87" max="-2" attributes="0"/>
+                              <Component id="jbHelp" alignment="2" max="32767" attributes="0"/>
                               <Component id="startGameButton" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="26" max="32767" attributes="0"/>
@@ -190,7 +190,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="startGameButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="helpButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbHelp" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="exitButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
@@ -207,12 +207,12 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="startGameButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="helpButton">
+                <Component class="javax.swing.JButton" name="jbHelp">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Help"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="helpButtonActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbHelpActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="exitButton">
