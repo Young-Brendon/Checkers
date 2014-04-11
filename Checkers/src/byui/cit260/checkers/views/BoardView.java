@@ -11,7 +11,10 @@ public class BoardView {
  
     Board board;          
           
-    String[][] boardDisplay = {
+    /**
+     *
+     */
+    public static  String[][] boardDisplay = {
         {"B","-","B","-","B","-","B","-"},
         {"-","B","-","B","-","B","-","B"},
         {"B","-","B","-","B","-","B","-"},
@@ -21,6 +24,8 @@ public class BoardView {
         {"R","-","R","-","R","-","R","-"},
         {"-","R","-","R","-","R","-","R"},
     };    
+
+
     
     public void display() {
         
