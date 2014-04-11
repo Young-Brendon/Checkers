@@ -6,6 +6,7 @@
 
 package byui.cit260.checkers.frames;
 
+import byui.cit260.checkers.views.BoardView;
 import byui.cit260.checkers.controls.Checkers;
 import byui.cit260.checkers.controls.GameMenuControl;
 import byui.cit260.checkers.enums.GameType;
@@ -52,9 +53,10 @@ public class GameFrame extends javax.swing.JFrame {
         this.gameCommands = new GameMenuControl(game);
     }
     
+    @SuppressWarnings("empty-statement")
         public void initializeFrame() {
         /* Create and display the form */
-        
+      
 
         jChekersTable.getTableHeader().setVisible(false);
         jChekersTable.getTableHeader().setPreferredSize(new Dimension(8, 8));
@@ -65,11 +67,19 @@ public class GameFrame extends javax.swing.JFrame {
         CellRenderer cellRenderer = new CellRenderer();
         cellRenderer.setHorizontalAlignment(JLabel.CENTER);
         TableColumnModel columnTableModel = jChekersTable.getColumnModel();
+        String[][] displayBoard = BoardView.boardDisplay;
+        
         for (int i = 0; i < jChekersTable.getColumnCount(); i++) {
             columnTableModel.getColumn(i).setCellRenderer(cellRenderer);
         }
+        for(int row = 0;row<displayBoard.length;row++){
+              for(int column = 0; column<displayBoard.length;column++){
+        jChekersTable.getModel().setValueAt(displayBoard[row][column], row, column);
+              }
         
-    }
+        }
+        
+        }
     public String getCurrentMarker() {
         return currentMarker;
     }
@@ -91,6 +101,8 @@ public class GameFrame extends javax.swing.JFrame {
     }
 
     public void setCheckersTable(JTable CheckersTable) {
+       
+       
         this.jChekersTable = CheckersTable;
     }
 
