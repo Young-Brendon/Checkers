@@ -4,13 +4,15 @@ import byui.cit260.checkers.models.Board;
 import java.util.Scanner;
 
 
+
+
 /**
   * @author Cody
  */
 public class BoardView { 
  
     Board board;          
-          
+       
     /**
      *
      */

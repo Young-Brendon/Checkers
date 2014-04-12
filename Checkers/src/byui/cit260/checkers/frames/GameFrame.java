@@ -58,26 +58,26 @@ public class GameFrame extends javax.swing.JFrame {
         /* Create and display the form */
       
 
-        jChekersTable.getTableHeader().setVisible(false);
-        jChekersTable.getTableHeader().setPreferredSize(new Dimension(8, 8));
-        jChekersTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        Color backgroundColor = jChekersTable.getBackground();
-        jChekersTable.setSelectionBackground(backgroundColor);
+       // jChekersTable.getTableHeader().setVisible(false);
+        //jChekersTable.getTableHeader().setPreferredSize(new Dimension(8, 8));
+       // jChekersTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+       // Color backgroundColor = jChekersTable.getBackground();
+       // jChekersTable.setSelectionBackground(backgroundColor);
 
-        CellRenderer cellRenderer = new CellRenderer();
-        cellRenderer.setHorizontalAlignment(JLabel.CENTER);
-        TableColumnModel columnTableModel = jChekersTable.getColumnModel();
-        String[][] displayBoard = BoardView.boardDisplay;
+        //CellRenderer cellRenderer = new CellRenderer();
+        //cellRenderer.setHorizontalAlignment(JLabel.CENTER);
+       // TableColumnModel columnTableModel = jChekersTable.getColumnModel();
+       // String[][] displayBoard = BoardView.boardDisplay;
         
-        for (int i = 0; i < jChekersTable.getColumnCount(); i++) {
-            columnTableModel.getColumn(i).setCellRenderer(cellRenderer);
-        }
-        for(int row = 0;row<displayBoard.length;row++){
-              for(int column = 0; column<displayBoard.length;column++){
-        jChekersTable.getModel().setValueAt(displayBoard[row][column], row, column);
-              }
+        //for (int i = 0; i < jChekersTable.getColumnCount(); i++) {
+       //     columnTableModel.getColumn(i).setCellRenderer(cellRenderer);
+       // }
+       // for(int row = 0;row<displayBoard.length;row++){
+       //       for(int column = 0; column<displayBoard.length;column++){
+       // jChekersTable.getModel().setValueAt(displayBoard[row][column], row, column);
+      //        }
         
-        }
+       // }
         
         }
     public String getCurrentMarker() {
@@ -96,23 +96,23 @@ public class GameFrame extends javax.swing.JFrame {
         this.game = game;
     }
 
-    public JTable getCheckersTable() {
-        return jChekersTable;
-    }
+ //   public JTable getCheckersTable() {
+  //      return jChekersTable;
+ //   }
 
-    public void setCheckersTable(JTable CheckersTable) {
+  //  public void setCheckersTable(JTable CheckersTable) {
        
        
-        this.jChekersTable = CheckersTable;
-    }
+   //     this.jChekersTable = CheckersTable;
+  //  }
 
-    public JScrollPane getJpScrollPane1() {
-        return jScrollPane1;
-    }
+ //   public JScrollPane getJpScrollPane1() {
+ //       return jScrollPane1;
+ //   }
 
-    public void setJpScrollPane1(JScrollPane jScrollPane1) {
-        this.jScrollPane1 = jScrollPane1;
-    }
+ //   public void setJpScrollPane1(JScrollPane jScrollPane1) {
+ //       this.jScrollPane1 = jScrollPane1;
+ //   }
 
 
 
@@ -132,10 +132,73 @@ public class GameFrame extends javax.swing.JFrame {
         jNewGame = new javax.swing.JButton();
         jHelp = new javax.swing.JButton();
         jbQuit = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jChekersTable = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         jtMessageArea = new javax.swing.JTextArea();
+        jPanel3 = new javax.swing.JPanel();
+        jc1r1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jc3r1 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jc5r1 = new javax.swing.JButton();
+        jc7r1 = new javax.swing.JButton();
+        jc2r2 = new javax.swing.JButton();
+        jc4r2 = new javax.swing.JButton();
+        jc6r2 = new javax.swing.JButton();
+        jc8r2 = new javax.swing.JButton();
+        jc1r3 = new javax.swing.JButton();
+        jc3r3 = new javax.swing.JButton();
+        jc5r3 = new javax.swing.JButton();
+        jc7r3 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
+        jButton25 = new javax.swing.JButton();
+        BlankSquare = new javax.swing.JButton();
+        jButton27 = new javax.swing.JButton();
+        jButton28 = new javax.swing.JButton();
+        jButton29 = new javax.swing.JButton();
+        jButton30 = new javax.swing.JButton();
+        jButton31 = new javax.swing.JButton();
+        jButton32 = new javax.swing.JButton();
+        jButton33 = new javax.swing.JButton();
+        jButton34 = new javax.swing.JButton();
+        jButton35 = new javax.swing.JButton();
+        jButton36 = new javax.swing.JButton();
+        jButton37 = new javax.swing.JButton();
+        jButton38 = new javax.swing.JButton();
+        jButton39 = new javax.swing.JButton();
+        jButton40 = new javax.swing.JButton();
+        jButton41 = new javax.swing.JButton();
+        jButton42 = new javax.swing.JButton();
+        jButton43 = new javax.swing.JButton();
+        jButton44 = new javax.swing.JButton();
+        jButton45 = new javax.swing.JButton();
+        jButton46 = new javax.swing.JButton();
+        jButton47 = new javax.swing.JButton();
+        jButton48 = new javax.swing.JButton();
+        jButton49 = new javax.swing.JButton();
+        jButton50 = new javax.swing.JButton();
+        jButton51 = new javax.swing.JButton();
+        jButton52 = new javax.swing.JButton();
+        jButton53 = new javax.swing.JButton();
+        jButton54 = new javax.swing.JButton();
+        jButton55 = new javax.swing.JButton();
+        jButton56 = new javax.swing.JButton();
+        jc2r4 = new javax.swing.JButton();
+        jc4r4 = new javax.swing.JButton();
+        jc6r4 = new javax.swing.JButton();
+        jc8r4 = new javax.swing.JButton();
+        jc1r5 = new javax.swing.JButton();
+        jButton62 = new javax.swing.JButton();
+        jButton63 = new javax.swing.JButton();
+        jButton64 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Checkers");
@@ -146,7 +209,7 @@ public class GameFrame extends javax.swing.JFrame {
         jLabel1.setText("Checkers");
         jLabel1.setName("jpTitle"); // NOI18N
 
-        jNewGame.setText("New Game");
+        jNewGame.setText("Begin");
         jNewGame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jNewGameActionPerformed(evt);
@@ -173,103 +236,1390 @@ public class GameFrame extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jNewGame, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
-                    .addComponent(jbQuit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(jHelp, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jbQuit, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jNewGame, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jHelp, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(20, 20, 20)
                 .addComponent(jNewGame)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
                 .addComponent(jHelp)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(jbQuit)
-                .addContainerGap())
+                .addContainerGap(27, Short.MAX_VALUE))
         );
-
-        jChekersTable.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(0, 0, 0)));
-        jChekersTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "", "", "", "", "", "", "", ""
-            }
-        ));
-        jChekersTable.setAutoscrolls(false);
-        jChekersTable.setFocusable(false);
-        jChekersTable.setGridColor(new java.awt.Color(0, 0, 0));
-        jChekersTable.setRowHeight(30);
-        jChekersTable.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jChekersTableMouseClicked(evt);
-            }
-        });
-        jScrollPane1.setViewportView(jChekersTable);
-        if (jChekersTable.getColumnModel().getColumnCount() > 0) {
-            jChekersTable.getColumnModel().getColumn(0).setResizable(false);
-            jChekersTable.getColumnModel().getColumn(0).setHeaderValue("");
-            jChekersTable.getColumnModel().getColumn(1).setResizable(false);
-            jChekersTable.getColumnModel().getColumn(1).setHeaderValue("");
-            jChekersTable.getColumnModel().getColumn(2).setResizable(false);
-            jChekersTable.getColumnModel().getColumn(2).setHeaderValue("");
-            jChekersTable.getColumnModel().getColumn(3).setResizable(false);
-            jChekersTable.getColumnModel().getColumn(3).setHeaderValue("");
-            jChekersTable.getColumnModel().getColumn(4).setResizable(false);
-            jChekersTable.getColumnModel().getColumn(4).setHeaderValue("");
-            jChekersTable.getColumnModel().getColumn(5).setResizable(false);
-            jChekersTable.getColumnModel().getColumn(5).setHeaderValue("");
-            jChekersTable.getColumnModel().getColumn(6).setResizable(false);
-            jChekersTable.getColumnModel().getColumn(6).setHeaderValue("");
-            jChekersTable.getColumnModel().getColumn(7).setResizable(false);
-            jChekersTable.getColumnModel().getColumn(7).setHeaderValue("");
-        }
 
         jtMessageArea.setColumns(20);
         jtMessageArea.setRows(5);
         jScrollPane2.setViewportView(jtMessageArea);
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jc1r1.setBackground(new java.awt.Color(255, 255, 255));
+        jc1r1.setForeground(new java.awt.Color(255, 255, 255));
+        jc1r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); // NOI18N
+        jc1r1.setAlignmentY(0.0F);
+        jc1r1.setBorder(null);
+        jc1r1.setBorderPainted(false);
+        jc1r1.setIconTextGap(0);
+        jc1r1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc1r1.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc1r1.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc1r1.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc1r1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc1r1ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton3.setAlignmentY(0.0F);
+        jButton3.setBorder(null);
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
+        jButton3.setIconTextGap(0);
+        jButton3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton3.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton3.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton3.setName(""); // NOI18N
+        jButton3.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jc3r1.setBackground(new java.awt.Color(255, 255, 255));
+        jc3r1.setForeground(new java.awt.Color(255, 255, 255));
+        jc3r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); // NOI18N
+        jc3r1.setAlignmentY(0.0F);
+        jc3r1.setBorder(null);
+        jc3r1.setBorderPainted(false);
+        jc3r1.setIconTextGap(0);
+        jc3r1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc3r1.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc3r1.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc3r1.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc3r1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc3r1ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton4.setAlignmentY(0.0F);
+        jButton4.setBorder(null);
+        jButton4.setBorderPainted(false);
+        jButton4.setContentAreaFilled(false);
+        jButton4.setIconTextGap(0);
+        jButton4.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton4.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton4.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton4.setName(""); // NOI18N
+        jButton4.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton5.setAlignmentY(0.0F);
+        jButton5.setBorder(null);
+        jButton5.setBorderPainted(false);
+        jButton5.setContentAreaFilled(false);
+        jButton5.setIconTextGap(0);
+        jButton5.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton5.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton5.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton5.setName(""); // NOI18N
+        jButton5.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton6.setAlignmentY(0.0F);
+        jButton6.setBorder(null);
+        jButton6.setBorderPainted(false);
+        jButton6.setContentAreaFilled(false);
+        jButton6.setIconTextGap(0);
+        jButton6.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton6.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton6.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton6.setName(""); // NOI18N
+        jButton6.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton7.setAlignmentY(0.0F);
+        jButton7.setBorder(null);
+        jButton7.setBorderPainted(false);
+        jButton7.setContentAreaFilled(false);
+        jButton7.setIconTextGap(0);
+        jButton7.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton7.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton7.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton7.setName(""); // NOI18N
+        jButton7.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jc5r1.setBackground(new java.awt.Color(255, 255, 255));
+        jc5r1.setForeground(new java.awt.Color(255, 255, 255));
+        jc5r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); // NOI18N
+        jc5r1.setAlignmentY(0.0F);
+        jc5r1.setBorder(null);
+        jc5r1.setBorderPainted(false);
+        jc5r1.setIconTextGap(0);
+        jc5r1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc5r1.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc5r1.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc5r1.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc5r1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc5r1ActionPerformed(evt);
+            }
+        });
+
+        jc7r1.setBackground(new java.awt.Color(255, 255, 255));
+        jc7r1.setForeground(new java.awt.Color(255, 255, 255));
+        jc7r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); // NOI18N
+        jc7r1.setAlignmentY(0.0F);
+        jc7r1.setBorder(null);
+        jc7r1.setBorderPainted(false);
+        jc7r1.setIconTextGap(0);
+        jc7r1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc7r1.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc7r1.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc7r1.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc7r1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc7r1ActionPerformed(evt);
+            }
+        });
+
+        jc2r2.setBackground(new java.awt.Color(255, 255, 255));
+        jc2r2.setForeground(new java.awt.Color(255, 255, 255));
+        jc2r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); // NOI18N
+        jc2r2.setAlignmentY(0.0F);
+        jc2r2.setBorder(null);
+        jc2r2.setBorderPainted(false);
+        jc2r2.setIconTextGap(0);
+        jc2r2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc2r2.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc2r2.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc2r2.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc2r2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc2r2ActionPerformed(evt);
+            }
+        });
+
+        jc4r2.setBackground(new java.awt.Color(255, 255, 255));
+        jc4r2.setForeground(new java.awt.Color(255, 255, 255));
+        jc4r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); // NOI18N
+        jc4r2.setAlignmentY(0.0F);
+        jc4r2.setBorder(null);
+        jc4r2.setBorderPainted(false);
+        jc4r2.setIconTextGap(0);
+        jc4r2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc4r2.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc4r2.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc4r2.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc4r2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc4r2ActionPerformed(evt);
+            }
+        });
+
+        jc6r2.setBackground(new java.awt.Color(255, 255, 255));
+        jc6r2.setForeground(new java.awt.Color(255, 255, 255));
+        jc6r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); // NOI18N
+        jc6r2.setAlignmentY(0.0F);
+        jc6r2.setBorder(null);
+        jc6r2.setBorderPainted(false);
+        jc6r2.setIconTextGap(0);
+        jc6r2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc6r2.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc6r2.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc6r2.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc6r2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc6r2ActionPerformed(evt);
+            }
+        });
+
+        jc8r2.setBackground(new java.awt.Color(255, 255, 255));
+        jc8r2.setForeground(new java.awt.Color(255, 255, 255));
+        jc8r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); // NOI18N
+        jc8r2.setAlignmentY(0.0F);
+        jc8r2.setBorder(null);
+        jc8r2.setBorderPainted(false);
+        jc8r2.setIconTextGap(0);
+        jc8r2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc8r2.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc8r2.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc8r2.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc8r2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc8r2ActionPerformed(evt);
+            }
+        });
+
+        jc1r3.setBackground(new java.awt.Color(255, 255, 255));
+        jc1r3.setForeground(new java.awt.Color(255, 255, 255));
+        jc1r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); // NOI18N
+        jc1r3.setAlignmentY(0.0F);
+        jc1r3.setBorder(null);
+        jc1r3.setBorderPainted(false);
+        jc1r3.setIconTextGap(0);
+        jc1r3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc1r3.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc1r3.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc1r3.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc1r3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc1r3ActionPerformed(evt);
+            }
+        });
+
+        jc3r3.setBackground(new java.awt.Color(255, 255, 255));
+        jc3r3.setForeground(new java.awt.Color(255, 255, 255));
+        jc3r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); // NOI18N
+        jc3r3.setAlignmentY(0.0F);
+        jc3r3.setBorder(null);
+        jc3r3.setBorderPainted(false);
+        jc3r3.setIconTextGap(0);
+        jc3r3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc3r3.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc3r3.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc3r3.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc3r3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc3r3ActionPerformed(evt);
+            }
+        });
+
+        jc5r3.setBackground(new java.awt.Color(255, 255, 255));
+        jc5r3.setForeground(new java.awt.Color(255, 255, 255));
+        jc5r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); // NOI18N
+        jc5r3.setAlignmentY(0.0F);
+        jc5r3.setBorder(null);
+        jc5r3.setBorderPainted(false);
+        jc5r3.setIconTextGap(0);
+        jc5r3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc5r3.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc5r3.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc5r3.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc5r3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc5r3ActionPerformed(evt);
+            }
+        });
+
+        jc7r3.setBackground(new java.awt.Color(255, 255, 255));
+        jc7r3.setForeground(new java.awt.Color(255, 255, 255));
+        jc7r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); // NOI18N
+        jc7r3.setAlignmentY(0.0F);
+        jc7r3.setBorder(null);
+        jc7r3.setBorderPainted(false);
+        jc7r3.setIconTextGap(0);
+        jc7r3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc7r3.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc7r3.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc7r3.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc7r3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc7r3ActionPerformed(evt);
+            }
+        });
+
+        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton18.setAlignmentY(0.0F);
+        jButton18.setBorder(null);
+        jButton18.setBorderPainted(false);
+        jButton18.setContentAreaFilled(false);
+        jButton18.setIconTextGap(0);
+        jButton18.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton18.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton18.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton18.setName(""); // NOI18N
+        jButton18.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton19.setAlignmentY(0.0F);
+        jButton19.setBorder(null);
+        jButton19.setBorderPainted(false);
+        jButton19.setContentAreaFilled(false);
+        jButton19.setIconTextGap(0);
+        jButton19.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton19.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton19.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton19.setName(""); // NOI18N
+        jButton19.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+
+        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton20.setAlignmentY(0.0F);
+        jButton20.setBorder(null);
+        jButton20.setBorderPainted(false);
+        jButton20.setContentAreaFilled(false);
+        jButton20.setIconTextGap(0);
+        jButton20.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton20.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton20.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton20.setName(""); // NOI18N
+        jButton20.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+
+        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton21.setAlignmentY(0.0F);
+        jButton21.setBorder(null);
+        jButton21.setBorderPainted(false);
+        jButton21.setContentAreaFilled(false);
+        jButton21.setIconTextGap(0);
+        jButton21.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton21.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton21.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton21.setName(""); // NOI18N
+        jButton21.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+
+        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton22.setAlignmentY(0.0F);
+        jButton22.setBorder(null);
+        jButton22.setBorderPainted(false);
+        jButton22.setContentAreaFilled(false);
+        jButton22.setIconTextGap(0);
+        jButton22.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton22.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton22.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton22.setName(""); // NOI18N
+        jButton22.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+
+        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton23.setAlignmentY(0.0F);
+        jButton23.setBorder(null);
+        jButton23.setBorderPainted(false);
+        jButton23.setContentAreaFilled(false);
+        jButton23.setIconTextGap(0);
+        jButton23.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton23.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton23.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton23.setName(""); // NOI18N
+        jButton23.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+
+        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton24.setAlignmentY(0.0F);
+        jButton24.setBorder(null);
+        jButton24.setBorderPainted(false);
+        jButton24.setContentAreaFilled(false);
+        jButton24.setIconTextGap(0);
+        jButton24.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton24.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton24.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton24.setName(""); // NOI18N
+        jButton24.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
+
+        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton25.setAlignmentY(0.0F);
+        jButton25.setBorder(null);
+        jButton25.setBorderPainted(false);
+        jButton25.setContentAreaFilled(false);
+        jButton25.setIconTextGap(0);
+        jButton25.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton25.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton25.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton25.setName(""); // NOI18N
+        jButton25.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
+
+        BlankSquare.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        BlankSquare.setAlignmentY(0.0F);
+        BlankSquare.setBorder(null);
+        BlankSquare.setBorderPainted(false);
+        BlankSquare.setContentAreaFilled(false);
+        BlankSquare.setIconTextGap(0);
+        BlankSquare.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        BlankSquare.setMaximumSize(new java.awt.Dimension(30, 30));
+        BlankSquare.setMinimumSize(new java.awt.Dimension(30, 30));
+        BlankSquare.setName(""); // NOI18N
+        BlankSquare.setPreferredSize(new java.awt.Dimension(30, 30));
+        BlankSquare.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BlankSquareActionPerformed(evt);
+            }
+        });
+
+        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton27.setAlignmentY(0.0F);
+        jButton27.setBorder(null);
+        jButton27.setBorderPainted(false);
+        jButton27.setContentAreaFilled(false);
+        jButton27.setIconTextGap(0);
+        jButton27.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton27.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton27.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton27.setName(""); // NOI18N
+        jButton27.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
+
+        jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton28.setAlignmentY(0.0F);
+        jButton28.setBorder(null);
+        jButton28.setBorderPainted(false);
+        jButton28.setContentAreaFilled(false);
+        jButton28.setIconTextGap(0);
+        jButton28.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton28.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton28.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton28.setName(""); // NOI18N
+        jButton28.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton28ActionPerformed(evt);
+            }
+        });
+
+        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton29.setAlignmentY(0.0F);
+        jButton29.setBorder(null);
+        jButton29.setBorderPainted(false);
+        jButton29.setContentAreaFilled(false);
+        jButton29.setIconTextGap(0);
+        jButton29.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton29.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton29.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton29.setName(""); // NOI18N
+        jButton29.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
+
+        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton30.setAlignmentY(0.0F);
+        jButton30.setBorder(null);
+        jButton30.setBorderPainted(false);
+        jButton30.setContentAreaFilled(false);
+        jButton30.setIconTextGap(0);
+        jButton30.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton30.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton30.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton30.setName(""); // NOI18N
+        jButton30.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton30ActionPerformed(evt);
+            }
+        });
+
+        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton31.setAlignmentY(0.0F);
+        jButton31.setBorder(null);
+        jButton31.setBorderPainted(false);
+        jButton31.setContentAreaFilled(false);
+        jButton31.setIconTextGap(0);
+        jButton31.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton31.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton31.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton31.setName(""); // NOI18N
+        jButton31.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
+
+        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton32.setAlignmentY(0.0F);
+        jButton32.setBorder(null);
+        jButton32.setBorderPainted(false);
+        jButton32.setContentAreaFilled(false);
+        jButton32.setIconTextGap(0);
+        jButton32.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton32.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton32.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton32.setName(""); // NOI18N
+        jButton32.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton32ActionPerformed(evt);
+            }
+        });
+
+        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton33.setAlignmentY(0.0F);
+        jButton33.setBorder(null);
+        jButton33.setBorderPainted(false);
+        jButton33.setContentAreaFilled(false);
+        jButton33.setIconTextGap(0);
+        jButton33.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton33.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton33.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton33.setName(""); // NOI18N
+        jButton33.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton33ActionPerformed(evt);
+            }
+        });
+
+        jButton34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton34.setAlignmentY(0.0F);
+        jButton34.setBorder(null);
+        jButton34.setBorderPainted(false);
+        jButton34.setContentAreaFilled(false);
+        jButton34.setIconTextGap(0);
+        jButton34.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton34.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton34.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton34.setName(""); // NOI18N
+        jButton34.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton34ActionPerformed(evt);
+            }
+        });
+
+        jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton35.setAlignmentY(0.0F);
+        jButton35.setBorder(null);
+        jButton35.setBorderPainted(false);
+        jButton35.setContentAreaFilled(false);
+        jButton35.setIconTextGap(0);
+        jButton35.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton35.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton35.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton35.setName(""); // NOI18N
+        jButton35.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton35ActionPerformed(evt);
+            }
+        });
+
+        jButton36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton36.setAlignmentY(0.0F);
+        jButton36.setBorder(null);
+        jButton36.setBorderPainted(false);
+        jButton36.setContentAreaFilled(false);
+        jButton36.setIconTextGap(0);
+        jButton36.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton36.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton36.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton36.setName(""); // NOI18N
+        jButton36.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton36ActionPerformed(evt);
+            }
+        });
+
+        jButton37.setBackground(new java.awt.Color(255, 255, 255));
+        jButton37.setForeground(new java.awt.Color(255, 255, 255));
+        jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jButton37.setAlignmentY(0.0F);
+        jButton37.setBorder(null);
+        jButton37.setBorderPainted(false);
+        jButton37.setIconTextGap(0);
+        jButton37.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton37.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton37.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton37.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton37ActionPerformed(evt);
+            }
+        });
+
+        jButton38.setBackground(new java.awt.Color(255, 255, 255));
+        jButton38.setForeground(new java.awt.Color(255, 255, 255));
+        jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jButton38.setAlignmentY(0.0F);
+        jButton38.setBorder(null);
+        jButton38.setBorderPainted(false);
+        jButton38.setIconTextGap(0);
+        jButton38.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton38.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton38.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton38.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton38ActionPerformed(evt);
+            }
+        });
+
+        jButton39.setBackground(new java.awt.Color(255, 255, 255));
+        jButton39.setForeground(new java.awt.Color(255, 255, 255));
+        jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jButton39.setAlignmentY(0.0F);
+        jButton39.setBorder(null);
+        jButton39.setBorderPainted(false);
+        jButton39.setIconTextGap(0);
+        jButton39.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton39.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton39.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton39.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton39ActionPerformed(evt);
+            }
+        });
+
+        jButton40.setBackground(new java.awt.Color(255, 255, 255));
+        jButton40.setForeground(new java.awt.Color(255, 255, 255));
+        jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jButton40.setAlignmentY(0.0F);
+        jButton40.setBorder(null);
+        jButton40.setBorderPainted(false);
+        jButton40.setIconTextGap(0);
+        jButton40.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton40.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton40.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton40.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton40ActionPerformed(evt);
+            }
+        });
+
+        jButton41.setBackground(new java.awt.Color(255, 255, 255));
+        jButton41.setForeground(new java.awt.Color(255, 255, 255));
+        jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jButton41.setAlignmentY(0.0F);
+        jButton41.setBorder(null);
+        jButton41.setBorderPainted(false);
+        jButton41.setIconTextGap(0);
+        jButton41.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton41.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton41.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton41.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton41ActionPerformed(evt);
+            }
+        });
+
+        jButton42.setBackground(new java.awt.Color(255, 255, 255));
+        jButton42.setForeground(new java.awt.Color(255, 255, 255));
+        jButton42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jButton42.setAlignmentY(0.0F);
+        jButton42.setBorder(null);
+        jButton42.setBorderPainted(false);
+        jButton42.setIconTextGap(0);
+        jButton42.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton42.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton42.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton42.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton42ActionPerformed(evt);
+            }
+        });
+
+        jButton43.setBackground(new java.awt.Color(255, 255, 255));
+        jButton43.setForeground(new java.awt.Color(255, 255, 255));
+        jButton43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jButton43.setAlignmentY(0.0F);
+        jButton43.setBorder(null);
+        jButton43.setBorderPainted(false);
+        jButton43.setIconTextGap(0);
+        jButton43.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton43.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton43.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton43.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton43ActionPerformed(evt);
+            }
+        });
+
+        jButton44.setBackground(new java.awt.Color(255, 255, 255));
+        jButton44.setForeground(new java.awt.Color(255, 255, 255));
+        jButton44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jButton44.setAlignmentY(0.0F);
+        jButton44.setBorder(null);
+        jButton44.setBorderPainted(false);
+        jButton44.setIconTextGap(0);
+        jButton44.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton44.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton44.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton44.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton44.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton44ActionPerformed(evt);
+            }
+        });
+
+        jButton45.setBackground(new java.awt.Color(255, 255, 255));
+        jButton45.setForeground(new java.awt.Color(255, 255, 255));
+        jButton45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jButton45.setAlignmentY(0.0F);
+        jButton45.setBorder(null);
+        jButton45.setBorderPainted(false);
+        jButton45.setIconTextGap(0);
+        jButton45.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton45.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton45.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton45.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton45.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton45ActionPerformed(evt);
+            }
+        });
+
+        jButton46.setBackground(new java.awt.Color(255, 255, 255));
+        jButton46.setForeground(new java.awt.Color(255, 255, 255));
+        jButton46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jButton46.setAlignmentY(0.0F);
+        jButton46.setBorder(null);
+        jButton46.setBorderPainted(false);
+        jButton46.setIconTextGap(0);
+        jButton46.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton46.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton46.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton46.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton46.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton46ActionPerformed(evt);
+            }
+        });
+
+        jButton47.setBackground(new java.awt.Color(255, 255, 255));
+        jButton47.setForeground(new java.awt.Color(255, 255, 255));
+        jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jButton47.setAlignmentY(0.0F);
+        jButton47.setBorder(null);
+        jButton47.setBorderPainted(false);
+        jButton47.setIconTextGap(0);
+        jButton47.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton47.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton47.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton47.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton47.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton47ActionPerformed(evt);
+            }
+        });
+
+        jButton48.setBackground(new java.awt.Color(255, 255, 255));
+        jButton48.setForeground(new java.awt.Color(255, 255, 255));
+        jButton48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jButton48.setAlignmentY(0.0F);
+        jButton48.setBorder(null);
+        jButton48.setBorderPainted(false);
+        jButton48.setIconTextGap(0);
+        jButton48.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton48.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton48.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton48.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton48.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton48ActionPerformed(evt);
+            }
+        });
+
+        jButton49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton49.setAlignmentY(0.0F);
+        jButton49.setBorder(null);
+        jButton49.setBorderPainted(false);
+        jButton49.setContentAreaFilled(false);
+        jButton49.setIconTextGap(0);
+        jButton49.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton49.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton49.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton49.setName(""); // NOI18N
+        jButton49.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton49.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton49ActionPerformed(evt);
+            }
+        });
+
+        jButton50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton50.setAlignmentY(0.0F);
+        jButton50.setBorder(null);
+        jButton50.setBorderPainted(false);
+        jButton50.setContentAreaFilled(false);
+        jButton50.setIconTextGap(0);
+        jButton50.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton50.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton50.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton50.setName(""); // NOI18N
+        jButton50.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton50.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton50ActionPerformed(evt);
+            }
+        });
+
+        jButton51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton51.setAlignmentY(0.0F);
+        jButton51.setBorder(null);
+        jButton51.setBorderPainted(false);
+        jButton51.setContentAreaFilled(false);
+        jButton51.setIconTextGap(0);
+        jButton51.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton51.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton51.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton51.setName(""); // NOI18N
+        jButton51.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton51ActionPerformed(evt);
+            }
+        });
+
+        jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton52.setAlignmentY(0.0F);
+        jButton52.setBorder(null);
+        jButton52.setBorderPainted(false);
+        jButton52.setContentAreaFilled(false);
+        jButton52.setIconTextGap(0);
+        jButton52.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton52.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton52.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton52.setName(""); // NOI18N
+        jButton52.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton52.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton52ActionPerformed(evt);
+            }
+        });
+
+        jButton53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton53.setAlignmentY(0.0F);
+        jButton53.setBorder(null);
+        jButton53.setBorderPainted(false);
+        jButton53.setContentAreaFilled(false);
+        jButton53.setIconTextGap(0);
+        jButton53.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton53.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton53.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton53.setName(""); // NOI18N
+        jButton53.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton53.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton53ActionPerformed(evt);
+            }
+        });
+
+        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton54.setAlignmentY(0.0F);
+        jButton54.setBorder(null);
+        jButton54.setBorderPainted(false);
+        jButton54.setContentAreaFilled(false);
+        jButton54.setIconTextGap(0);
+        jButton54.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton54.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton54.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton54.setName(""); // NOI18N
+        jButton54.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton54.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton54ActionPerformed(evt);
+            }
+        });
+
+        jButton55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton55.setAlignmentY(0.0F);
+        jButton55.setBorder(null);
+        jButton55.setBorderPainted(false);
+        jButton55.setContentAreaFilled(false);
+        jButton55.setIconTextGap(0);
+        jButton55.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton55.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton55.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton55.setName(""); // NOI18N
+        jButton55.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton55.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton55ActionPerformed(evt);
+            }
+        });
+
+        jButton56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/square.gif"))); // NOI18N
+        jButton56.setAlignmentY(0.0F);
+        jButton56.setBorder(null);
+        jButton56.setBorderPainted(false);
+        jButton56.setContentAreaFilled(false);
+        jButton56.setIconTextGap(0);
+        jButton56.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton56.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton56.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton56.setName(""); // NOI18N
+        jButton56.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton56.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton56ActionPerformed(evt);
+            }
+        });
+
+        jc2r4.setBackground(new java.awt.Color(255, 255, 255));
+        jc2r4.setForeground(new java.awt.Color(255, 255, 255));
+        jc2r4.setAlignmentY(0.0F);
+        jc2r4.setBorder(null);
+        jc2r4.setBorderPainted(false);
+        jc2r4.setIconTextGap(0);
+        jc2r4.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc2r4.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc2r4.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc2r4.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc2r4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc2r4ActionPerformed(evt);
+            }
+        });
+
+        jc4r4.setBackground(new java.awt.Color(255, 255, 255));
+        jc4r4.setForeground(new java.awt.Color(255, 255, 255));
+        jc4r4.setAlignmentY(0.0F);
+        jc4r4.setBorder(null);
+        jc4r4.setBorderPainted(false);
+        jc4r4.setIconTextGap(0);
+        jc4r4.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc4r4.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc4r4.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc4r4.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc4r4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc4r4ActionPerformed(evt);
+            }
+        });
+
+        jc6r4.setBackground(new java.awt.Color(255, 255, 255));
+        jc6r4.setForeground(new java.awt.Color(255, 255, 255));
+        jc6r4.setAlignmentY(0.0F);
+        jc6r4.setBorder(null);
+        jc6r4.setBorderPainted(false);
+        jc6r4.setIconTextGap(0);
+        jc6r4.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc6r4.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc6r4.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc6r4.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc6r4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc6r4ActionPerformed(evt);
+            }
+        });
+
+        jc8r4.setBackground(new java.awt.Color(255, 255, 255));
+        jc8r4.setForeground(new java.awt.Color(255, 255, 255));
+        jc8r4.setAlignmentY(0.0F);
+        jc8r4.setBorder(null);
+        jc8r4.setBorderPainted(false);
+        jc8r4.setIconTextGap(0);
+        jc8r4.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc8r4.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc8r4.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc8r4.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc8r4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc8r4ActionPerformed(evt);
+            }
+        });
+
+        jc1r5.setBackground(new java.awt.Color(255, 255, 255));
+        jc1r5.setForeground(new java.awt.Color(255, 255, 255));
+        jc1r5.setAlignmentY(0.0F);
+        jc1r5.setBorder(null);
+        jc1r5.setBorderPainted(false);
+        jc1r5.setIconTextGap(0);
+        jc1r5.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc1r5.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc1r5.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc1r5.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc1r5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jc1r5ActionPerformed(evt);
+            }
+        });
+
+        jButton62.setBackground(new java.awt.Color(255, 255, 255));
+        jButton62.setForeground(new java.awt.Color(255, 255, 255));
+        jButton62.setAlignmentY(0.0F);
+        jButton62.setBorder(null);
+        jButton62.setBorderPainted(false);
+        jButton62.setIconTextGap(0);
+        jButton62.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton62.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton62.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton62.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton62.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton62ActionPerformed(evt);
+            }
+        });
+
+        jButton63.setBackground(new java.awt.Color(255, 255, 255));
+        jButton63.setForeground(new java.awt.Color(255, 255, 255));
+        jButton63.setAlignmentY(0.0F);
+        jButton63.setBorder(null);
+        jButton63.setBorderPainted(false);
+        jButton63.setIconTextGap(0);
+        jButton63.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton63.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton63.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton63.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton63.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton63ActionPerformed(evt);
+            }
+        });
+
+        jButton64.setBackground(new java.awt.Color(255, 255, 255));
+        jButton64.setForeground(new java.awt.Color(255, 255, 255));
+        jButton64.setAlignmentY(0.0F);
+        jButton64.setBorder(null);
+        jButton64.setBorderPainted(false);
+        jButton64.setIconTextGap(0);
+        jButton64.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton64.setMaximumSize(new java.awt.Dimension(30, 30));
+        jButton64.setMinimumSize(new java.awt.Dimension(30, 30));
+        jButton64.setPreferredSize(new java.awt.Dimension(30, 30));
+        jButton64.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton64ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jc1r1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jc1r3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jc1r5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addComponent(jButton49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jc3r3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jc3r1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jc2r4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(BlankSquare, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jc4r4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jc2r2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jc4r2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jc6r2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jc5r3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jc5r1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButton50, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jc6r4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jc8r2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jc7r3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jc7r1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jc8r4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jButton55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addComponent(jButton54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jc8r2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jc6r2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jc4r2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jc7r1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jc7r3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jc5r1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jc5r3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jc1r1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jc3r1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jc3r3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jc2r2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jc1r3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BlankSquare, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jc2r4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jc4r4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jc6r4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jc8r4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(4, 4, 4)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jc1r5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jButton35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton50, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButton45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton52, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton55, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton56, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButton54, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton46, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton47, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton48, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel1)
+                        .addGap(19, 19, 19))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2)
                 .addContainerGap())
@@ -308,16 +1658,266 @@ public class GameFrame extends javax.swing.JFrame {
     private void jNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNewGameActionPerformed
         this.gameCommands.startNewGame(this.game);
         takeFirstTurn();
-        String nextPlayersMessage = this.game.getCurrentPlayer().getName()
-        + " it is your turn.";
+        String nextPlayersMessage = "A new game has begun. \n" + this.game.getCurrentPlayer().getName()
+        + ", it is your turn.";
         this.jtMessageArea.setText(nextPlayersMessage);
     }//GEN-LAST:event_jNewGameActionPerformed
 
-    private void jChekersTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jChekersTableMouseClicked
-        JTable jTable = (JTable) evt.getComponent();
-        this.jtMessageArea.setForeground(Color.black);
-        this.takeTurn(jTable);
-    }//GEN-LAST:event_jChekersTableMouseClicked
+    private void jButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton64ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton64ActionPerformed
+
+    private void jButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton63ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton63ActionPerformed
+
+    private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton62ActionPerformed
+
+    private void jc1r5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc1r5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc1r5ActionPerformed
+
+    private void jc8r4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc8r4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc8r4ActionPerformed
+
+    private void jc6r4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc6r4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc6r4ActionPerformed
+
+    private void jc4r4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc4r4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc4r4ActionPerformed
+
+    private void jc2r4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc2r4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc2r4ActionPerformed
+
+    private void jButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton56ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton56ActionPerformed
+
+    private void jButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton55ActionPerformed
+
+    private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton54ActionPerformed
+
+    private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton53ActionPerformed
+
+    private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton52ActionPerformed
+
+    private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton51ActionPerformed
+
+    private void jButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton50ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton50ActionPerformed
+
+    private void jButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton49ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton49ActionPerformed
+
+    private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton48ActionPerformed
+
+    private void jButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton47ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton47ActionPerformed
+
+    private void jButton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton46ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton46ActionPerformed
+
+    private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton45ActionPerformed
+
+    private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton44ActionPerformed
+
+    private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton43ActionPerformed
+
+    private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton42ActionPerformed
+
+    private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton41ActionPerformed
+
+    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton40ActionPerformed
+
+    private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton39ActionPerformed
+
+    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton38ActionPerformed
+
+    private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton37ActionPerformed
+
+    private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton36ActionPerformed
+
+    private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton35ActionPerformed
+
+    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton34ActionPerformed
+
+    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton33ActionPerformed
+
+    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton32ActionPerformed
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton31ActionPerformed
+
+    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton30ActionPerformed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton28ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void BlankSquareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlankSquareActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BlankSquareActionPerformed
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton25ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jc7r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc7r3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc7r3ActionPerformed
+
+    private void jc5r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc5r3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc5r3ActionPerformed
+
+    private void jc3r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc3r3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc3r3ActionPerformed
+
+    private void jc1r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc1r3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc1r3ActionPerformed
+
+    private void jc8r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc8r2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc8r2ActionPerformed
+
+    private void jc6r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc6r2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc6r2ActionPerformed
+
+    private void jc4r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc4r2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc4r2ActionPerformed
+
+    private void jc2r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc2r2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc2r2ActionPerformed
+
+    private void jc7r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc7r1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc7r1ActionPerformed
+
+    private void jc5r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc5r1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc5r1ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jc3r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc3r1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc3r1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jc1r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc1r1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jc1r1ActionPerformed
   
      private String getNextPlayerMessage(Player player) {
        
@@ -330,15 +1930,78 @@ public class GameFrame extends javax.swing.JFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable jChekersTable;
+    private javax.swing.JButton BlankSquare;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton30;
+    private javax.swing.JButton jButton31;
+    private javax.swing.JButton jButton32;
+    private javax.swing.JButton jButton33;
+    private javax.swing.JButton jButton34;
+    private javax.swing.JButton jButton35;
+    private javax.swing.JButton jButton36;
+    private javax.swing.JButton jButton37;
+    private javax.swing.JButton jButton38;
+    private javax.swing.JButton jButton39;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton40;
+    private javax.swing.JButton jButton41;
+    private javax.swing.JButton jButton42;
+    private javax.swing.JButton jButton43;
+    private javax.swing.JButton jButton44;
+    private javax.swing.JButton jButton45;
+    private javax.swing.JButton jButton46;
+    private javax.swing.JButton jButton47;
+    private javax.swing.JButton jButton48;
+    private javax.swing.JButton jButton49;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton50;
+    private javax.swing.JButton jButton51;
+    private javax.swing.JButton jButton52;
+    private javax.swing.JButton jButton53;
+    private javax.swing.JButton jButton54;
+    private javax.swing.JButton jButton55;
+    private javax.swing.JButton jButton56;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton62;
+    private javax.swing.JButton jButton63;
+    private javax.swing.JButton jButton64;
+    private javax.swing.JButton jButton7;
     private javax.swing.JButton jHelp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton jNewGame;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton jbQuit;
+    private javax.swing.JButton jc1r1;
+    private javax.swing.JButton jc1r3;
+    private javax.swing.JButton jc1r5;
+    private javax.swing.JButton jc2r2;
+    private javax.swing.JButton jc2r4;
+    private javax.swing.JButton jc3r1;
+    private javax.swing.JButton jc3r3;
+    private javax.swing.JButton jc4r2;
+    private javax.swing.JButton jc4r4;
+    private javax.swing.JButton jc5r1;
+    private javax.swing.JButton jc5r3;
+    private javax.swing.JButton jc6r2;
+    private javax.swing.JButton jc6r4;
+    private javax.swing.JButton jc7r1;
+    private javax.swing.JButton jc7r3;
+    private javax.swing.JButton jc8r2;
+    private javax.swing.JButton jc8r4;
     private javax.swing.JTextArea jtMessageArea;
     // End of variables declaration//GEN-END:variables
 
