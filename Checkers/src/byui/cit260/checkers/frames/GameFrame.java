@@ -36,7 +36,7 @@ public class GameFrame extends javax.swing.JFrame {
     private String currentMarker = null;
     private Game game = null;
     private GameMenuControl gameCommands = null;
-
+    private String move = "select";
     /**
      * Creates new form GameFrame
      */
@@ -55,6 +55,7 @@ public class GameFrame extends javax.swing.JFrame {
     
     @SuppressWarnings("empty-statement")
         public void initializeFrame() {
+           
         /* Create and display the form */
       
 
@@ -96,6 +97,7 @@ public class GameFrame extends javax.swing.JFrame {
         this.game = game;
     }
 
+    
  //   public JTable getCheckersTable() {
   //      return jChekersTable;
  //   }
@@ -171,18 +173,18 @@ public class GameFrame extends javax.swing.JFrame {
         jButton34 = new javax.swing.JButton();
         jButton35 = new javax.swing.JButton();
         jButton36 = new javax.swing.JButton();
-        jButton37 = new javax.swing.JButton();
-        jButton38 = new javax.swing.JButton();
-        jButton39 = new javax.swing.JButton();
-        jButton40 = new javax.swing.JButton();
-        jButton41 = new javax.swing.JButton();
-        jButton42 = new javax.swing.JButton();
-        jButton43 = new javax.swing.JButton();
-        jButton44 = new javax.swing.JButton();
-        jButton45 = new javax.swing.JButton();
-        jButton46 = new javax.swing.JButton();
-        jButton47 = new javax.swing.JButton();
-        jButton48 = new javax.swing.JButton();
+        jc2r6 = new javax.swing.JButton();
+        jc4r6 = new javax.swing.JButton();
+        jc6r6 = new javax.swing.JButton();
+        jc8r6 = new javax.swing.JButton();
+        jc1r7 = new javax.swing.JButton();
+        jc3r7 = new javax.swing.JButton();
+        jc5r7 = new javax.swing.JButton();
+        jc7r7 = new javax.swing.JButton();
+        jc8r8 = new javax.swing.JButton();
+        jc4r8 = new javax.swing.JButton();
+        jc6r8 = new javax.swing.JButton();
+        jc2r8 = new javax.swing.JButton();
         jButton49 = new javax.swing.JButton();
         jButton50 = new javax.swing.JButton();
         jButton51 = new javax.swing.JButton();
@@ -196,9 +198,9 @@ public class GameFrame extends javax.swing.JFrame {
         jc6r4 = new javax.swing.JButton();
         jc8r4 = new javax.swing.JButton();
         jc1r5 = new javax.swing.JButton();
-        jButton62 = new javax.swing.JButton();
-        jButton63 = new javax.swing.JButton();
-        jButton64 = new javax.swing.JButton();
+        jc3r5 = new javax.swing.JButton();
+        jc5r5 = new javax.swing.JButton();
+        jc7r5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Checkers");
@@ -878,207 +880,207 @@ public class GameFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton37.setBackground(new java.awt.Color(255, 255, 255));
-        jButton37.setForeground(new java.awt.Color(255, 255, 255));
-        jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
-        jButton37.setAlignmentY(0.0F);
-        jButton37.setBorder(null);
-        jButton37.setBorderPainted(false);
-        jButton37.setIconTextGap(0);
-        jButton37.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton37.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton37.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton37.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton37.addActionListener(new java.awt.event.ActionListener() {
+        jc2r6.setBackground(new java.awt.Color(255, 255, 255));
+        jc2r6.setForeground(new java.awt.Color(255, 255, 255));
+        jc2r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jc2r6.setAlignmentY(0.0F);
+        jc2r6.setBorder(null);
+        jc2r6.setBorderPainted(false);
+        jc2r6.setIconTextGap(0);
+        jc2r6.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc2r6.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc2r6.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc2r6.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc2r6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton37ActionPerformed(evt);
+                jc2r6ActionPerformed(evt);
             }
         });
 
-        jButton38.setBackground(new java.awt.Color(255, 255, 255));
-        jButton38.setForeground(new java.awt.Color(255, 255, 255));
-        jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
-        jButton38.setAlignmentY(0.0F);
-        jButton38.setBorder(null);
-        jButton38.setBorderPainted(false);
-        jButton38.setIconTextGap(0);
-        jButton38.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton38.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton38.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton38.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton38.addActionListener(new java.awt.event.ActionListener() {
+        jc4r6.setBackground(new java.awt.Color(255, 255, 255));
+        jc4r6.setForeground(new java.awt.Color(255, 255, 255));
+        jc4r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jc4r6.setAlignmentY(0.0F);
+        jc4r6.setBorder(null);
+        jc4r6.setBorderPainted(false);
+        jc4r6.setIconTextGap(0);
+        jc4r6.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc4r6.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc4r6.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc4r6.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc4r6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton38ActionPerformed(evt);
+                jc4r6ActionPerformed(evt);
             }
         });
 
-        jButton39.setBackground(new java.awt.Color(255, 255, 255));
-        jButton39.setForeground(new java.awt.Color(255, 255, 255));
-        jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
-        jButton39.setAlignmentY(0.0F);
-        jButton39.setBorder(null);
-        jButton39.setBorderPainted(false);
-        jButton39.setIconTextGap(0);
-        jButton39.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton39.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton39.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton39.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton39.addActionListener(new java.awt.event.ActionListener() {
+        jc6r6.setBackground(new java.awt.Color(255, 255, 255));
+        jc6r6.setForeground(new java.awt.Color(255, 255, 255));
+        jc6r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jc6r6.setAlignmentY(0.0F);
+        jc6r6.setBorder(null);
+        jc6r6.setBorderPainted(false);
+        jc6r6.setIconTextGap(0);
+        jc6r6.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc6r6.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc6r6.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc6r6.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc6r6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton39ActionPerformed(evt);
+                jc6r6ActionPerformed(evt);
             }
         });
 
-        jButton40.setBackground(new java.awt.Color(255, 255, 255));
-        jButton40.setForeground(new java.awt.Color(255, 255, 255));
-        jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
-        jButton40.setAlignmentY(0.0F);
-        jButton40.setBorder(null);
-        jButton40.setBorderPainted(false);
-        jButton40.setIconTextGap(0);
-        jButton40.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton40.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton40.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton40.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton40.addActionListener(new java.awt.event.ActionListener() {
+        jc8r6.setBackground(new java.awt.Color(255, 255, 255));
+        jc8r6.setForeground(new java.awt.Color(255, 255, 255));
+        jc8r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jc8r6.setAlignmentY(0.0F);
+        jc8r6.setBorder(null);
+        jc8r6.setBorderPainted(false);
+        jc8r6.setIconTextGap(0);
+        jc8r6.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc8r6.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc8r6.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc8r6.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc8r6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton40ActionPerformed(evt);
+                jc8r6ActionPerformed(evt);
             }
         });
 
-        jButton41.setBackground(new java.awt.Color(255, 255, 255));
-        jButton41.setForeground(new java.awt.Color(255, 255, 255));
-        jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
-        jButton41.setAlignmentY(0.0F);
-        jButton41.setBorder(null);
-        jButton41.setBorderPainted(false);
-        jButton41.setIconTextGap(0);
-        jButton41.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton41.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton41.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton41.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton41.addActionListener(new java.awt.event.ActionListener() {
+        jc1r7.setBackground(new java.awt.Color(255, 255, 255));
+        jc1r7.setForeground(new java.awt.Color(255, 255, 255));
+        jc1r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jc1r7.setAlignmentY(0.0F);
+        jc1r7.setBorder(null);
+        jc1r7.setBorderPainted(false);
+        jc1r7.setIconTextGap(0);
+        jc1r7.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc1r7.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc1r7.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc1r7.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc1r7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton41ActionPerformed(evt);
+                jc1r7ActionPerformed(evt);
             }
         });
 
-        jButton42.setBackground(new java.awt.Color(255, 255, 255));
-        jButton42.setForeground(new java.awt.Color(255, 255, 255));
-        jButton42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
-        jButton42.setAlignmentY(0.0F);
-        jButton42.setBorder(null);
-        jButton42.setBorderPainted(false);
-        jButton42.setIconTextGap(0);
-        jButton42.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton42.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton42.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton42.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton42.addActionListener(new java.awt.event.ActionListener() {
+        jc3r7.setBackground(new java.awt.Color(255, 255, 255));
+        jc3r7.setForeground(new java.awt.Color(255, 255, 255));
+        jc3r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jc3r7.setAlignmentY(0.0F);
+        jc3r7.setBorder(null);
+        jc3r7.setBorderPainted(false);
+        jc3r7.setIconTextGap(0);
+        jc3r7.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc3r7.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc3r7.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc3r7.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc3r7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton42ActionPerformed(evt);
+                jc3r7ActionPerformed(evt);
             }
         });
 
-        jButton43.setBackground(new java.awt.Color(255, 255, 255));
-        jButton43.setForeground(new java.awt.Color(255, 255, 255));
-        jButton43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
-        jButton43.setAlignmentY(0.0F);
-        jButton43.setBorder(null);
-        jButton43.setBorderPainted(false);
-        jButton43.setIconTextGap(0);
-        jButton43.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton43.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton43.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton43.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton43.addActionListener(new java.awt.event.ActionListener() {
+        jc5r7.setBackground(new java.awt.Color(255, 255, 255));
+        jc5r7.setForeground(new java.awt.Color(255, 255, 255));
+        jc5r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jc5r7.setAlignmentY(0.0F);
+        jc5r7.setBorder(null);
+        jc5r7.setBorderPainted(false);
+        jc5r7.setIconTextGap(0);
+        jc5r7.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc5r7.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc5r7.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc5r7.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc5r7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton43ActionPerformed(evt);
+                jc5r7ActionPerformed(evt);
             }
         });
 
-        jButton44.setBackground(new java.awt.Color(255, 255, 255));
-        jButton44.setForeground(new java.awt.Color(255, 255, 255));
-        jButton44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
-        jButton44.setAlignmentY(0.0F);
-        jButton44.setBorder(null);
-        jButton44.setBorderPainted(false);
-        jButton44.setIconTextGap(0);
-        jButton44.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton44.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton44.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton44.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton44.addActionListener(new java.awt.event.ActionListener() {
+        jc7r7.setBackground(new java.awt.Color(255, 255, 255));
+        jc7r7.setForeground(new java.awt.Color(255, 255, 255));
+        jc7r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jc7r7.setAlignmentY(0.0F);
+        jc7r7.setBorder(null);
+        jc7r7.setBorderPainted(false);
+        jc7r7.setIconTextGap(0);
+        jc7r7.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc7r7.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc7r7.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc7r7.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc7r7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton44ActionPerformed(evt);
+                jc7r7ActionPerformed(evt);
             }
         });
 
-        jButton45.setBackground(new java.awt.Color(255, 255, 255));
-        jButton45.setForeground(new java.awt.Color(255, 255, 255));
-        jButton45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
-        jButton45.setAlignmentY(0.0F);
-        jButton45.setBorder(null);
-        jButton45.setBorderPainted(false);
-        jButton45.setIconTextGap(0);
-        jButton45.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton45.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton45.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton45.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton45.addActionListener(new java.awt.event.ActionListener() {
+        jc8r8.setBackground(new java.awt.Color(255, 255, 255));
+        jc8r8.setForeground(new java.awt.Color(255, 255, 255));
+        jc8r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jc8r8.setAlignmentY(0.0F);
+        jc8r8.setBorder(null);
+        jc8r8.setBorderPainted(false);
+        jc8r8.setIconTextGap(0);
+        jc8r8.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc8r8.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc8r8.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc8r8.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc8r8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton45ActionPerformed(evt);
+                jc8r8ActionPerformed(evt);
             }
         });
 
-        jButton46.setBackground(new java.awt.Color(255, 255, 255));
-        jButton46.setForeground(new java.awt.Color(255, 255, 255));
-        jButton46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
-        jButton46.setAlignmentY(0.0F);
-        jButton46.setBorder(null);
-        jButton46.setBorderPainted(false);
-        jButton46.setIconTextGap(0);
-        jButton46.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton46.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton46.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton46.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton46.addActionListener(new java.awt.event.ActionListener() {
+        jc4r8.setBackground(new java.awt.Color(255, 255, 255));
+        jc4r8.setForeground(new java.awt.Color(255, 255, 255));
+        jc4r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jc4r8.setAlignmentY(0.0F);
+        jc4r8.setBorder(null);
+        jc4r8.setBorderPainted(false);
+        jc4r8.setIconTextGap(0);
+        jc4r8.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc4r8.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc4r8.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc4r8.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc4r8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton46ActionPerformed(evt);
+                jc4r8ActionPerformed(evt);
             }
         });
 
-        jButton47.setBackground(new java.awt.Color(255, 255, 255));
-        jButton47.setForeground(new java.awt.Color(255, 255, 255));
-        jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
-        jButton47.setAlignmentY(0.0F);
-        jButton47.setBorder(null);
-        jButton47.setBorderPainted(false);
-        jButton47.setIconTextGap(0);
-        jButton47.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton47.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton47.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton47.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton47.addActionListener(new java.awt.event.ActionListener() {
+        jc6r8.setBackground(new java.awt.Color(255, 255, 255));
+        jc6r8.setForeground(new java.awt.Color(255, 255, 255));
+        jc6r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jc6r8.setAlignmentY(0.0F);
+        jc6r8.setBorder(null);
+        jc6r8.setBorderPainted(false);
+        jc6r8.setIconTextGap(0);
+        jc6r8.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc6r8.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc6r8.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc6r8.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc6r8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton47ActionPerformed(evt);
+                jc6r8ActionPerformed(evt);
             }
         });
 
-        jButton48.setBackground(new java.awt.Color(255, 255, 255));
-        jButton48.setForeground(new java.awt.Color(255, 255, 255));
-        jButton48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
-        jButton48.setAlignmentY(0.0F);
-        jButton48.setBorder(null);
-        jButton48.setBorderPainted(false);
-        jButton48.setIconTextGap(0);
-        jButton48.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton48.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton48.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton48.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton48.addActionListener(new java.awt.event.ActionListener() {
+        jc2r8.setBackground(new java.awt.Color(255, 255, 255));
+        jc2r8.setForeground(new java.awt.Color(255, 255, 255));
+        jc2r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif"))); // NOI18N
+        jc2r8.setAlignmentY(0.0F);
+        jc2r8.setBorder(null);
+        jc2r8.setBorderPainted(false);
+        jc2r8.setIconTextGap(0);
+        jc2r8.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc2r8.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc2r8.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc2r8.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc2r8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton48ActionPerformed(evt);
+                jc2r8ActionPerformed(evt);
             }
         });
 
@@ -1220,6 +1222,7 @@ public class GameFrame extends javax.swing.JFrame {
 
         jc2r4.setBackground(new java.awt.Color(255, 255, 255));
         jc2r4.setForeground(new java.awt.Color(255, 255, 255));
+        jc2r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif"))); // NOI18N
         jc2r4.setAlignmentY(0.0F);
         jc2r4.setBorder(null);
         jc2r4.setBorderPainted(false);
@@ -1236,6 +1239,7 @@ public class GameFrame extends javax.swing.JFrame {
 
         jc4r4.setBackground(new java.awt.Color(255, 255, 255));
         jc4r4.setForeground(new java.awt.Color(255, 255, 255));
+        jc4r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif"))); // NOI18N
         jc4r4.setAlignmentY(0.0F);
         jc4r4.setBorder(null);
         jc4r4.setBorderPainted(false);
@@ -1252,6 +1256,7 @@ public class GameFrame extends javax.swing.JFrame {
 
         jc6r4.setBackground(new java.awt.Color(255, 255, 255));
         jc6r4.setForeground(new java.awt.Color(255, 255, 255));
+        jc6r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif"))); // NOI18N
         jc6r4.setAlignmentY(0.0F);
         jc6r4.setBorder(null);
         jc6r4.setBorderPainted(false);
@@ -1268,6 +1273,7 @@ public class GameFrame extends javax.swing.JFrame {
 
         jc8r4.setBackground(new java.awt.Color(255, 255, 255));
         jc8r4.setForeground(new java.awt.Color(255, 255, 255));
+        jc8r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif"))); // NOI18N
         jc8r4.setAlignmentY(0.0F);
         jc8r4.setBorder(null);
         jc8r4.setBorderPainted(false);
@@ -1284,6 +1290,7 @@ public class GameFrame extends javax.swing.JFrame {
 
         jc1r5.setBackground(new java.awt.Color(255, 255, 255));
         jc1r5.setForeground(new java.awt.Color(255, 255, 255));
+        jc1r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif"))); // NOI18N
         jc1r5.setAlignmentY(0.0F);
         jc1r5.setBorder(null);
         jc1r5.setBorderPainted(false);
@@ -1298,51 +1305,54 @@ public class GameFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton62.setBackground(new java.awt.Color(255, 255, 255));
-        jButton62.setForeground(new java.awt.Color(255, 255, 255));
-        jButton62.setAlignmentY(0.0F);
-        jButton62.setBorder(null);
-        jButton62.setBorderPainted(false);
-        jButton62.setIconTextGap(0);
-        jButton62.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton62.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton62.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton62.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton62.addActionListener(new java.awt.event.ActionListener() {
+        jc3r5.setBackground(new java.awt.Color(255, 255, 255));
+        jc3r5.setForeground(new java.awt.Color(255, 255, 255));
+        jc3r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif"))); // NOI18N
+        jc3r5.setAlignmentY(0.0F);
+        jc3r5.setBorder(null);
+        jc3r5.setBorderPainted(false);
+        jc3r5.setIconTextGap(0);
+        jc3r5.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc3r5.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc3r5.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc3r5.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc3r5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton62ActionPerformed(evt);
+                jc3r5ActionPerformed(evt);
             }
         });
 
-        jButton63.setBackground(new java.awt.Color(255, 255, 255));
-        jButton63.setForeground(new java.awt.Color(255, 255, 255));
-        jButton63.setAlignmentY(0.0F);
-        jButton63.setBorder(null);
-        jButton63.setBorderPainted(false);
-        jButton63.setIconTextGap(0);
-        jButton63.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton63.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton63.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton63.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton63.addActionListener(new java.awt.event.ActionListener() {
+        jc5r5.setBackground(new java.awt.Color(255, 255, 255));
+        jc5r5.setForeground(new java.awt.Color(255, 255, 255));
+        jc5r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif"))); // NOI18N
+        jc5r5.setAlignmentY(0.0F);
+        jc5r5.setBorder(null);
+        jc5r5.setBorderPainted(false);
+        jc5r5.setIconTextGap(0);
+        jc5r5.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc5r5.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc5r5.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc5r5.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc5r5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton63ActionPerformed(evt);
+                jc5r5ActionPerformed(evt);
             }
         });
 
-        jButton64.setBackground(new java.awt.Color(255, 255, 255));
-        jButton64.setForeground(new java.awt.Color(255, 255, 255));
-        jButton64.setAlignmentY(0.0F);
-        jButton64.setBorder(null);
-        jButton64.setBorderPainted(false);
-        jButton64.setIconTextGap(0);
-        jButton64.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton64.setMaximumSize(new java.awt.Dimension(30, 30));
-        jButton64.setMinimumSize(new java.awt.Dimension(30, 30));
-        jButton64.setPreferredSize(new java.awt.Dimension(30, 30));
-        jButton64.addActionListener(new java.awt.event.ActionListener() {
+        jc7r5.setBackground(new java.awt.Color(255, 255, 255));
+        jc7r5.setForeground(new java.awt.Color(255, 255, 255));
+        jc7r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif"))); // NOI18N
+        jc7r5.setAlignmentY(0.0F);
+        jc7r5.setBorder(null);
+        jc7r5.setBorderPainted(false);
+        jc7r5.setIconTextGap(0);
+        jc7r5.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jc7r5.setMaximumSize(new java.awt.Dimension(30, 30));
+        jc7r5.setMinimumSize(new java.awt.Dimension(30, 30));
+        jc7r5.setPreferredSize(new java.awt.Dimension(30, 30));
+        jc7r5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton64ActionPerformed(evt);
+                jc7r5ActionPerformed(evt);
             }
         });
 
@@ -1357,7 +1367,7 @@ public class GameFrame extends javax.swing.JFrame {
                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jc1r3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jc1r7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jc1r5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1366,12 +1376,12 @@ public class GameFrame extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jc3r5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(jPanel3Layout.createSequentialGroup()
                                     .addComponent(jButton49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jc3r7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                                         .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1386,7 +1396,7 @@ public class GameFrame extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(BlankSquare, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jc2r6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1394,7 +1404,7 @@ public class GameFrame extends javax.swing.JFrame {
                             .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jc4r6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jc4r4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -1415,8 +1425,8 @@ public class GameFrame extends javax.swing.JFrame {
                             .addComponent(jc5r1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jc5r7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jc5r5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1425,7 +1435,7 @@ public class GameFrame extends javax.swing.JFrame {
                                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jButton39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jc6r6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(jButton50, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jc6r4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1440,32 +1450,32 @@ public class GameFrame extends javax.swing.JFrame {
                             .addComponent(jc7r1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jc7r7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jc7r5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jc8r6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jc8r4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jButton55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jc2r8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jc4r8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addComponent(jButton54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jc6r8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jc8r8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1538,51 +1548,51 @@ public class GameFrame extends javax.swing.JFrame {
                     .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jc1r5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jc3r5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jc5r5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jc7r5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jc5r7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jButton35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jc1r7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jc6r6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jc2r6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jc4r6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton50, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jc3r7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jc8r6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jc7r7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jc8r8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton52, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton55, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton56, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jButton54, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton46, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton47, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton48, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jc4r8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jc6r8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jc2r8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -1591,35 +1601,32 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
+                        .addGap(54, 54, 54)
                         .addComponent(jLabel1)
                         .addGap(19, 19, 19))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(26, 26, 26)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2)
                 .addContainerGap())
@@ -1657,42 +1664,157 @@ public class GameFrame extends javax.swing.JFrame {
 
     private void jNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNewGameActionPerformed
         this.gameCommands.startNewGame(this.game);
-        takeFirstTurn();
-        String nextPlayersMessage = "A new game has begun. \n" + this.game.getCurrentPlayer().getName()
-        + ", it is your turn.";
-        this.jtMessageArea.setText(nextPlayersMessage);
+            
+        takeFirstTurn();  
     }//GEN-LAST:event_jNewGameActionPerformed
 
-    private void jButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton64ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton64ActionPerformed
+    private void jc7r5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc7r5ActionPerformed
+        
+        if(move=="select"){
+            jc7r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc7r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc7r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc7r5ActionPerformed
 
-    private void jButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton63ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton63ActionPerformed
+    private void jc5r5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc5r5ActionPerformed
+        
+        if(move=="select"){
+            jc5r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc5r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc5r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc5r5ActionPerformed
 
-    private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton62ActionPerformed
+    private void jc3r5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc3r5ActionPerformed
+        
+        if(move=="select"){
+            jc3r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc3r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc3r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc3r5ActionPerformed
 
     private void jc1r5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc1r5ActionPerformed
-        // TODO add your handling code here:
+        
+        if(move=="select"){
+            jc1r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc1r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc1r5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }        
     }//GEN-LAST:event_jc1r5ActionPerformed
 
     private void jc8r4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc8r4ActionPerformed
-        // TODO add your handling code here:
+        
+        if(move=="select"){
+            jc8r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc8r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc8r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }
     }//GEN-LAST:event_jc8r4ActionPerformed
 
     private void jc6r4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc6r4ActionPerformed
-        // TODO add your handling code here:
+        
+        if(move=="select"){
+            jc6r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc6r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc6r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }
     }//GEN-LAST:event_jc6r4ActionPerformed
 
     private void jc4r4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc4r4ActionPerformed
-        // TODO add your handling code here:
+        
+        if(move=="select"){
+            jc4r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc4r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc4r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }
     }//GEN-LAST:event_jc4r4ActionPerformed
 
     private void jc2r4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc2r4ActionPerformed
-        // TODO add your handling code here:
+        
+        if(move=="select"){
+            jc2r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc2r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc2r4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }
     }//GEN-LAST:event_jc2r4ActionPerformed
 
     private void jButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton56ActionPerformed
@@ -1727,53 +1849,221 @@ public class GameFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton49ActionPerformed
 
-    private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton48ActionPerformed
+    private void jc2r8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc2r8ActionPerformed
+        
+        if(move=="select"){
+            jc2r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc2r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc2r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc2r8ActionPerformed
 
-    private void jButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton47ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton47ActionPerformed
+    private void jc6r8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc6r8ActionPerformed
+        
+        if(move=="select"){
+            jc6r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc6r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc6r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc6r8ActionPerformed
 
-    private void jButton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton46ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton46ActionPerformed
+    private void jc4r8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc4r8ActionPerformed
+        
+        if(move=="select"){
+            jc4r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc4r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc4r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc4r8ActionPerformed
 
-    private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton45ActionPerformed
+    private void jc8r8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc8r8ActionPerformed
+        
+        if(move=="select"){
+            jc8r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc8r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc8r8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            }
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc8r8ActionPerformed
 
-    private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton44ActionPerformed
+    private void jc7r7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc7r7ActionPerformed
+        
+        if(move=="select"){
+            jc7r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc7r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc7r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc7r7ActionPerformed
 
-    private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton43ActionPerformed
+    private void jc5r7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc5r7ActionPerformed
+        
+        if(move=="select"){
+            jc5r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc5r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc5r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc5r7ActionPerformed
 
-    private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton42ActionPerformed
+    private void jc3r7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc3r7ActionPerformed
+        
+        if(move=="select"){
+            jc3r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc3r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc3r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc3r7ActionPerformed
 
-    private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton41ActionPerformed
+    private void jc1r7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc1r7ActionPerformed
+        
+        if(move=="select"){
+            jc1r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc1r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc1r7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc1r7ActionPerformed
 
-    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton40ActionPerformed
+    private void jc8r6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc8r6ActionPerformed
+        
+        if(move=="select"){
+            jc8r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc8r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc8r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc8r6ActionPerformed
 
-    private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton39ActionPerformed
+    private void jc6r6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc6r6ActionPerformed
+        
+        if(move=="select"){
+            jc6r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc6r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc6r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc6r6ActionPerformed
 
-    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton38ActionPerformed
+    private void jc4r6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc4r6ActionPerformed
+        
+        if(move=="select"){
+            jc4r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc4r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc4r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc4r6ActionPerformed
 
-    private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton37ActionPerformed
+    private void jc2r6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc2r6ActionPerformed
+        
+        if(move=="select"){
+            jc2r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc2r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc2r6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }     }//GEN-LAST:event_jc2r6ActionPerformed
 
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
         // TODO add your handling code here:
@@ -1852,44 +2142,185 @@ public class GameFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jc7r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc7r3ActionPerformed
-        // TODO add your handling code here:
+        
+        if(move=="select"){
+            jc7r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc7r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc7r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }
     }//GEN-LAST:event_jc7r3ActionPerformed
 
     private void jc5r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc5r3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jc5r3ActionPerformed
+        
+        if(move=="select"){
+            jc5r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc5r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc5r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }    }//GEN-LAST:event_jc5r3ActionPerformed
 
     private void jc3r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc3r3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jc3r3ActionPerformed
+        
+        if(move=="select"){
+            jc3r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc3r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc3r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }    }//GEN-LAST:event_jc3r3ActionPerformed
 
     private void jc1r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc1r3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jc1r3ActionPerformed
+        
+        if(move=="select"){
+            jc1r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc1r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc1r3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }    }//GEN-LAST:event_jc1r3ActionPerformed
 
     private void jc8r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc8r2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jc8r2ActionPerformed
+        
+        if(move=="select"){
+            jc8r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc8r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc8r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }    }//GEN-LAST:event_jc8r2ActionPerformed
 
     private void jc6r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc6r2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jc6r2ActionPerformed
+        
+        if(move=="select"){
+            jc6r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc6r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc6r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }    }//GEN-LAST:event_jc6r2ActionPerformed
 
     private void jc4r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc4r2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jc4r2ActionPerformed
+        
+        if(move=="select"){
+            jc4r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc4r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc4r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }    }//GEN-LAST:event_jc4r2ActionPerformed
 
     private void jc2r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc2r2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jc2r2ActionPerformed
+        
+        if(move=="select"){
+            jc2r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc2r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc2r2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }    }//GEN-LAST:event_jc2r2ActionPerformed
 
     private void jc7r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc7r1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jc7r1ActionPerformed
+        
+        if(move=="select"){
+            jc7r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc7r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc7r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }    }//GEN-LAST:event_jc7r1ActionPerformed
 
     private void jc5r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc5r1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jc5r1ActionPerformed
+        
+        if(move=="select"){
+            jc5r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc5r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc5r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }    }//GEN-LAST:event_jc5r1ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
@@ -1908,21 +2339,48 @@ public class GameFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jc3r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc3r1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jc3r1ActionPerformed
+        
+        if(move=="select"){
+            jc3r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+             placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc3r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc3r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } gameCommands.alternatePlayers();
+            takeTurn();
+        }    }//GEN-LAST:event_jc3r1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jc1r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc1r1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jc1r1ActionPerformed
+        if(move=="select"){
+            jc1r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/clear.gif")));
+            placePiece();
+        }
+        else if (move=="place"){
+           Player currentPlayer = this.game.getCurrentPlayer(); 
+            if (currentPlayer == game.playerA){
+                jc1r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/R.gif"))); 
+            }
+            else {
+                jc1r1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/checkers/images/B.gif")));
+            } 
+            gameCommands.alternatePlayers();
+            takeTurn();
+        }
+            }//GEN-LAST:event_jc1r1ActionPerformed
   
      private String getNextPlayerMessage(Player player) {
        
             return "It is now your turn "
-                    + player.getName();
+                    + player.getName() + ".\nSelect the piece you would like to move.";
         }
     
     /**
@@ -1950,19 +2408,7 @@ public class GameFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton34;
     private javax.swing.JButton jButton35;
     private javax.swing.JButton jButton36;
-    private javax.swing.JButton jButton37;
-    private javax.swing.JButton jButton38;
-    private javax.swing.JButton jButton39;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton40;
-    private javax.swing.JButton jButton41;
-    private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton43;
-    private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton45;
-    private javax.swing.JButton jButton46;
-    private javax.swing.JButton jButton47;
-    private javax.swing.JButton jButton48;
     private javax.swing.JButton jButton49;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton50;
@@ -1973,9 +2419,6 @@ public class GameFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton55;
     private javax.swing.JButton jButton56;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton62;
-    private javax.swing.JButton jButton63;
-    private javax.swing.JButton jButton64;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jHelp;
     private javax.swing.JLabel jLabel1;
@@ -1988,57 +2431,59 @@ public class GameFrame extends javax.swing.JFrame {
     private javax.swing.JButton jc1r1;
     private javax.swing.JButton jc1r3;
     private javax.swing.JButton jc1r5;
+    private javax.swing.JButton jc1r7;
     private javax.swing.JButton jc2r2;
     private javax.swing.JButton jc2r4;
+    private javax.swing.JButton jc2r6;
+    private javax.swing.JButton jc2r8;
     private javax.swing.JButton jc3r1;
     private javax.swing.JButton jc3r3;
+    private javax.swing.JButton jc3r5;
+    private javax.swing.JButton jc3r7;
     private javax.swing.JButton jc4r2;
     private javax.swing.JButton jc4r4;
+    private javax.swing.JButton jc4r6;
+    private javax.swing.JButton jc4r8;
     private javax.swing.JButton jc5r1;
     private javax.swing.JButton jc5r3;
+    private javax.swing.JButton jc5r5;
+    private javax.swing.JButton jc5r7;
     private javax.swing.JButton jc6r2;
     private javax.swing.JButton jc6r4;
+    private javax.swing.JButton jc6r6;
+    private javax.swing.JButton jc6r8;
     private javax.swing.JButton jc7r1;
     private javax.swing.JButton jc7r3;
+    private javax.swing.JButton jc7r5;
+    private javax.swing.JButton jc7r7;
     private javax.swing.JButton jc8r2;
     private javax.swing.JButton jc8r4;
+    private javax.swing.JButton jc8r6;
+    private javax.swing.JButton jc8r8;
     private javax.swing.JTextArea jtMessageArea;
     // End of variables declaration//GEN-END:variables
 
  private void takeFirstTurn() {
         Player currentPlayer = this.game.getCurrentPlayer();
-             
         String promptNextPlayer = getNextPlayerMessage(currentPlayer);
         this.jtMessageArea.setText(promptNextPlayer);
-        this.game.setStatus(StatusType.PLAYING);
+        this.game.setStatus(StatusType.PLAYING);     
     }
 
-    private void takeTurn(JTable table) {
-        String playersMarker;
-        int selectedRow = table.getSelectedRow();
-        int selectedColumn = table.getSelectedColumn();
-        Point selectedLocation = new Point(selectedRow, selectedColumn);
-
+    private void takeTurn() {
         Player currentPlayer = this.game.getCurrentPlayer();
-        Player otherPlayer = this.game.getOtherPlayer();
-
-         
-            String promptNextPlayer = getNextPlayerMessage(this.game.getCurrentPlayer());
-            this.jtMessageArea.setText(promptNextPlayer);
-
+        String promptNextPlayer = getNextPlayerMessage(currentPlayer);
+        this.jtMessageArea.setText(promptNextPlayer);
+        this.move="select";    
+        
         }
     
-
-    private class CellRenderer extends DefaultTableCellRenderer {
-
-        public CellRenderer() {
-            super();
-        }
-
-        public void setValue(Player player) {
-            setText((player == null) ? "" : player.getMarker());
-        }
+    private void placePiece(){
+        this.move="place";
+        String placeMessage = "Select where you would like to place your piece.";
+            jtMessageArea.setText(placeMessage);   
     }
+              
 }
 
 

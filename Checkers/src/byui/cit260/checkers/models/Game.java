@@ -14,8 +14,8 @@ public class Game {
     
           
     private GameType gameType; 
-    private Player playerA;
-    private Player playerB;
+    public Player playerA;
+    public Player playerB;
     private Player currentPlayer;
     private Player otherPlayer;
     private Player winner;
@@ -115,10 +115,8 @@ public class Game {
     public void start() {
 
         this.setPlayingOrder(playerA, playerB);
-
-        // clear the board
-        this.board.clearTheBoard();
         this.setStatus(StatusType.NEW_GAME);
+        return;
     }
 
   public void setPlayingOrder(Player player1, Player player2) {

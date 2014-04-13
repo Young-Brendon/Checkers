@@ -111,21 +111,11 @@ public class GameMenuControl {
     
     public void startNewGame(Game game) {
         game.start();
-        this.clearTheBoard();
     }
   
     
     
-    public void clearTheBoard() {
-        Player[][] locations = this.game.getBoard().getBoardLocations();
-        
-        for (int i = 0; i < this.board.getBoardLocations().length; i++) {
-            Player[] rowlocations = locations[i];
-            for (int j = 0; j < rowlocations.length; j++) {
-                rowlocations[j] = null;
-            }
-        }
-    }
+
 }  
     
     
